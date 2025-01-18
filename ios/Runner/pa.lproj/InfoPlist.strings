@@ -1,0 +1,9 @@
+NSCameraUsageDescription = "ਠੀਕ ਹੈ";
+NSPhotoLibraryUsageDescription = "ਠੀਕ ਹੈ";
+NSMicrophoneUsageDescription = "ਠੀਕ ਹੈ";
+NSCalendarsUsageDescription = "ਹਾਂ";
+NSContactsUsageDescription = "ਕੋਨ";
+NSLocationWhenInUseUsageDescription = "ਕਾਨਪੁਰ";
+PermissionGroupNotification = "ਚੰਗਾ";
+NSBluetoothAlwaysUsageDescription = "ਠੀਕ ਹੈ";
+NSFaceIDUsageDescription = "ਠੀਕ ਹੈ";

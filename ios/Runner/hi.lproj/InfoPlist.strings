@@ -1,0 +1,9 @@
+NSCameraUsageDescription = "ठीक है";
+NSPhotoLibraryUsageDescription = "ठीक है";
+NSMicrophoneUsageDescription = "ठीक है";
+NSCalendarsUsageDescription = "हाँ";
+NSContactsUsageDescription = "चोर";
+NSLocationWhenInUseUsageDescription = "कानपुर";
+PermissionGroupNotification = "अच्छा";
+NSBluetoothAlwaysUsageDescription = "ठीक है";
+NSFaceIDUsageDescription = "ठीक है";

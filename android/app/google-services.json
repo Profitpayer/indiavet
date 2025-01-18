@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "323215544462",
+    "project_id": "indiavet-207a4",
+    "storage_bucket": "indiavet-207a4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323215544462:android:7935e037edf91781b4f9df",
+        "android_client_info": {
+          "package_name": "com.mycompany.indiavet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYNSoR47xmVl5cyIjnplmXVnMMMiecn9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,9 @@
+NSCameraUsageDescription = "ok";
+NSPhotoLibraryUsageDescription = "OK";
+NSMicrophoneUsageDescription = "OK";
+NSCalendarsUsageDescription = "Yes";
+NSContactsUsageDescription = "Con";
+NSLocationWhenInUseUsageDescription = "kanpur";
+PermissionGroupNotification = "Good";
+NSBluetoothAlwaysUsageDescription = "OK";
+NSFaceIDUsageDescription = "OK";
