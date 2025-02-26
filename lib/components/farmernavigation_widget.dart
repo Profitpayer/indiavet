@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'farmernavigation_model.dart';
@@ -117,20 +118,20 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 1.0),
+      alignment: AlignmentDirectional(0.0, 1.0),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 3.0),
+        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 3.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Expanded(
               child: Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Material(
                   color: Colors.transparent,
                   elevation: 8.0,
-                  shape: const RoundedRectangleBorder(
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(0.0),
                       bottomRight: Radius.circular(0.0),
@@ -142,7 +143,7 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                     height: 75.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).alternate,
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(0.0),
                         bottomRight: Radius.circular(0.0),
                         topLeft: Radius.circular(0.0),
@@ -150,9 +151,9 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                       ),
                       shape: BoxShape.rectangle,
                     ),
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           10.0, 10.0, 10.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -165,13 +166,13 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed('Farmer');
+                              context.pushNamed(FarmerWidget.routeName);
                             },
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                const Align(
+                                Align(
                                   alignment: AlignmentDirectional(0.0, -1.0),
                                   child: Icon(
                                     Icons.home,
@@ -187,7 +188,7 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Plus Jakarta Sans',
-                                        color: const Color(0xFF4A7C7C),
+                                        color: Color(0xFF4A7C7C),
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -202,13 +203,14 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed('AppointmentBooking');
+                              context.pushNamed(
+                                  AppointmentBookingWidget.routeName);
                             },
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                const Icon(
+                                Icon(
                                   Icons.event,
                                   color: Color(0xFF34495E),
                                   size: 28.0,
@@ -221,7 +223,7 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Plus Jakarta Sans',
-                                        color: const Color(0xFF34495E),
+                                        color: Color(0xFF34495E),
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -236,13 +238,14 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed('MyProductList');
+                              context
+                                  .pushNamed(ProductCategoryWidget.routeName);
                             },
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                const Icon(
+                                Icon(
                                   Icons.local_pharmacy,
                                   color: Color(0xFF34495E),
                                   size: 28.0,
@@ -255,7 +258,7 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Plus Jakarta Sans',
-                                        color: const Color(0xFF34495E),
+                                        color: Color(0xFF34495E),
                                         letterSpacing: 0.0,
                                       ),
                                 ),
@@ -268,7 +271,7 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                             mainAxisSize: MainAxisSize.min,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              const Icon(
+                              Icon(
                                 Icons.currency_rupee,
                                 color: Color(0xFFD41A1A),
                                 size: 28.0,
@@ -281,7 +284,7 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                                     .bodySmall
                                     .override(
                                       fontFamily: 'Plus Jakarta Sans',
-                                      color: const Color(0xFF34495E),
+                                      color: Color(0xFF34495E),
                                       letterSpacing: 0.0,
                                     ),
                               ),
@@ -289,28 +292,37 @@ class _FarmernavigationWidgetState extends State<FarmernavigationWidget>
                           ).animateOnActionTrigger(
                             animationsMap['columnOnActionTriggerAnimation4']!,
                           ),
-                          Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const Icon(
-                                Icons.help_outline,
-                                color: Color(0xFF34495E),
-                                size: 28.0,
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  '3avdwonb' /* Feedback */,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed(FeedbackWidget.routeName);
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.help_outline,
+                                  color: Color(0xFF34495E),
+                                  size: 28.0,
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: const Color(0xFF34495E),
-                                      letterSpacing: 0.0,
-                                    ),
-                              ),
-                            ],
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    '3avdwonb' /* Feedback */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF34495E),
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                              ],
+                            ),
                           ).animateOnActionTrigger(
                             animationsMap['columnOnActionTriggerAnimation5']!,
                           ),

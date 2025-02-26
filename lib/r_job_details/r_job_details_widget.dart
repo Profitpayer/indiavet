@@ -2,12 +2,16 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'r_job_details_model.dart';
 export 'r_job_details_model.dart';
 
 class RJobDetailsWidget extends StatefulWidget {
   const RJobDetailsWidget({super.key});
+
+  static String routeName = 'RJobDetails';
+  static String routePath = '/rJobDetails';
 
   @override
   State<RJobDetailsWidget> createState() => _RJobDetailsWidgetState();
@@ -54,7 +58,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: const Icon(
+                icon: Icon(
                   Icons.arrow_back,
                   color: Colors.white,
                   size: 30.0,
@@ -83,7 +87,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Icon(
                       Icons.edit_square,
                       color: FlutterFlowTheme.of(context).alternate,
@@ -92,21 +96,21 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                   ),
                 ],
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 10.0,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 3.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 3.0),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -117,13 +121,13 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 5.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: ClipRRect(
                                         borderRadius:
@@ -138,7 +142,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -192,7 +196,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                 color: FlutterFlowTheme.of(context).alternate,
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -245,7 +249,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -298,7 +302,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -351,7 +355,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -404,7 +408,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 10.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -464,7 +468,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     5.0, 5.0, 0.0, 3.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -492,7 +496,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 3.0, 5.0, 2.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -522,7 +526,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 3.0, 5.0, 2.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -552,7 +556,7 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 3.0, 5.0, 2.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -586,16 +590,16 @@ class _RJobDetailsWidgetState extends State<RJobDetailsWidget> {
                         Expanded(
                           child: FFButtonWidget(
                             onPressed: () async {
-                              context.pushNamed('Applicants');
+                              context.pushNamed(ApplicantsWidget.routeName);
                             },
                             text: FFLocalizations.of(context).getText(
                               '68pn5u61' /* See Applicants */,
                             ),
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)

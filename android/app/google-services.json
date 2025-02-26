@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "323215544462",
+    "firebase_url": "https://indiavet-207a4-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "indiavet-207a4",
     "storage_bucket": "indiavet-207a4.firebasestorage.app"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.mycompany.indiavet"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "323215544462-61dgct8gev4bl3o7rkffnr8d0miak33b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.indiavet",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "323215544462-bv5qdmp38m672ivrqlq978cqqeeud58l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAYNSoR47xmVl5cyIjnplmXVnMMMiecn9M"
@@ -20,7 +34,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "323215544462-bv5qdmp38m672ivrqlq978cqqeeud58l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "323215544462-lmkp3ltu6clvbfu3bsutaqteogkr29ss.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.indiavet"
+              }
+            }
+          ]
         }
       }
     }

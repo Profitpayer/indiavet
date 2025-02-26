@@ -9,6 +9,9 @@ export 'pharmacy_report_model.dart';
 class PharmacyReportWidget extends StatefulWidget {
   const PharmacyReportWidget({super.key});
 
+  static String routeName = 'PharmacyReport';
+  static String routePath = '/pharmacyReport';
+
   @override
   State<PharmacyReportWidget> createState() => _PharmacyReportWidgetState();
 }
@@ -70,20 +73,20 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -93,7 +96,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -136,7 +139,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 16.0, 16.0, 16.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -191,7 +194,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(height: 8.0)),
+                                            ].divide(SizedBox(height: 8.0)),
                                           ),
                                         ),
                                       ),
@@ -215,7 +218,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 16.0, 16.0, 16.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -270,20 +273,20 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(height: 8.0)),
+                                            ].divide(SizedBox(height: 8.0)),
                                           ),
                                         ),
                                       ),
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -293,7 +296,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -327,7 +330,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -570,18 +573,18 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                               ),
                                             ],
                                           ),
-                                        ].divide(const SizedBox(height: 12.0)),
+                                        ].divide(SizedBox(height: 12.0)),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -591,7 +594,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -625,7 +628,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -868,18 +871,18 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                               ),
                                             ],
                                           ),
-                                        ].divide(const SizedBox(height: 12.0)),
+                                        ].divide(SizedBox(height: 12.0)),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             16.0, 0.0, 16.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -889,7 +892,7 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -930,10 +933,10 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                       options: FFButtonOptions(
                                         width: 150.0,
                                         height: 50.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
@@ -959,10 +962,10 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                       options: FFButtonOptions(
                                         width: 150.0,
                                         height: 50.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .secondary,
@@ -980,12 +983,12 @@ class _PharmacyReportWidgetState extends State<PharmacyReportWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),

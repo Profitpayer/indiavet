@@ -14,6 +14,9 @@ export 'test_model.dart';
 class TestWidget extends StatefulWidget {
   const TestWidget({super.key});
 
+  static String routeName = 'Test';
+  static String routePath = '/test';
+
   @override
   State<TestWidget> createState() => _TestWidgetState();
 }
@@ -70,7 +73,7 @@ class _TestWidgetState extends State<TestWidget> {
               automaticallyImplyLeading: false,
               title: Text(
                 FFLocalizations.of(context).getText(
-                  'l7wq5rn8' /* Page Title */,
+                  '2v9ic1x1' /* Page Title */,
                 ),
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
@@ -79,7 +82,7 @@ class _TestWidgetState extends State<TestWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 10.0,
             ),
@@ -89,10 +92,10 @@ class _TestWidgetState extends State<TestWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 2.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 2.0),
                       child: SingleChildScrollView(
                         primary: false,
                         child: Column(
@@ -100,7 +103,7 @@ class _TestWidgetState extends State<TestWidget> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 2.0, 0.0, 0.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -115,7 +118,7 @@ class _TestWidgetState extends State<TestWidget> {
                                     borderRadius: BorderRadius.circular(16.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 20.0, 20.0, 20.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -149,7 +152,7 @@ class _TestWidgetState extends State<TestWidget> {
                                               'r24rmn6z' /* Your Name* */,
                                             ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 1.0,
                                               ),
@@ -157,7 +160,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -165,7 +168,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             errorBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -174,7 +177,7 @@ class _TestWidgetState extends State<TestWidget> {
                                             ),
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -223,7 +226,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 1.0,
                                               ),
@@ -231,7 +234,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -239,7 +242,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             errorBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -248,7 +251,7 @@ class _TestWidgetState extends State<TestWidget> {
                                             ),
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -256,7 +259,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             filled: true,
-                                            fillColor: const Color(0xFFF1F4F8),
+                                            fillColor: Color(0xFFF1F4F8),
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
@@ -308,7 +311,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0xFFE0E3E7),
                                                 width: 1.0,
                                               ),
@@ -316,7 +319,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -324,7 +327,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             errorBorder: OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -333,7 +336,7 @@ class _TestWidgetState extends State<TestWidget> {
                                             ),
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Color(0x00000000),
                                                 width: 1.0,
                                               ),
@@ -341,7 +344,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                   BorderRadius.circular(8.0),
                                             ),
                                             filled: true,
-                                            fillColor: const Color(0xFFF1F4F8),
+                                            fillColor: Color(0xFFF1F4F8),
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyLarge
@@ -354,7 +357,7 @@ class _TestWidgetState extends State<TestWidget> {
                                               .appointmentVillTextControllerValidator
                                               .asValidator(context),
                                         ),
-                                      ].divide(const SizedBox(height: 16.0)),
+                                      ].divide(SizedBox(height: 16.0)),
                                     ),
                                   ),
                                 ),
@@ -373,7 +376,7 @@ class _TestWidgetState extends State<TestWidget> {
                                   borderRadius: BorderRadius.circular(16.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 20.0, 20.0, 20.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
@@ -394,7 +397,7 @@ class _TestWidgetState extends State<TestWidget> {
                                             ),
                                       ),
                                       Autocomplete<String>(
-                                        initialValue: const TextEditingValue(),
+                                        initialValue: TextEditingValue(),
                                         optionsBuilder: (textEditingValue) {
                                           if (textEditingValue.text == '') {
                                             return const Iterable<
@@ -429,7 +432,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                           'Plus Jakarta Sans',
                                                       letterSpacing: 0.0,
                                                     ),
-                                            textHighlightStyle: const TextStyle(),
+                                            textHighlightStyle: TextStyle(),
                                             elevation: 4.0,
                                             optionBackgroundColor:
                                                 FlutterFlowTheme.of(context)
@@ -471,7 +474,7 @@ class _TestWidgetState extends State<TestWidget> {
                                             onChanged: (_) =>
                                                 EasyDebounce.debounce(
                                               '_model.petnameTextController',
-                                              const Duration(milliseconds: 2),
+                                              Duration(milliseconds: 2),
                                               () => safeSetState(() {}),
                                             ),
                                             autofocus: false,
@@ -491,7 +494,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                               enabledBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0xFFE0E3E7),
                                                   width: 1.0,
                                                 ),
@@ -499,7 +502,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               focusedBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -507,7 +510,7 @@ class _TestWidgetState extends State<TestWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               errorBorder: OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -516,7 +519,7 @@ class _TestWidgetState extends State<TestWidget> {
                                               ),
                                               focusedErrorBorder:
                                                   OutlineInputBorder(
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x00000000),
                                                   width: 1.0,
                                                 ),
@@ -575,14 +578,14 @@ class _TestWidgetState extends State<TestWidget> {
                                                     color: Colors.white,
                                                     letterSpacing: 0.0,
                                                   ),
-                                          iconColor: const Color(0xFF08C514),
+                                          iconColor: Color(0xFF08C514),
                                           iconSize: 18.0,
                                           elevation: 0.0,
                                           borderRadius:
                                               BorderRadius.circular(20.0),
                                         ),
                                         unselectedChipStyle: ChipStyle(
-                                          backgroundColor: const Color(0xFFF1F4F8),
+                                          backgroundColor: Color(0xFFF1F4F8),
                                           textStyle: FlutterFlowTheme.of(
                                                   context)
                                               .bodySmall
@@ -612,7 +615,7 @@ class _TestWidgetState extends State<TestWidget> {
                                         ),
                                         wrapped: false,
                                       ),
-                                    ].divide(const SizedBox(height: 16.0)),
+                                    ].divide(SizedBox(height: 16.0)),
                                   ),
                                 ),
                               ),
@@ -627,9 +630,9 @@ class _TestWidgetState extends State<TestWidget> {
                               options: FFButtonOptions(
                                 width: MediaQuery.sizeOf(context).width * 0.9,
                                 height: 50.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -658,8 +661,8 @@ class _TestWidgetState extends State<TestWidget> {
                                   ),
                             ),
                           ]
-                              .divide(const SizedBox(height: 24.0))
-                              .around(const SizedBox(height: 24.0)),
+                              .divide(SizedBox(height: 24.0))
+                              .around(SizedBox(height: 24.0)),
                         ),
                       ),
                     ),

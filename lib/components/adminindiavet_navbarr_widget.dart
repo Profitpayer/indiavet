@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'adminindiavet_navbarr_model.dart';
@@ -41,13 +42,13 @@ class _AdminindiavetNavbarrWidgetState
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 1.0),
+      alignment: AlignmentDirectional(0.0, 1.0),
       child: Container(
         width: double.infinity,
         height: 75.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
               blurRadius: 8.0,
               color: Color(0x1A000000),
@@ -59,9 +60,9 @@ class _AdminindiavetNavbarrWidgetState
             )
           ],
         ),
-        alignment: const AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 8.0),
+          padding: EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 8.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -72,7 +73,7 @@ class _AdminindiavetNavbarrWidgetState
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed('Adminhome');
+                  context.pushNamed(AdminhomeWidget.routeName);
                 },
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -92,7 +93,7 @@ class _AdminindiavetNavbarrWidgetState
                             letterSpacing: 0.0,
                           ),
                     ),
-                  ].divide(const SizedBox(height: 4.0)),
+                  ].divide(SizedBox(height: 4.0)),
                 ),
               ),
               InkWell(
@@ -101,7 +102,7 @@ class _AdminindiavetNavbarrWidgetState
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed('Login');
+                  context.pushNamed(LoginWidget.routeName);
                 },
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -121,7 +122,7 @@ class _AdminindiavetNavbarrWidgetState
                             letterSpacing: 0.0,
                           ),
                     ),
-                  ].divide(const SizedBox(height: 4.0)),
+                  ].divide(SizedBox(height: 4.0)),
                 ),
               ),
               Column(
@@ -142,7 +143,7 @@ class _AdminindiavetNavbarrWidgetState
                           letterSpacing: 0.0,
                         ),
                   ),
-                ].divide(const SizedBox(height: 4.0)),
+                ].divide(SizedBox(height: 4.0)),
               ),
               Column(
                 mainAxisSize: MainAxisSize.min,
@@ -162,7 +163,7 @@ class _AdminindiavetNavbarrWidgetState
                           letterSpacing: 0.0,
                         ),
                   ),
-                ].divide(const SizedBox(height: 4.0)),
+                ].divide(SizedBox(height: 4.0)),
               ),
               InkWell(
                 splashColor: Colors.transparent,
@@ -170,7 +171,7 @@ class _AdminindiavetNavbarrWidgetState
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed('Notice');
+                  context.pushNamed(NoticeWidget.routeName);
                 },
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
@@ -190,7 +191,7 @@ class _AdminindiavetNavbarrWidgetState
                             letterSpacing: 0.0,
                           ),
                     ),
-                  ].divide(const SizedBox(height: 4.0)),
+                  ].divide(SizedBox(height: 4.0)),
                 ),
               ),
             ],

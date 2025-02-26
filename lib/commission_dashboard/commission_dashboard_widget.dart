@@ -9,6 +9,9 @@ export 'commission_dashboard_model.dart';
 class CommissionDashboardWidget extends StatefulWidget {
   const CommissionDashboardWidget({super.key});
 
+  static String routeName = 'CommissionDashboard';
+  static String routePath = '/commissionDashboard';
+
   @override
   State<CommissionDashboardWidget> createState() =>
       _CommissionDashboardWidgetState();
@@ -59,12 +62,12 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
               leading: FlutterFlowIconButton(
                 buttonSize: 48.0,
                 icon: Icon(
-                  Icons.menu,
+                  Icons.arrow_back_sharp,
                   color: FlutterFlowTheme.of(context).info,
                   size: 24.0,
                 ),
-                onPressed: () {
-                  print('IconButton pressed ...');
+                onPressed: () async {
+                  context.safePop();
                 },
               ),
               title: Text(
@@ -96,7 +99,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -120,7 +123,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -165,7 +168,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 8.0)),
+                                  ].divide(SizedBox(height: 8.0)),
                                 ),
                               ),
                             ),
@@ -185,7 +188,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -230,7 +233,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 8.0)),
+                                  ].divide(SizedBox(height: 8.0)),
                                 ),
                               ),
                             ),
@@ -250,7 +253,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -295,7 +298,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 8.0)),
+                                  ].divide(SizedBox(height: 8.0)),
                                 ),
                               ),
                             ),
@@ -316,7 +319,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -349,7 +352,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 16.0, 8.0, 16.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -379,7 +382,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
-                                              ].divide(const SizedBox(width: 8.0)),
+                                              ].divide(SizedBox(width: 8.0)),
                                             ),
                                           ),
                                         ),
@@ -392,7 +395,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     8.0, 16.0, 8.0, 16.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -422,11 +425,11 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
-                                              ].divide(const SizedBox(width: 8.0)),
+                                              ].divide(SizedBox(width: 8.0)),
                                             ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 12.0)),
+                                      ].divide(SizedBox(width: 12.0)),
                                     ),
                                   ],
                                 ),
@@ -446,7 +449,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 16.0, 16.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -537,12 +540,12 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             ),
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFFFFF3E0),
+                                                color: Color(0xFFFFF3E0),
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         4.0, 12.0, 4.0, 12.0),
                                                 child: Text(
@@ -557,7 +560,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFFFF6F00),
+                                                            Color(0xFFFF6F00),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -580,7 +583,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                       .error,
                                                   size: 24.0,
                                                 ),
-                                              ].divide(const SizedBox(width: 8.0)),
+                                              ].divide(SizedBox(width: 8.0)),
                                             ),
                                           ],
                                         ),
@@ -596,7 +599,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 16.0, 16.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -687,12 +690,12 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             ),
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFFE8F5E9),
+                                                color: Color(0xFFE8F5E9),
                                                 borderRadius:
                                                     BorderRadius.circular(20.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         4.0, 12.0, 4.0, 12.0),
                                                 child: Text(
@@ -707,7 +710,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF2E7D32),
+                                                            Color(0xFF2E7D32),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -723,15 +726,15 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                       .primary,
                                                   size: 24.0,
                                                 ),
-                                              ].divide(const SizedBox(width: 8.0)),
+                                              ].divide(SizedBox(width: 8.0)),
                                             ),
                                           ],
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(height: 16.0)),
+                                  ].divide(SizedBox(height: 16.0)),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -750,7 +753,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -797,21 +800,21 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -863,21 +866,21 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
@@ -909,8 +912,8 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 50.0,
-                                    padding: const EdgeInsets.all(8.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsets.all(8.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -925,7 +928,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                     borderRadius: BorderRadius.circular(25.0),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -944,7 +947,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -989,7 +992,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                 ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 16.0)),
+                                      ].divide(SizedBox(width: 16.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1014,7 +1017,7 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                 ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 16.0)),
+                                      ].divide(SizedBox(width: 16.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1039,16 +1042,16 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                                 ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 16.0)),
+                                      ].divide(SizedBox(width: 16.0)),
                                     ),
-                                  ].divide(const SizedBox(height: 12.0)),
+                                  ].divide(SizedBox(height: 12.0)),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),

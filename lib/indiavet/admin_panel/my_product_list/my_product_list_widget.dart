@@ -10,6 +10,9 @@ export 'my_product_list_model.dart';
 class MyProductListWidget extends StatefulWidget {
   const MyProductListWidget({super.key});
 
+  static String routeName = 'MyProductList';
+  static String routePath = '/myProductList';
+
   @override
   State<MyProductListWidget> createState() => _MyProductListWidgetState();
 }
@@ -72,7 +75,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -97,7 +100,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                   ),
                 ],
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -110,7 +113,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                         child: LinearPercentIndicator(
                           percent: 1.0,
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -118,8 +121,8 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                           animation: true,
                           animateFromLastPercent: true,
                           progressColor: FlutterFlowTheme.of(context).secondary,
-                          backgroundColor: const Color(0xFFE0E3E7),
-                          barRadius: const Radius.circular(0.0),
+                          backgroundColor: Color(0xFFE0E3E7),
+                          barRadius: Radius.circular(0.0),
                           padding: EdgeInsets.zero,
                         ),
                       ),
@@ -129,7 +132,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 12.0, 10.0, 0.0),
                                 child:
                                     StreamBuilder<List<ProductCategoryRecord>>(
@@ -168,7 +171,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                                                 listViewIndex];
                                         return Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 8.0),
                                           child: Container(
                                             width: 100.0,
@@ -190,7 +193,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Card(
@@ -208,7 +211,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(2.0),
+                                                          EdgeInsets.all(2.0),
                                                       child: ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
@@ -219,7 +222,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                                                           width: 44.0,
                                                           height: 44.0,
                                                           fit: BoxFit.contain,
-                                                          alignment: const Alignment(
+                                                          alignment: Alignment(
                                                               0.0, 0.0),
                                                         ),
                                                       ),
@@ -318,7 +321,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 8.0, 0.0),
                                                   child: FlutterFlowIconButton(
@@ -329,7 +332,7 @@ class _MyProductListWidgetState extends State<MyProductListWidget> {
                                                                 context)
                                                             .primary,
                                                     hoverColor:
-                                                        const Color(0xFF54CC27),
+                                                        Color(0xFF54CC27),
                                                     icon: Icon(
                                                       Icons.add_shopping_cart,
                                                       color:

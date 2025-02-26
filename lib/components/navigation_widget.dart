@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'navigation_model.dart';
@@ -117,20 +118,20 @@ class _NavigationWidgetState extends State<NavigationWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 1.0),
+      alignment: AlignmentDirectional(0.0, 1.0),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 3.0),
+        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 3.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Expanded(
               child: Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Material(
                   color: Colors.transparent,
                   elevation: 8.0,
-                  shape: const RoundedRectangleBorder(
+                  shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(0.0),
                       bottomRight: Radius.circular(0.0),
@@ -143,7 +144,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                     height: 90.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).alternate,
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(0.0),
                         bottomRight: Radius.circular(0.0),
                         topLeft: Radius.circular(0.0),
@@ -151,9 +152,9 @@ class _NavigationWidgetState extends State<NavigationWidget>
                       ),
                       shape: BoxShape.rectangle,
                     ),
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           10.0, 10.0, 10.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -166,13 +167,13 @@ class _NavigationWidgetState extends State<NavigationWidget>
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed('HomeDashboard');
+                              context.pushNamed(HomeDashboardWidget.routeName);
                             },
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                const Align(
+                                Align(
                                   alignment: AlignmentDirectional(0.0, -1.0),
                                   child: Icon(
                                     Icons.home,
@@ -188,7 +189,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Plus Jakarta Sans',
-                                        color: const Color(0xFF4A7C7C),
+                                        color: Color(0xFF4A7C7C),
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
@@ -199,84 +200,112 @@ class _NavigationWidgetState extends State<NavigationWidget>
                           ).animateOnActionTrigger(
                             animationsMap['columnOnActionTriggerAnimation1']!,
                           ),
-                          Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const Icon(
-                                Icons.local_grocery_store,
-                                color: Color(0xFF34495E),
-                                size: 35.0,
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'dmj7dzex' /* Our Pharmacy */,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed(LoginWidget.routeName);
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.local_grocery_store,
+                                  color: Color(0xFF34495E),
+                                  size: 35.0,
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: const Color(0xFF34495E),
-                                      fontSize: 16.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                            ],
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'dmj7dzex' /* Our Pharmacy */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF34495E),
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                              ],
+                            ),
                           ).animateOnActionTrigger(
                             animationsMap['columnOnActionTriggerAnimation2']!,
                           ),
-                          Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Icons.currency_rupee,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                size: 35.0,
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'z7ok0nta' /* Offer */,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed(NoticeWidget.routeName);
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.currency_rupee,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 35.0,
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: const Color(0xFF34495E),
-                                      fontSize: 16.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                            ],
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'z7ok0nta' /* Offer */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF34495E),
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                              ],
+                            ),
                           ).animateOnActionTrigger(
                             animationsMap['columnOnActionTriggerAnimation3']!,
                           ),
-                          Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const Icon(
-                                Icons.help_outline,
-                                color: Color(0xFF34495E),
-                                size: 35.0,
-                              ),
-                              Text(
-                                FFLocalizations.of(context).getText(
-                                  'x05gqqj0' /* Feedback */,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.pushNamed(FeedbackWidget.routeName);
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.help_outline,
+                                  color: Color(0xFF34495E),
+                                  size: 35.0,
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodySmall
-                                    .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: const Color(0xFF34495E),
-                                      fontSize: 16.0,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                            ],
+                                Text(
+                                  FFLocalizations.of(context).getText(
+                                    'x05gqqj0' /* Feedback */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodySmall
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF34495E),
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                              ],
+                            ),
                           ).animateOnActionTrigger(
                             animationsMap['columnOnActionTriggerAnimation4']!,
                           ),
@@ -286,7 +315,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
-                              context.pushNamed('Login');
+                              context.pushNamed(LoginWidget.routeName);
                             },
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -306,7 +335,7 @@ class _NavigationWidgetState extends State<NavigationWidget>
                                       .bodySmall
                                       .override(
                                         fontFamily: 'Plus Jakarta Sans',
-                                        color: const Color(0xFF34495E),
+                                        color: Color(0xFF34495E),
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,

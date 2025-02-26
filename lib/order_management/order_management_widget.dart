@@ -5,16 +5,21 @@ import 'package:flutter/material.dart';
 import 'order_management_model.dart';
 export 'order_management_model.dart';
 
+/// Order ID: Unique identifier for each order.
+///
+///
+/// Order Date: Date of the order.
+/// Client/Retailer: Name or ID of the client or retailer who placed the
+/// order.
+/// Product List: List of products ordered with quantities and unit prices.
+/// Order Status: Dropdown for status options (e.g., Pending, Completed,
+/// Shipped).
+/// Total Amount: Calculation based on ordered items.
 class OrderManagementWidget extends StatefulWidget {
-  /// Order ID: Unique identifier for each order.
-  /// Order Date: Date of the order.
-  /// Client/Retailer: Name or ID of the client or retailer who placed the
-  /// order.
-  /// Product List: List of products ordered with quantities and unit prices.
-  /// Order Status: Dropdown for status options (e.g., Pending, Completed,
-  /// Shipped).
-  /// Total Amount: Calculation based on ordered items.
   const OrderManagementWidget({super.key});
+
+  static String routeName = 'OrderManagement';
+  static String routePath = '/orderManagement';
 
   @override
   State<OrderManagementWidget> createState() => _OrderManagementWidgetState();
@@ -56,7 +61,7 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
             appBar: AppBar(
               backgroundColor: FlutterFlowTheme.of(context).primary,
               automaticallyImplyLeading: false,
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -68,7 +73,7 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           16.0, 16.0, 16.0, 16.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
@@ -77,7 +82,7 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: EdgeInsets.all(16.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -110,10 +115,10 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                     options: FFButtonOptions(
                                       width: 120.0,
                                       height: 40.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -144,7 +149,7 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -304,12 +309,12 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                             Container(
                                               width: 100.0,
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFFE8F5E9),
+                                                color: Color(0xFFE8F5E9),
                                                 borderRadius:
                                                     BorderRadius.circular(12.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         4.0, 8.0, 4.0, 8.0),
                                                 child: Text(
@@ -325,7 +330,7 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF2E7D32),
+                                                            Color(0xFF2E7D32),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -376,18 +381,18 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                             ),
                                           ],
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           16.0, 16.0, 16.0, 16.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
@@ -396,7 +401,7 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: EdgeInsets.all(16.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -428,7 +433,7 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -749,18 +754,18 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                             ),
                                           ],
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           16.0, 16.0, 16.0, 16.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
@@ -769,7 +774,7 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: EdgeInsets.all(16.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -802,10 +807,10 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                     options: FFButtonOptions(
                                       width: 150.0,
                                       height: 50.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color:
                                           FlutterFlowTheme.of(context).primary,
@@ -830,10 +835,10 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                     options: FFButtonOptions(
                                       width: 150.0,
                                       height: 50.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: FlutterFlowTheme.of(context)
                                           .secondary,
@@ -860,9 +865,9 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                 options: FFButtonOptions(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height: 50.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).error,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -876,12 +881,12 @@ class _OrderManagementWidgetState extends State<OrderManagementWidget> {
                                   borderRadius: BorderRadius.circular(25.0),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 24.0)),
+                  ].divide(SizedBox(height: 24.0)),
                 ),
               ),
             ),

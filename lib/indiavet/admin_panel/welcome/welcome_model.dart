@@ -1,5 +1,6 @@
 import '/components/navigation_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'welcome_widget.dart' show WelcomeWidget;
 import 'package:flutter/material.dart';

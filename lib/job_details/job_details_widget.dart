@@ -9,6 +9,9 @@ export 'job_details_model.dart';
 class JobDetailsWidget extends StatefulWidget {
   const JobDetailsWidget({super.key});
 
+  static String routeName = 'JobDetails';
+  static String routePath = '/jobDetails';
+
   @override
   State<JobDetailsWidget> createState() => _JobDetailsWidgetState();
 }
@@ -54,7 +57,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: const Icon(
+                icon: Icon(
                   Icons.arrow_back,
                   color: Colors.white,
                   size: 30.0,
@@ -74,21 +77,21 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 10.0,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 3.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 3.0),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -99,13 +102,13 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 5.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: ClipRRect(
                                         borderRadius:
@@ -120,7 +123,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                     ),
                                     Expanded(
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -174,7 +177,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                 color: FlutterFlowTheme.of(context).alternate,
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -227,7 +230,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -280,7 +283,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -333,7 +336,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -386,7 +389,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 2.0, 10.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -446,7 +449,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     5.0, 5.0, 0.0, 3.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -474,7 +477,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 3.0, 5.0, 2.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -504,7 +507,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 3.0, 5.0, 2.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -534,7 +537,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 3.0, 5.0, 2.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -575,9 +578,9 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                             ),
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)

@@ -14,10 +14,15 @@ import 'package:webviewx_plus/webviewx_plus.dart';
 import 'appointment_booking_model.dart';
 export 'appointment_booking_model.dart';
 
+/// Quickly schedule an appointment with a vet!
+///
+/// Just enter your name, mobile number, and location, and let us connect you
+/// to expert pet care.
 class AppointmentBookingWidget extends StatefulWidget {
-  /// Quickly schedule an appointment with a vet! Just enter your name, mobile
-  /// number, and location, and let us connect you to expert pet care.
   const AppointmentBookingWidget({super.key});
+
+  static String routeName = 'AppointmentBooking';
+  static String routePath = '/appointmentBooking';
 
   @override
   State<AppointmentBookingWidget> createState() =>
@@ -69,7 +74,7 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
               borderRadius: 30.0,
               borderWidth: 1.0,
               buttonSize: 60.0,
-              icon: const Icon(
+              icon: Icon(
                 Icons.arrow_back,
                 color: Colors.white,
                 size: 30.0,
@@ -89,14 +94,14 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                     letterSpacing: 0.0,
                   ),
             ),
-            actions: const [],
+            actions: [],
             centerTitle: false,
             elevation: 10.0,
           ),
           body: Align(
-            alignment: const AlignmentDirectional(0.0, -1.0),
+            alignment: AlignmentDirectional(0.0, -1.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 2.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 2.0),
               child: SingleChildScrollView(
                 primary: false,
                 child: Column(
@@ -106,7 +111,7 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                       child: Material(
                         color: Colors.transparent,
                         elevation: 2.0,
@@ -120,7 +125,7 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -163,35 +168,35 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFFE0E3E7),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFF1F4F8),
+                                    fillColor: Color(0xFFF1F4F8),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -228,35 +233,35 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFFE0E3E7),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFF1F4F8),
+                                    fillColor: Color(0xFFF1F4F8),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -302,35 +307,35 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFFE0E3E7),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFF1F4F8),
+                                    fillColor: Color(0xFFF1F4F8),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -344,7 +349,7 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                       .asValidator(context),
                                 ),
                                 Container(
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: FlutterFlowPlacePicker(
                                     iOSGoogleMapsApiKey: '',
                                     androidGoogleMapsApiKey:
@@ -390,7 +395,8 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                 Expanded(
                                   child: Container(
                                     width: 370.0,
-                                    decoration: const BoxDecoration(),
+                                    height: 100.0,
+                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -398,11 +404,11 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
-                                              'ilwhtzzf' /* Type of Animal */,
+                                              'ouo7x51l' /* Type of Animal */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
@@ -421,22 +427,22 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '7185ln19' /* Cow */,
+                                                'jqssf3zv' /* Cow */,
                                               )),
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'szsw93g1' /* Goat */,
+                                                'ubofhjlo' /* Goat */,
                                               )),
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '2litj7vw' /* Buffalo */,
+                                                'e5ctwnxv' /* Buffalo */,
                                               )),
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'eudzqdgk' /* Other */,
+                                                'y32pxrwq' /* Other */,
                                               ))
                                             ],
                                             onChanged: (val) => safeSetState(
@@ -510,7 +516,7 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                 Expanded(
                                   child: Container(
                                     width: 370.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       crossAxisAlignment:
@@ -518,7 +524,7 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -610,14 +616,14 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                                     List<String>>(
                                               [],
                                             ),
-                                            wrapped: false,
+                                            wrapped: true,
                                           ),
                                         ),
                                       ],
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -632,7 +638,11 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                   null) &&
                               (_model.appointmentVillTextController.text !=
                                       '') &&
-                              (_model.appointmentCityValue != null)) {
+                              (_model.appointmentCityValue != null) &&
+                              (_model.choiceChipsValue1 != null &&
+                                  _model.choiceChipsValue1 != '') &&
+                              (_model.choiceChipsValue2 != null &&
+                                  _model.choiceChipsValue2 != '')) {
                             await JobsRecord.collection
                                 .doc()
                                 .set(createJobsRecordData(
@@ -646,7 +656,10 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                       _model.appointmentCityValue.city,
                                   recruiterID: currentUserReference,
                                   createdAt: getCurrentTimestamp,
+                                  typeofAnimales: _model.choiceChipsValue1,
+                                  typeofDoctors: _model.choiceChipsValue2,
                                 ));
+                            Navigator.pop(context);
                             await showDialog(
                               context: context,
                               builder: (dialogContext) {
@@ -654,9 +667,9 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                   elevation: 0,
                                   insetPadding: EdgeInsets.zero,
                                   backgroundColor: Colors.transparent,
-                                  alignment: const AlignmentDirectional(0.0, 0.0)
+                                  alignment: AlignmentDirectional(0.0, 0.0)
                                       .resolve(Directionality.of(context)),
-                                  child: const WebViewAware(
+                                  child: WebViewAware(
                                     child: DoctorconfriWidget(),
                                   ),
                                 );
@@ -672,7 +685,7 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                                         .primaryText,
                                   ),
                                 ),
-                                duration: const Duration(milliseconds: 4000),
+                                duration: Duration(milliseconds: 4000),
                                 backgroundColor:
                                     FlutterFlowTheme.of(context).secondary,
                               ),
@@ -680,14 +693,14 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                           }
                         },
                         text: FFLocalizations.of(context).getText(
-                          '4o8t59f2' /* Book Appointment */,
+                          '4o8t59f2' /* Schedule Appointment  */,
                         ),
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.9,
                           height: 50.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -713,8 +726,8 @@ class _AppointmentBookingWidgetState extends State<AppointmentBookingWidget> {
                           ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 24.0))
-                      .around(const SizedBox(height: 24.0)),
+                      .divide(SizedBox(height: 24.0))
+                      .around(SizedBox(height: 24.0)),
                 ),
               ),
             ),

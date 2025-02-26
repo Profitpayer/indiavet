@@ -5,16 +5,21 @@ import 'package:flutter/material.dart';
 import 'sales_management_model.dart';
 export 'sales_management_model.dart';
 
+/// Sales ID: Unique identifier for each sale.
+///
+///
+/// Date: Sale date field.
+/// Product Name/Description: Details about the product(s) sold.
+/// Quantity Sold: Number of units.
+/// Total Amount: Total sale amount.
+/// Sales Representative: Dropdown or search bar to select the salesperson
+/// responsible.
+/// Client/Retailer: Selection of the client or retailer linked to the sale.
 class SalesManagementWidget extends StatefulWidget {
-  /// Sales ID: Unique identifier for each sale.
-  /// Date: Sale date field.
-  /// Product Name/Description: Details about the product(s) sold.
-  /// Quantity Sold: Number of units.
-  /// Total Amount: Total sale amount.
-  /// Sales Representative: Dropdown or search bar to select the salesperson
-  /// responsible.
-  /// Client/Retailer: Selection of the client or retailer linked to the sale.
   const SalesManagementWidget({super.key});
+
+  static String routeName = 'SalesManagement';
+  static String routePath = '/salesManagement';
 
   @override
   State<SalesManagementWidget> createState() => _SalesManagementWidgetState();
@@ -64,11 +69,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
           },
           child: Scaffold(
             key: scaffoldKey,
-            backgroundColor: const Color(0xFFF0F5F5),
+            backgroundColor: Color(0xFFF0F5F5),
             appBar: AppBar(
-              backgroundColor: const Color(0xFF4A7C7C),
+              backgroundColor: Color(0xFF4A7C7C),
               automaticallyImplyLeading: false,
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -80,7 +85,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 24.0, 24.0),
                       child: Material(
                         color: Colors.transparent,
@@ -95,7 +100,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                            padding: EdgeInsets.all(16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -107,7 +112,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -135,35 +140,35 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF4A7C7C),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFE6F3F3),
+                                    fillColor: Color(0xFFE6F3F3),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -178,11 +183,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 12.0, 12.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -197,11 +202,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                        const Icon(
+                                        Icon(
                                           Icons.calendar_today,
                                           color: Color(0xFF4A7C7C),
                                           size: 24.0,
@@ -233,35 +238,35 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF4A7C7C),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFE6F3F3),
+                                    fillColor: Color(0xFFE6F3F3),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -278,7 +283,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    SizedBox(
+                                    Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.48,
                                       child: TextFormField(
@@ -308,7 +313,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF4A7C7C),
                                               width: 1.0,
                                             ),
@@ -316,7 +321,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0x00000000),
                                               width: 1.0,
                                             ),
@@ -324,7 +329,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           errorBorder: OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0x00000000),
                                               width: 1.0,
                                             ),
@@ -333,7 +338,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0x00000000),
                                               width: 1.0,
                                             ),
@@ -341,7 +346,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           filled: true,
-                                          fillColor: const Color(0xFFE6F3F3),
+                                          fillColor: Color(0xFFE6F3F3),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
@@ -356,7 +361,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                             .asValidator(context),
                                       ),
                                     ),
-                                    SizedBox(
+                                    Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.48,
                                       child: TextFormField(
@@ -386,7 +391,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0xFF4A7C7C),
                                               width: 1.0,
                                             ),
@@ -394,7 +399,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0x00000000),
                                               width: 1.0,
                                             ),
@@ -402,7 +407,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           errorBorder: OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0x00000000),
                                               width: 1.0,
                                             ),
@@ -411,7 +416,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Color(0x00000000),
                                               width: 1.0,
                                             ),
@@ -419,7 +424,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                 BorderRadius.circular(8.0),
                                           ),
                                           filled: true,
-                                          fillColor: const Color(0xFFE6F3F3),
+                                          fillColor: Color(0xFFE6F3F3),
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
@@ -439,11 +444,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 12.0, 12.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -458,11 +463,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                        const Icon(
+                                        Icon(
                                           Icons.arrow_drop_down,
                                           color: Color(0xFF4A7C7C),
                                           size: 24.0,
@@ -474,11 +479,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 12.0, 12.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -493,11 +498,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                        const Icon(
+                                        Icon(
                                           Icons.arrow_drop_down,
                                           color: Color(0xFF4A7C7C),
                                           size: 24.0,
@@ -517,11 +522,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 50.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0xFF4A7C7C),
+                                    color: Color(0xFF4A7C7C),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
@@ -533,14 +538,14 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                     borderRadius: BorderRadius.circular(25.0),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 20.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 24.0, 24.0),
                       child: Material(
                         color: Colors.transparent,
@@ -555,7 +560,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                            padding: EdgeInsets.all(16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -567,7 +572,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -575,11 +580,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -600,7 +605,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF2C3E50),
+                                                    color: Color(0xFF2C3E50),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -617,7 +622,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -631,7 +636,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -652,7 +657,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -668,7 +673,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -682,7 +687,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -694,22 +699,22 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -730,7 +735,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF2C3E50),
+                                                    color: Color(0xFF2C3E50),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -747,7 +752,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -761,7 +766,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -782,7 +787,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -798,7 +803,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -812,7 +817,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -824,22 +829,22 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 20.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 24.0, 24.0),
                       child: Material(
                         color: Colors.transparent,
@@ -854,7 +859,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(16.0),
+                            padding: EdgeInsets.all(16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -866,7 +871,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -889,7 +894,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -901,7 +906,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .headlineMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -920,7 +925,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -932,7 +937,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .headlineMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -944,11 +949,11 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height: 200.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -965,7 +970,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -977,7 +982,7 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -985,13 +990,13 @@ class _SalesManagementWidgetState extends State<SalesManagementWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 20.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 24.0)),
+                  ].divide(SizedBox(height: 24.0)),
                 ),
               ),
             ),

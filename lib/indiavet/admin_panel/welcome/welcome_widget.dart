@@ -3,17 +3,20 @@ import '/components/language_widget.dart';
 import '/components/navigation_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'welcome_model.dart';
 export 'welcome_model.dart';
 
 class WelcomeWidget extends StatefulWidget {
   const WelcomeWidget({super.key});
+
+  static String routeName = 'welcome';
+  static String routePath = '/welcome';
 
   @override
   State<WelcomeWidget> createState() => _WelcomeWidgetState();
@@ -32,16 +35,18 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (valueOrDefault(currentUserDocument?.role, '') == 'Doctor') {
-        context.pushNamed('DoctorPanel');
+        context.pushNamed(DoctorPanelWidget.routeName);
       } else if (valueOrDefault(currentUserDocument?.role, '') == 'Farmer') {
-        context.pushNamed('Farmer');
+        context.pushNamed(FarmerWidget.routeName);
       } else if (valueOrDefault(currentUserDocument?.role, '') == 'MR') {
-        context.pushNamed('Medicalrepresentativepane');
+        context.pushNamed(MedicalrepresentativepaneWidget.routeName);
       } else if (valueOrDefault(currentUserDocument?.role, '') ==
           'Medical Store') {
-        context.pushNamed('MedicalStore');
+        context.pushNamed(MedicalStoreWidget.routeName);
+      } else if (valueOrDefault(currentUserDocument?.role, '') == 'Admin') {
+        context.pushNamed(Authentication2Widget.routeName);
       } else {
-        context.pushNamed('Login');
+        context.pushNamed(LoginWidget.routeName);
 
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -51,7 +56,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                 color: FlutterFlowTheme.of(context).primaryText,
               ),
             ),
-            duration: const Duration(milliseconds: 4000),
+            duration: Duration(milliseconds: 4000),
             backgroundColor: FlutterFlowTheme.of(context).secondary,
           ),
         );
@@ -85,9 +90,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
               backgroundColor: FlutterFlowTheme.of(context).primary,
               automaticallyImplyLeading: false,
               title: Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -97,20 +102,20 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                         width: 50.0,
                         height: 50.0,
                         clipBehavior: Clip.antiAlias,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           shape: BoxShape.circle,
                         ),
                         child: Image.asset(
                           'assets/images/Inidavet_Logo.jpg',
                           fit: BoxFit.cover,
-                          alignment: const Alignment(0.0, 0.0),
+                          alignment: Alignment(0.0, 0.0),
                         ),
                       ),
                       Expanded(
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, -1.0),
+                          alignment: AlignmentDirectional(0.0, -1.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 0.0, 10.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -119,9 +124,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: const AlignmentDirectional(-1.0, -1.0),
+                                    alignment: AlignmentDirectional(-1.0, -1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 5.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -131,7 +136,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                             .headlineMedium
                                             .override(
                                               fontFamily: 'Outfit',
-                                              color: const Color(0xFFF0F0F4),
+                                              color: Color(0xFFF0F0F4),
                                               fontSize: 22.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
@@ -148,7 +153,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Plus Jakarta Sans',
-                                        color: const Color(0xFFEBE9E9),
+                                        color: Color(0xFFEBE9E9),
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                       ),
@@ -160,14 +165,14 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 2.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.pushNamed('search');
+                            context.pushNamed(SearchWidget.routeName);
                           },
                           child: Icon(
                             Icons.search_rounded,
@@ -178,14 +183,14 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
                           hoverColor: Colors.transparent,
                           highlightColor: Colors.transparent,
                           onTap: () async {
-                            context.pushNamed('Notice');
+                            context.pushNamed(NoticeWidget.routeName);
                           },
                           child: Icon(
                             Icons.notifications_sharp,
@@ -196,7 +201,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(2.0, 0.0, 2.0, 0.0),
                         child: Icon(
                           Icons.local_grocery_store,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -205,7 +210,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                       ),
                       Builder(
                         builder: (context) => Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               2.0, 0.0, 2.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -221,7 +226,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                     elevation: 0,
                                     insetPadding: EdgeInsets.zero,
                                     backgroundColor: Colors.transparent,
-                                    alignment: const AlignmentDirectional(0.0, 0.0)
+                                    alignment: AlignmentDirectional(0.0, 0.0)
                                         .resolve(Directionality.of(context)),
                                     child: WebViewAware(
                                       child: GestureDetector(
@@ -231,14 +236,14 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                           FocusManager.instance.primaryFocus
                                               ?.unfocus();
                                         },
-                                        child: const LanguageWidget(),
+                                        child: LanguageWidget(),
                                       ),
                                     ),
                                   );
                                 },
                               );
                             },
-                            child: const FaIcon(
+                            child: FaIcon(
                               FontAwesomeIcons.language,
                               color: Color(0xFFC36418),
                               size: 30.0,
@@ -250,7 +255,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                   ),
                 ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 10.0,
             ),
@@ -260,18 +265,18 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: 177.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 gradient: LinearGradient(
                                   colors: [
                                     Color(0xFFC9D59E),
@@ -300,9 +305,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, 1.0),
+                                    alignment: AlignmentDirectional(-1.0, 1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 5.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -312,7 +317,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                             .displaySmall
                                             .override(
                                               fontFamily: 'Outfit',
-                                              color: const Color(0xFFF8F8F8),
+                                              color: Color(0xFFF8F8F8),
                                               fontSize: 22.0,
                                               letterSpacing: 0.0,
                                             ),
@@ -324,11 +329,11 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
-                              child: SizedBox(
+                              child: Container(
                                 width: double.infinity,
                                 height: 200.0,
                                 child: CarouselSlider(
@@ -346,7 +351,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                       tag: 'ControllerImage',
                                       transitionOnUserGestures: true,
                                       child: ClipRRect(
-                                        borderRadius: const BorderRadius.only(
+                                        borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(0.0),
                                           bottomRight: Radius.circular(0.0),
                                           topLeft: Radius.circular(0.0),
@@ -410,9 +415,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                     scrollDirection: Axis.horizontal,
                                     autoPlay: true,
                                     autoPlayAnimationDuration:
-                                        const Duration(milliseconds: 2000),
+                                        Duration(milliseconds: 2000),
                                     autoPlayInterval:
-                                        const Duration(milliseconds: (2000 + 2000)),
+                                        Duration(milliseconds: (2000 + 2000)),
                                     autoPlayCurve: Curves.linear,
                                     pauseAutoPlayInFiniteScroll: true,
                                     onPageChanged: (index, _) =>
@@ -423,7 +428,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 3.0, 0.0, 0.0),
                             child: Container(
                               width: double.infinity,
@@ -436,20 +441,20 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, -1.0),
+                                    alignment: AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 2.0, 0.0, 0.0),
                                       child: Container(
                                         width: double.infinity,
                                         height: 36.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, -1.0),
+                                              AlignmentDirectional(0.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 2.0, 0.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -480,7 +485,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                           .secondaryBackground,
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 3.0, 0.0, 0.0),
                                       child: SingleChildScrollView(
                                         scrollDirection: Axis.horizontal,
@@ -490,10 +495,10 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                               MainAxisAlignment.start,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: ListView(
-                                                padding: const EdgeInsets.fromLTRB(
+                                                padding: EdgeInsets.fromLTRB(
                                                   15.0,
                                                   0,
                                                   5.0,
@@ -505,7 +510,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: InkWell(
@@ -518,8 +523,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                       highlightColor:
                                                           Colors.transparent,
                                                       onTap: () async {
-                                                        context
-                                                            .pushNamed('Login');
+                                                        context.pushNamed(
+                                                            LoginWidget
+                                                                .routeName);
                                                       },
                                                       child: Container(
                                                         width: 120.0,
@@ -536,12 +542,12 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                                       context)
                                                                   .secondary
                                                             ],
-                                                            stops: const [0.0, 1.0],
+                                                            stops: [0.0, 1.0],
                                                             begin:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -0.64, 1.0),
                                                             end:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.64, -1.0),
                                                           ),
                                                           borderRadius:
@@ -567,7 +573,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                               ),
                                                               child: Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         0.0,
                                                                         -1.0),
                                                                 child: Text(
@@ -598,7 +604,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             3.0,
@@ -625,7 +631,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           3.0,
                                                                           0.0,
@@ -663,7 +669,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: InkWell(
@@ -676,8 +682,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                       highlightColor:
                                                           Colors.transparent,
                                                       onTap: () async {
-                                                        context
-                                                            .pushNamed('Login');
+                                                        context.pushNamed(
+                                                            LoginWidget
+                                                                .routeName);
                                                       },
                                                       child: Container(
                                                         width: 120.0,
@@ -694,12 +701,12 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                                       context)
                                                                   .secondary
                                                             ],
-                                                            stops: const [0.0, 1.0],
+                                                            stops: [0.0, 1.0],
                                                             begin:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -0.64, 1.0),
                                                             end:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.64, -1.0),
                                                           ),
                                                           borderRadius:
@@ -722,7 +729,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                               ),
                                                               child: Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         0.0,
                                                                         -1.0),
                                                                 child: Text(
@@ -755,7 +762,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             3.0,
@@ -784,11 +791,11 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -828,7 +835,145 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(10.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Container(
+                                                      width: 120.0,
+                                                      height: 100.0,
+                                                      decoration: BoxDecoration(
+                                                        gradient:
+                                                            LinearGradient(
+                                                          colors: [
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondary
+                                                          ],
+                                                          stops: [0.0, 1.0],
+                                                          begin:
+                                                              AlignmentDirectional(
+                                                                  -0.64, 1.0),
+                                                          end:
+                                                              AlignmentDirectional(
+                                                                  0.64, -1.0),
+                                                        ),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(18.0),
+                                                      ),
+                                                      child: Column(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        children: [
+                                                          Container(
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .secondary,
+                                                              shape: BoxShape
+                                                                  .circle,
+                                                            ),
+                                                            child: Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0.0,
+                                                                      -1.0),
+                                                              child: Text(
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '8h9eugi0' /* Doctors */,
+                                                                ),
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .start,
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Plus Jakarta Sans',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .accent4,
+                                                                      letterSpacing:
+                                                                          0.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w500,
+                                                                    ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Expanded(
+                                                            child: Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          5.0,
+                                                                          3.0,
+                                                                          5.0,
+                                                                          3.0),
+                                                              child: ClipRRect(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            8.0),
+                                                                child: Image
+                                                                    .network(
+                                                                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8k0hViJWVJVa92YPHh41fxa-_1oq4k6eNmA&s',
+                                                                  width: 100.0,
+                                                                  height: 100.0,
+                                                                  fit: BoxFit
+                                                                      .cover,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        3.0,
+                                                                        0.0,
+                                                                        3.0,
+                                                                        5.0),
+                                                            child: Text(
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'pdochkwy' /* Doctor List */,
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Plus Jakarta Sans',
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .accent4,
+                                                                    fontSize:
+                                                                        12.0,
+                                                                    letterSpacing:
+                                                                        0.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold,
+                                                                  ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: InkWell(
@@ -842,7 +987,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         context.pushNamed(
-                                                            'DoctorList');
+                                                            LoginWidget
+                                                                .routeName);
                                                       },
                                                       child: Container(
                                                         width: 120.0,
@@ -859,12 +1005,12 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                                       context)
                                                                   .secondary
                                                             ],
-                                                            stops: const [0.0, 1.0],
+                                                            stops: [0.0, 1.0],
                                                             begin:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -0.64, 1.0),
                                                             end:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.64, -1.0),
                                                           ),
                                                           borderRadius:
@@ -887,162 +1033,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                               ),
                                                               child: Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
-                                                                        0.0,
-                                                                        -1.0),
-                                                                child: Text(
-                                                                  FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    '8h9eugi0' /* Doctors */,
-                                                                  ),
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .start,
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Plus Jakarta Sans',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .accent4,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w500,
-                                                                      ),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            Expanded(
-                                                              child: Padding(
-                                                                padding:
-                                                                    const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            5.0,
-                                                                            3.0,
-                                                                            5.0,
-                                                                            3.0),
-                                                                child:
-                                                                    ClipRRect(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              8.0),
-                                                                  child: Image
-                                                                      .network(
-                                                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8k0hViJWVJVa92YPHh41fxa-_1oq4k6eNmA&s',
-                                                                    width:
-                                                                        100.0,
-                                                                    height:
-                                                                        100.0,
-                                                                    fit: BoxFit
-                                                                        .cover,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          3.0,
-                                                                          0.0,
-                                                                          3.0,
-                                                                          5.0),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'pdochkwy' /* Doctor List */,
-                                                                ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Plus Jakarta Sans',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .accent4,
-                                                                      fontSize:
-                                                                          12.0,
-                                                                      letterSpacing:
-                                                                          0.0,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold,
-                                                                    ),
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(10.0, 0.0,
-                                                                0.0, 0.0),
-                                                    child: InkWell(
-                                                      splashColor:
-                                                          Colors.transparent,
-                                                      focusColor:
-                                                          Colors.transparent,
-                                                      hoverColor:
-                                                          Colors.transparent,
-                                                      highlightColor:
-                                                          Colors.transparent,
-                                                      onTap: () async {
-                                                        context
-                                                            .pushNamed('Login');
-                                                      },
-                                                      child: Container(
-                                                        width: 120.0,
-                                                        height: 100.0,
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          gradient:
-                                                              LinearGradient(
-                                                            colors: [
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .primary,
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .secondary
-                                                            ],
-                                                            stops: const [0.0, 1.0],
-                                                            begin:
-                                                                const AlignmentDirectional(
-                                                                    -0.64, 1.0),
-                                                            end:
-                                                                const AlignmentDirectional(
-                                                                    0.64, -1.0),
-                                                          ),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      18.0),
-                                                        ),
-                                                        child: Column(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Container(
-                                                              decoration:
-                                                                  BoxDecoration(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondary,
-                                                                shape: BoxShape
-                                                                    .circle,
-                                                              ),
-                                                              child: Align(
-                                                                alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         0.0,
                                                                         -1.0),
                                                                 child: Text(
@@ -1073,7 +1064,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             3.0,
@@ -1100,7 +1091,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           3.0,
                                                                           0.0,
@@ -1138,7 +1129,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: InkWell(
@@ -1151,8 +1142,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                       highlightColor:
                                                           Colors.transparent,
                                                       onTap: () async {
-                                                        context
-                                                            .pushNamed('Login');
+                                                        context.pushNamed(
+                                                            LoginWidget
+                                                                .routeName);
                                                       },
                                                       child: Container(
                                                         width: 120.0,
@@ -1169,12 +1161,12 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                                       context)
                                                                   .secondary
                                                             ],
-                                                            stops: const [0.0, 1.0],
+                                                            stops: [0.0, 1.0],
                                                             begin:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -0.64, 1.0),
                                                             end:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.64, -1.0),
                                                           ),
                                                           borderRadius:
@@ -1186,7 +1178,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -1210,7 +1202,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           0.0,
                                                                           -1.0),
                                                                   child: Text(
@@ -1240,7 +1232,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                               ),
                                                               Expanded(
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           3.0,
@@ -1266,7 +1258,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             3.0,
                                                                             0.0,
@@ -1305,8 +1297,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                               ),
                                             ),
                                           ]
-                                              .divide(const SizedBox(width: 1.0))
-                                              .around(const SizedBox(width: 1.0)),
+                                              .divide(SizedBox(width: 1.0))
+                                              .around(SizedBox(width: 1.0)),
                                         ),
                                       ),
                                     ),
@@ -1316,9 +1308,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 15.0),
                               child: Material(
                                 color: Colors.transparent,
@@ -1333,7 +1325,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                     borderRadius: BorderRadius.circular(16.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 20.0, 20.0, 20.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -1365,7 +1357,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                               highlightColor:
                                                   Colors.transparent,
                                               onTap: () async {
-                                                context.pushNamed('Login');
+                                                context.pushNamed(
+                                                    LoginWidget.routeName);
                                               },
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
@@ -1394,8 +1387,9 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                       highlightColor:
                                                           Colors.transparent,
                                                       onTap: () async {
-                                                        context
-                                                            .pushNamed('Login');
+                                                        context.pushNamed(
+                                                            LoginWidget
+                                                                .routeName);
                                                       },
                                                       child: Icon(
                                                         Icons.pets,
@@ -1426,7 +1420,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
-                                                ].divide(const SizedBox(height: 8.0)),
+                                                ].divide(SizedBox(height: 8.0)),
                                               ),
                                             ),
                                             InkWell(
@@ -1436,8 +1430,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                               highlightColor:
                                                   Colors.transparent,
                                               onTap: () async {
-                                                context
-                                                    .pushNamed('AdminListing');
+                                                context.pushNamed(
+                                                    NewProductWidget.routeName);
                                               },
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
@@ -1484,68 +1478,54 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
-                                                ].divide(const SizedBox(height: 8.0)),
+                                                ].divide(SizedBox(height: 8.0)),
                                               ),
                                             ),
-                                            InkWell(
-                                              splashColor: Colors.transparent,
-                                              focusColor: Colors.transparent,
-                                              hoverColor: Colors.transparent,
-                                              highlightColor:
-                                                  Colors.transparent,
-                                              onTap: () async {
-                                                await launchUrl(Uri(
-                                                  scheme: 'tel',
-                                                  path: '8429745194',
-                                                ));
-                                              },
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.min,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.center,
-                                                children: [
-                                                  Container(
-                                                    width: 60.0,
-                                                    height: 60.0,
-                                                    decoration: BoxDecoration(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .accent3,
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              30.0),
-                                                    ),
-                                                    child: Icon(
-                                                      Icons.call_end,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primaryText,
-                                                      size: 24.0,
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '5yo0c7t2' /* Call */,
-                                                    ),
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(
+                                            Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  width: 60.0,
+                                                  height: 60.0,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(
                                                             context)
-                                                        .bodySmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryText,
-                                                          fontSize: 10.0,
-                                                          letterSpacing: 0.0,
-                                                        ),
+                                                        .accent3,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            30.0),
                                                   ),
-                                                ].divide(const SizedBox(height: 8.0)),
-                                              ),
+                                                  child: Icon(
+                                                    Icons.call_end,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    size: 24.0,
+                                                  ),
+                                                ),
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    '5yo0c7t2' /* Call */,
+                                                  ),
+                                                  textAlign: TextAlign.center,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        fontSize: 10.0,
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                                ),
+                                              ].divide(SizedBox(height: 8.0)),
                                             ),
                                             InkWell(
                                               splashColor: Colors.transparent,
@@ -1555,7 +1535,8 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                   Colors.transparent,
                                               onTap: () async {
                                                 context.pushNamed(
-                                                    'AllPrescriptionHistory');
+                                                    AllPrescriptionHistoryWidget
+                                                        .routeName);
                                               },
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
@@ -1570,7 +1551,7 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                           BorderRadius.circular(
                                                               30.0),
                                                     ),
-                                                    child: const Align(
+                                                    child: Align(
                                                       alignment:
                                                           AlignmentDirectional(
                                                               0.0, 0.0),
@@ -1601,12 +1582,12 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                   ),
-                                                ].divide(const SizedBox(height: 8.0)),
+                                                ].divide(SizedBox(height: 8.0)),
                                               ),
                                             ),
                                           ],
                                         ),
-                                      ].divide(const SizedBox(height: 16.0)),
+                                      ].divide(SizedBox(height: 16.0)),
                                     ),
                                   ),
                                 ),
@@ -1616,22 +1597,22 @@ class _WelcomeWidgetState extends State<WelcomeWidget> {
                           Container(
                             width: double.infinity,
                             height: 100.0,
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                           ),
                         ],
                       ),
                     ),
                   ),
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 1.0),
+                    alignment: AlignmentDirectional(0.0, 1.0),
                     child: Container(
                       width: double.infinity,
                       height: 100.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                       child: wrapWithModel(
                         model: _model.navigationModel,
                         updateCallback: () => safeSetState(() {}),
-                        child: const NavigationWidget(),
+                        child: NavigationWidget(),
                       ),
                     ),
                   ),

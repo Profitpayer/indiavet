@@ -8,16 +8,14 @@ class NewsOffersBroadcastingModel
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for TitleNameforBroadcasting widget.
-  FocusNode? titleNameforBroadcastingFocusNode1;
-  TextEditingController? titleNameforBroadcastingTextController1;
-  String? Function(BuildContext, String?)?
-      titleNameforBroadcastingTextController1Validator;
-  // State field(s) for TitleNameforBroadcasting widget.
-  FocusNode? titleNameforBroadcastingFocusNode2;
-  TextEditingController? titleNameforBroadcastingTextController2;
-  String? Function(BuildContext, String?)?
-      titleNameforBroadcastingTextController2Validator;
+  // State field(s) for TitleBroadC1 widget.
+  FocusNode? titleBroadC1FocusNode;
+  TextEditingController? titleBroadC1TextController;
+  String? Function(BuildContext, String?)? titleBroadC1TextControllerValidator;
+  // State field(s) for DiscTot1 widget.
+  FocusNode? discTot1FocusNode;
+  TextEditingController? discTot1TextController;
+  String? Function(BuildContext, String?)? discTot1TextControllerValidator;
   // State field(s) for ChoiceChips widget.
   FormFieldController<List<String>>? choiceChipsValueController;
   String? get choiceChipsValue =>
@@ -34,10 +32,10 @@ class NewsOffersBroadcastingModel
 
   @override
   void dispose() {
-    titleNameforBroadcastingFocusNode1?.dispose();
-    titleNameforBroadcastingTextController1?.dispose();
+    titleBroadC1FocusNode?.dispose();
+    titleBroadC1TextController?.dispose();
 
-    titleNameforBroadcastingFocusNode2?.dispose();
-    titleNameforBroadcastingTextController2?.dispose();
+    discTot1FocusNode?.dispose();
+    discTot1TextController?.dispose();
   }
 }

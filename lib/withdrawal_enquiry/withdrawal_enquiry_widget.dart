@@ -1,13 +1,20 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:provider/provider.dart';
 import 'withdrawal_enquiry_model.dart';
 export 'withdrawal_enquiry_model.dart';
 
 class WithdrawalEnquiryWidget extends StatefulWidget {
   const WithdrawalEnquiryWidget({super.key});
+
+  static String routeName = 'WithdrawalEnquiry';
+  static String routePath = '/withdrawalEnquiry';
 
   @override
   State<WithdrawalEnquiryWidget> createState() =>
@@ -24,6 +31,16 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
     super.initState();
     _model = createModel(context, () => WithdrawalEnquiryModel());
 
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      FFAppState().Point = FFAppState().Point +
+          (valueOrDefault(currentUserDocument?.referCode, '') ==
+                  currentPhoneNumber
+              ? 10
+              : 0);
+      safeSetState(() {});
+    });
+
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -36,6 +53,8 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Title(
         title: 'WithdrawalEnquiry',
         color: FlutterFlowTheme.of(context).primary.withAlpha(0XFF),
@@ -71,14 +90,14 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -97,7 +116,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -125,20 +144,27 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text(
-                                          FFLocalizations.of(context).getText(
-                                            'w40pv6fx' /* $12,458.90 */,
+                                        AuthUserStreamWidget(
+                                          builder: (context) => Text(
+                                            valueOrDefault<String>(
+                                              valueOrDefault(
+                                                      currentUserDocument
+                                                          ?.point,
+                                                      0)
+                                                  .toString(),
+                                              '0',
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .displaySmall
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
                                           ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .displaySmall
-                                              .override(
-                                                fontFamily: 'Outfit',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w600,
-                                              ),
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
@@ -174,7 +200,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -193,7 +219,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -290,7 +316,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -309,7 +335,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -343,7 +369,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                             BorderRadius.circular(12.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 16.0, 16.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -392,7 +418,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                               ],
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       4.0, 12.0, 4.0, 12.0),
                                               child: Container(
@@ -405,7 +431,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                                           16.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(8.0),
+                                                  padding: EdgeInsets.all(8.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -440,7 +466,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                             BorderRadius.circular(12.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 16.0, 16.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -489,7 +515,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                               ],
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       4.0, 12.0, 4.0, 12.0),
                                               child: Container(
@@ -502,7 +528,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                                           16.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(8.0),
+                                                  padding: EdgeInsets.all(8.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -537,7 +563,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                             BorderRadius.circular(12.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 16.0, 16.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -586,7 +612,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                               ],
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       4.0, 12.0, 4.0, 12.0),
                                               child: Container(
@@ -599,7 +625,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                                           16.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(8.0),
+                                                  padding: EdgeInsets.all(8.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -624,16 +650,20 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(height: 16.0)),
+                                  ].divide(SizedBox(height: 16.0)),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
                       ),
                       FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
+                        onPressed: () async {
+                          context
+                              .pushNamed(AppunderdevelopmentWidget.routeName);
+
+                          FFAppState().Point = FFAppState().Point + 10;
+                          safeSetState(() {});
                         },
                         text: FFLocalizations.of(context).getText(
                           'vz7icpdf' /* Request Withdrawal */,
@@ -641,9 +671,9 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 56.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -656,7 +686,7 @@ class _WithdrawalEnquiryWidgetState extends State<WithdrawalEnquiryWidget> {
                           borderRadius: BorderRadius.circular(28.0),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),

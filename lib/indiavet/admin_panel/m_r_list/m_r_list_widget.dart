@@ -4,12 +4,14 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'm_r_list_model.dart';
 export 'm_r_list_model.dart';
 
 class MRListWidget extends StatefulWidget {
   const MRListWidget({super.key});
+
+  static String routeName = 'MRList';
+  static String routePath = '/mRList';
 
   @override
   State<MRListWidget> createState() => _MRListWidgetState();
@@ -73,7 +75,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -110,7 +112,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                   ),
                 ],
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -123,7 +125,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                         child: LinearPercentIndicator(
                           percent: 1.0,
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -131,8 +133,8 @@ class _MRListWidgetState extends State<MRListWidget> {
                           animation: true,
                           animateFromLastPercent: true,
                           progressColor: FlutterFlowTheme.of(context).secondary,
-                          backgroundColor: const Color(0xFFE0E3E7),
-                          barRadius: const Radius.circular(0.0),
+                          backgroundColor: Color(0xFFE0E3E7),
+                          barRadius: Radius.circular(0.0),
                           padding: EdgeInsets.zero,
                         ),
                       ),
@@ -142,7 +144,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 12.0, 10.0, 0.0),
                                 child: StreamBuilder<List<UsersRecord>>(
                                   stream: queryUsersRecord(
@@ -183,7 +185,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                                                 listViewIndex];
                                         return Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 8.0),
                                           child: Container(
                                             width: 100.0,
@@ -205,7 +207,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Card(
@@ -223,7 +225,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(2.0),
+                                                          EdgeInsets.all(2.0),
                                                       child: ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
@@ -234,7 +236,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                                                           width: 44.0,
                                                           height: 44.0,
                                                           fit: BoxFit.contain,
-                                                          alignment: const Alignment(
+                                                          alignment: Alignment(
                                                               0.0, 0.0),
                                                         ),
                                                       ),
@@ -306,7 +308,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                                                             ListTileControlAffinity
                                                                 .trailing,
                                                         contentPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -324,7 +326,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 8.0, 0.0),
                                                   child: FlutterFlowIconButton(
@@ -335,7 +337,7 @@ class _MRListWidgetState extends State<MRListWidget> {
                                                                 context)
                                                             .primary,
                                                     hoverColor:
-                                                        const Color(0xFF54CC27),
+                                                        Color(0xFF54CC27),
                                                     icon: Icon(
                                                       Icons.call_sharp,
                                                       color:
@@ -344,13 +346,9 @@ class _MRListWidgetState extends State<MRListWidget> {
                                                               .info,
                                                       size: 24.0,
                                                     ),
-                                                    onPressed: () async {
-                                                      await launchUrl(Uri(
-                                                        scheme: 'tel',
-                                                        path:
-                                                            listViewUsersRecord
-                                                                .phoneNumber,
-                                                      ));
+                                                    onPressed: () {
+                                                      print(
+                                                          'IconButton pressed ...');
                                                     },
                                                   ),
                                                 ),

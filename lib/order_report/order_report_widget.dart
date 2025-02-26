@@ -8,6 +8,9 @@ export 'order_report_model.dart';
 class OrderReportWidget extends StatefulWidget {
   const OrderReportWidget({super.key});
 
+  static String routeName = 'OrderReport';
+  static String routePath = '/orderReport';
+
   @override
   State<OrderReportWidget> createState() => _OrderReportWidgetState();
 }
@@ -53,7 +56,7 @@ class _OrderReportWidgetState extends State<OrderReportWidget> {
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: const Icon(
+                icon: Icon(
                   Icons.arrow_back_rounded,
                   color: Colors.white,
                   size: 30.0,
@@ -73,11 +76,11 @@ class _OrderReportWidgetState extends State<OrderReportWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 10.0,
             ),
-            body: const SafeArea(
+            body: SafeArea(
               top: true,
               child: Column(
                 mainAxisSize: MainAxisSize.max,

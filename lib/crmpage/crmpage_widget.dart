@@ -8,6 +8,9 @@ export 'crmpage_model.dart';
 class CrmpageWidget extends StatefulWidget {
   const CrmpageWidget({super.key});
 
+  static String routeName = 'crmpage';
+  static String routePath = '/crmpage';
+
   @override
   State<CrmpageWidget> createState() => _CrmpageWidgetState();
 }
@@ -100,7 +103,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                         ),
                       ),
                     ),
-                  ].divide(const SizedBox(width: 16.0)),
+                  ].divide(SizedBox(width: 16.0)),
                 ),
               ],
               centerTitle: false,
@@ -126,7 +129,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 20.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -156,7 +159,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -205,7 +208,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -254,7 +257,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -296,7 +299,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                   ),
                                 ],
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
@@ -315,7 +318,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 20.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -364,7 +367,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -431,7 +434,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                                   ),
                                                 ],
                                               ),
-                                            ].divide(const SizedBox(width: 16.0)),
+                                            ].divide(SizedBox(width: 16.0)),
                                           ),
                                           Container(
                                             decoration: BoxDecoration(
@@ -442,7 +445,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                                   BorderRadius.circular(16.0),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       4.0, 12.0, 4.0, 12.0),
                                               child: Text(
@@ -475,7 +478,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                       borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 16.0, 16.0, 16.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -542,7 +545,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                                   ),
                                                 ],
                                               ),
-                                            ].divide(const SizedBox(width: 16.0)),
+                                            ].divide(SizedBox(width: 16.0)),
                                           ),
                                           Container(
                                             decoration: BoxDecoration(
@@ -553,7 +556,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                                   BorderRadius.circular(16.0),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       4.0, 12.0, 4.0, 12.0),
                                               child: Text(
@@ -579,9 +582,9 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(height: 16.0)),
+                                ].divide(SizedBox(height: 16.0)),
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
@@ -600,7 +603,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 20.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -706,7 +709,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                               ),
                                             ],
                                           ),
-                                        ].divide(const SizedBox(width: 16.0)),
+                                        ].divide(SizedBox(width: 16.0)),
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
@@ -785,7 +788,7 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                               ),
                                             ],
                                           ),
-                                        ].divide(const SizedBox(width: 16.0)),
+                                        ].divide(SizedBox(width: 16.0)),
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
@@ -800,14 +803,14 @@ class _CrmpageWidgetState extends State<CrmpageWidget> {
                                       ),
                                     ],
                                   ),
-                                ].divide(const SizedBox(height: 16.0)),
+                                ].divide(SizedBox(height: 16.0)),
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
                         ),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 24.0)),
+                  ].divide(SizedBox(height: 24.0)),
                 ),
               ),
             ),

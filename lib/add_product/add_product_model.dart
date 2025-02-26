@@ -1,77 +1,99 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
+import '/index.dart';
 import 'add_product_widget.dart' show AddProductWidget;
 import 'package:flutter/material.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class AddProductModel extends FlutterFlowModel<AddProductWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode3;
-  TextEditingController? textController3;
-  String? Function(BuildContext, String?)? textController3Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode4;
-  TextEditingController? textController4;
-  String? Function(BuildContext, String?)? textController4Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode5;
-  TextEditingController? textController5;
-  String? Function(BuildContext, String?)? textController5Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode6;
-  TextEditingController? textController6;
-  String? Function(BuildContext, String?)? textController6Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode7;
-  TextEditingController? textController7;
-  String? Function(BuildContext, String?)? textController7Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode8;
-  TextEditingController? textController8;
-  String? Function(BuildContext, String?)? textController8Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode9;
-  TextEditingController? textController9;
-  String? Function(BuildContext, String?)? textController9Validator;
+  // State field(s) for ProductasCatagr1 widget.
+  FormFieldController<List<String>>? productasCatagr1ValueController;
+  String? get productasCatagr1Value =>
+      productasCatagr1ValueController?.value?.firstOrNull;
+  set productasCatagr1Value(String? val) =>
+      productasCatagr1ValueController?.value = val != null ? [val] : [];
+  // State field(s) for ProductID widget.
+  FocusNode? productIDFocusNode;
+  TextEditingController? productIDTextController;
+  final productIDMask = MaskTextInputFormatter(mask: '##/##/####');
+  String? Function(BuildContext, String?)? productIDTextControllerValidator;
+  // State field(s) for Productname widget.
+  FocusNode? productnameFocusNode;
+  TextEditingController? productnameTextController;
+  String? Function(BuildContext, String?)? productnameTextControllerValidator;
+  // State field(s) for Producthsncode widget.
+  FocusNode? producthsncodeFocusNode;
+  TextEditingController? producthsncodeTextController;
+  String? Function(BuildContext, String?)?
+      producthsncodeTextControllerValidator;
+  // State field(s) for Productbatch widget.
+  FocusNode? productbatchFocusNode;
+  TextEditingController? productbatchTextController;
+  String? Function(BuildContext, String?)? productbatchTextControllerValidator;
+  DateTime? datePicked1;
+  DateTime? datePicked2;
+  // State field(s) for Productmrp widget.
+  FocusNode? productmrpFocusNode;
+  TextEditingController? productmrpTextController;
+  String? Function(BuildContext, String?)? productmrpTextControllerValidator;
+  // State field(s) for Productsalerate widget.
+  FocusNode? productsalerateFocusNode;
+  TextEditingController? productsalerateTextController;
+  String? Function(BuildContext, String?)?
+      productsalerateTextControllerValidator;
+  // State field(s) for Productqty widget.
+  FocusNode? productqtyFocusNode;
+  TextEditingController? productqtyTextController;
+  String? Function(BuildContext, String?)? productqtyTextControllerValidator;
+  // State field(s) for Productdes widget.
+  FocusNode? productdesFocusNode;
+  TextEditingController? productdesTextController;
+  String? Function(BuildContext, String?)? productdesTextControllerValidator;
+  // State field(s) for prooffercode widget.
+  FocusNode? prooffercodeFocusNode;
+  TextEditingController? prooffercodeTextController;
+  String? Function(BuildContext, String?)? prooffercodeTextControllerValidator;
+  // State field(s) for Producapercestage widget.
+  FocusNode? producapercestageFocusNode;
+  TextEditingController? producapercestageTextController;
+  String? Function(BuildContext, String?)?
+      producapercestageTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    productIDFocusNode?.dispose();
+    productIDTextController?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    productnameFocusNode?.dispose();
+    productnameTextController?.dispose();
 
-    textFieldFocusNode3?.dispose();
-    textController3?.dispose();
+    producthsncodeFocusNode?.dispose();
+    producthsncodeTextController?.dispose();
 
-    textFieldFocusNode4?.dispose();
-    textController4?.dispose();
+    productbatchFocusNode?.dispose();
+    productbatchTextController?.dispose();
 
-    textFieldFocusNode5?.dispose();
-    textController5?.dispose();
+    productmrpFocusNode?.dispose();
+    productmrpTextController?.dispose();
 
-    textFieldFocusNode6?.dispose();
-    textController6?.dispose();
+    productsalerateFocusNode?.dispose();
+    productsalerateTextController?.dispose();
 
-    textFieldFocusNode7?.dispose();
-    textController7?.dispose();
+    productqtyFocusNode?.dispose();
+    productqtyTextController?.dispose();
 
-    textFieldFocusNode8?.dispose();
-    textController8?.dispose();
+    productdesFocusNode?.dispose();
+    productdesTextController?.dispose();
 
-    textFieldFocusNode9?.dispose();
-    textController9?.dispose();
+    prooffercodeFocusNode?.dispose();
+    prooffercodeTextController?.dispose();
+
+    producapercestageFocusNode?.dispose();
+    producapercestageTextController?.dispose();
   }
 }

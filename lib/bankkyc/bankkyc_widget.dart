@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
@@ -12,6 +13,9 @@ export 'bankkyc_model.dart';
 
 class BankkycWidget extends StatefulWidget {
   const BankkycWidget({super.key});
+
+  static String routeName = 'bankkyc';
+  static String routePath = '/bankkyc';
 
   @override
   State<BankkycWidget> createState() => _BankkycWidgetState();
@@ -67,12 +71,12 @@ class _BankkycWidgetState extends State<BankkycWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             appBar: AppBar(
-              backgroundColor: const Color(0xFF4A7C7C),
+              backgroundColor: Color(0xFF4A7C7C),
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
                 borderRadius: 8.0,
                 buttonSize: 40.0,
-                icon: const Icon(
+                icon: Icon(
                   Icons.arrow_back,
                   color: Colors.white,
                   size: 24.0,
@@ -91,14 +95,14 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -117,7 +121,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -130,7 +134,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -174,7 +178,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF4A7C7C),
                                           width: 1.0,
                                         ),
@@ -182,7 +186,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -190,7 +194,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       errorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -198,7 +202,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -206,7 +210,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       filled: true,
-                                      fillColor: const Color(0xFFE6F3F3),
+                                      fillColor: Color(0xFFE6F3F3),
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
@@ -245,7 +249,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF4A7C7C),
                                           width: 1.0,
                                         ),
@@ -253,7 +257,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -261,7 +265,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       errorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -269,7 +273,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -277,7 +281,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       filled: true,
-                                      fillColor: const Color(0xFFE6F3F3),
+                                      fillColor: Color(0xFFE6F3F3),
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
@@ -317,7 +321,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF4A7C7C),
                                           width: 1.0,
                                         ),
@@ -325,7 +329,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -333,7 +337,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       errorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -341,7 +345,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -349,7 +353,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       filled: true,
-                                      fillColor: const Color(0xFFE6F3F3),
+                                      fillColor: Color(0xFFE6F3F3),
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
@@ -397,7 +401,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0xFF4A7C7C),
                                           width: 1.0,
                                         ),
@@ -405,7 +409,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -413,7 +417,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       errorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -421,7 +425,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -429,7 +433,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       filled: true,
-                                      fillColor: const Color(0xFFE6F3F3),
+                                      fillColor: Color(0xFFE6F3F3),
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyLarge
@@ -451,7 +455,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                         .asValidator(context),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 20.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
@@ -470,7 +474,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -483,7 +487,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -505,7 +509,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    const Icon(
+                                    Icon(
                                       Icons.check_circle,
                                       color: Color(0xFF4A7C7C),
                                       size: 24.0,
@@ -524,9 +528,9 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                             ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 8.0)),
+                                  ].divide(SizedBox(width: 8.0)),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -556,14 +560,14 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                               builder: (alertDialogContext) {
                                 return WebViewAware(
                                   child: AlertDialog(
-                                    title: const Text('Thanks'),
-                                    content: const Text(
+                                    title: Text('Thanks'),
+                                    content: Text(
                                         'Your Bank Details uploaded Successfully'),
                                     actions: [
                                       TextButton(
                                         onPressed: () =>
                                             Navigator.pop(alertDialogContext),
-                                        child: const Text('Ok'),
+                                        child: Text('Ok'),
                                       ),
                                     ],
                                   ),
@@ -571,7 +575,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                               },
                             );
 
-                            context.pushNamed('Farmer');
+                            context.pushNamed(FarmerWidget.routeName);
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
@@ -582,7 +586,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                                         .primaryText,
                                   ),
                                 ),
-                                duration: const Duration(milliseconds: 4000),
+                                duration: Duration(milliseconds: 4000),
                                 backgroundColor:
                                     FlutterFlowTheme.of(context).secondary,
                               ),
@@ -595,11 +599,11 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 0.9,
                           height: 50.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: const Color(0xFF4A7C7C),
+                          color: Color(0xFF4A7C7C),
                           textStyle:
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'Plus Jakarta Sans',
@@ -610,7 +614,7 @@ class _BankkycWidgetState extends State<BankkycWidget> {
                           borderRadius: BorderRadius.circular(25.0),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),

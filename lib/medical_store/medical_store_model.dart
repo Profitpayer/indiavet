@@ -1,5 +1,6 @@
 import '/components/medicalnavigation_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'medical_store_widget.dart' show MedicalStoreWidget;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

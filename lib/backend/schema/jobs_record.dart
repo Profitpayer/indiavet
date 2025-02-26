@@ -3,16 +3,15 @@ import 'dart:async';
 import 'package:collection/collection.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
 
 import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 class JobsRecord extends FirestoreRecord {
   JobsRecord._(
-    super.reference,
-    super.data,
-  ) {
+    DocumentReference reference,
+    Map<String, dynamic> data,
+  ) : super(reference, data) {
     _initializeFields();
   }
 
@@ -81,11 +80,6 @@ class JobsRecord extends FirestoreRecord {
   String get patientmobile => _patientmobile ?? '';
   bool hasPatientmobile() => _patientmobile != null;
 
-  // "medicines" field.
-  List<String>? _medicines;
-  List<String> get medicines => _medicines ?? const [];
-  bool hasMedicines() => _medicines != null;
-
   // "DistrictDropDown" field.
   String? _districtDropDown;
   String get districtDropDown => _districtDropDown ?? '';
@@ -100,11 +94,6 @@ class JobsRecord extends FirestoreRecord {
   String? _addmedicines;
   String get addmedicines => _addmedicines ?? '';
   bool hasAddmedicines() => _addmedicines != null;
-
-  // "typesofmedicines" field.
-  String? _typesofmedicines;
-  String get typesofmedicines => _typesofmedicines ?? '';
-  bool hasTypesofmedicines() => _typesofmedicines != null;
 
   // "districtname" field.
   String? _districtname;
@@ -125,11 +114,6 @@ class JobsRecord extends FirestoreRecord {
   String? _petinfoname;
   String get petinfoname => _petinfoname ?? '';
   bool hasPetinfoname() => _petinfoname != null;
-
-  // "typesofmedicine2" field.
-  String? _typesofmedicine2;
-  String get typesofmedicine2 => _typesofmedicine2 ?? '';
-  bool hasTypesofmedicine2() => _typesofmedicine2 != null;
 
   // "PrescriptionGentsVillage" field.
   String? _prescriptionGentsVillage;
@@ -161,6 +145,86 @@ class JobsRecord extends FirestoreRecord {
   String get appointmentCity => _appointmentCity ?? '';
   bool hasAppointmentCity() => _appointmentCity != null;
 
+  // "pettypes" field.
+  String? _pettypes;
+  String get pettypes => _pettypes ?? '';
+  bool hasPettypes() => _pettypes != null;
+
+  // "doctortypes" field.
+  String? _doctortypes;
+  String get doctortypes => _doctortypes ?? '';
+  bool hasDoctortypes() => _doctortypes != null;
+
+  // "typeofAnimales" field.
+  String? _typeofAnimales;
+  String get typeofAnimales => _typeofAnimales ?? '';
+  bool hasTypeofAnimales() => _typeofAnimales != null;
+
+  // "typeofDoctors" field.
+  String? _typeofDoctors;
+  String get typeofDoctors => _typeofDoctors ?? '';
+  bool hasTypeofDoctors() => _typeofDoctors != null;
+
+  // "typesofmedicine2" field.
+  String? _typesofmedicine2;
+  String get typesofmedicine2 => _typesofmedicine2 ?? '';
+  bool hasTypesofmedicine2() => _typesofmedicine2 != null;
+
+  // "medictimeing" field.
+  List<String>? _medictimeing;
+  List<String> get medictimeing => _medictimeing ?? const [];
+  bool hasMedictimeing() => _medictimeing != null;
+
+  // "uploadprescription" field.
+  String? _uploadprescription;
+  String get uploadprescription => _uploadprescription ?? '';
+  bool hasUploadprescription() => _uploadprescription != null;
+
+  // "prescriptionid" field.
+  DocumentReference? _prescriptionid;
+  DocumentReference? get prescriptionid => _prescriptionid;
+  bool hasPrescriptionid() => _prescriptionid != null;
+
+  // "broadcasttitle" field.
+  String? _broadcasttitle;
+  String get broadcasttitle => _broadcasttitle ?? '';
+  bool hasBroadcasttitle() => _broadcasttitle != null;
+
+  // "broadcastdesc" field.
+  String? _broadcastdesc;
+  String get broadcastdesc => _broadcastdesc ?? '';
+  bool hasBroadcastdesc() => _broadcastdesc != null;
+
+  // "broadcastImg" field.
+  String? _broadcastImg;
+  String get broadcastImg => _broadcastImg ?? '';
+  bool hasBroadcastImg() => _broadcastImg != null;
+
+  // "broadcasttype" field.
+  String? _broadcasttype;
+  String get broadcasttype => _broadcasttype ?? '';
+  bool hasBroadcasttype() => _broadcasttype != null;
+
+  // "typesofmedicine" field.
+  List<String>? _typesofmedicine;
+  List<String> get typesofmedicine => _typesofmedicine ?? const [];
+  bool hasTypesofmedicine() => _typesofmedicine != null;
+
+  // "medicineName" field.
+  List<String>? _medicineName;
+  List<String> get medicineName => _medicineName ?? const [];
+  bool hasMedicineName() => _medicineName != null;
+
+  // "PrescriptionInvoiceNo" field.
+  int? _prescriptionInvoiceNo;
+  int get prescriptionInvoiceNo => _prescriptionInvoiceNo ?? 0;
+  bool hasPrescriptionInvoiceNo() => _prescriptionInvoiceNo != null;
+
+  // "SRNO" field.
+  List<int>? _srno;
+  List<int> get srno => _srno ?? const [];
+  bool hasSrno() => _srno != null;
+
   void _initializeFields() {
     _title = snapshotData['title'] as String?;
     _experience = snapshotData['experience'] as String?;
@@ -175,16 +239,13 @@ class JobsRecord extends FirestoreRecord {
     _recruiterID = snapshotData['recruiter_ID'] as DocumentReference?;
     _patientName = snapshotData['PatientName'] as String?;
     _patientmobile = snapshotData['Patientmobile'] as String?;
-    _medicines = getDataList(snapshotData['medicines']);
     _districtDropDown = snapshotData['DistrictDropDown'] as String?;
     _createdAt = snapshotData['created_at'] as DateTime?;
     _addmedicines = snapshotData['addmedicines'] as String?;
-    _typesofmedicines = snapshotData['typesofmedicines'] as String?;
     _districtname = snapshotData['districtname'] as String?;
     _blockname = snapshotData['blockname'] as String?;
     _villagename = snapshotData['villagename'] as String?;
     _petinfoname = snapshotData['petinfoname'] as String?;
-    _typesofmedicine2 = snapshotData['typesofmedicine2'] as String?;
     _prescriptionGentsVillage =
         snapshotData['PrescriptionGentsVillage'] as String?;
     _medicinepqty = getDataList(snapshotData['medicinepqty']);
@@ -192,6 +253,23 @@ class JobsRecord extends FirestoreRecord {
     _appointmentMobile = snapshotData['AppointmentMobile'] as String?;
     _appointmentVill = snapshotData['AppointmentVill'] as String?;
     _appointmentCity = snapshotData['AppointmentCity'] as String?;
+    _pettypes = snapshotData['pettypes'] as String?;
+    _doctortypes = snapshotData['doctortypes'] as String?;
+    _typeofAnimales = snapshotData['typeofAnimales'] as String?;
+    _typeofDoctors = snapshotData['typeofDoctors'] as String?;
+    _typesofmedicine2 = snapshotData['typesofmedicine2'] as String?;
+    _medictimeing = getDataList(snapshotData['medictimeing']);
+    _uploadprescription = snapshotData['uploadprescription'] as String?;
+    _prescriptionid = snapshotData['prescriptionid'] as DocumentReference?;
+    _broadcasttitle = snapshotData['broadcasttitle'] as String?;
+    _broadcastdesc = snapshotData['broadcastdesc'] as String?;
+    _broadcastImg = snapshotData['broadcastImg'] as String?;
+    _broadcasttype = snapshotData['broadcasttype'] as String?;
+    _typesofmedicine = getDataList(snapshotData['typesofmedicine']);
+    _medicineName = getDataList(snapshotData['medicineName']);
+    _prescriptionInvoiceNo =
+        castToType<int>(snapshotData['PrescriptionInvoiceNo']);
+    _srno = getDataList(snapshotData['SRNO']);
   }
 
   static CollectionReference get collection =>
@@ -243,17 +321,27 @@ Map<String, dynamic> createJobsRecordData({
   String? districtDropDown,
   DateTime? createdAt,
   String? addmedicines,
-  String? typesofmedicines,
   String? districtname,
   String? blockname,
   String? villagename,
   String? petinfoname,
-  String? typesofmedicine2,
   String? prescriptionGentsVillage,
   String? appointmentName,
   String? appointmentMobile,
   String? appointmentVill,
   String? appointmentCity,
+  String? pettypes,
+  String? doctortypes,
+  String? typeofAnimales,
+  String? typeofDoctors,
+  String? typesofmedicine2,
+  String? uploadprescription,
+  DocumentReference? prescriptionid,
+  String? broadcasttitle,
+  String? broadcastdesc,
+  String? broadcastImg,
+  String? broadcasttype,
+  int? prescriptionInvoiceNo,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -272,17 +360,27 @@ Map<String, dynamic> createJobsRecordData({
       'DistrictDropDown': districtDropDown,
       'created_at': createdAt,
       'addmedicines': addmedicines,
-      'typesofmedicines': typesofmedicines,
       'districtname': districtname,
       'blockname': blockname,
       'villagename': villagename,
       'petinfoname': petinfoname,
-      'typesofmedicine2': typesofmedicine2,
       'PrescriptionGentsVillage': prescriptionGentsVillage,
       'AppointmentName': appointmentName,
       'AppointmentMobile': appointmentMobile,
       'AppointmentVill': appointmentVill,
       'AppointmentCity': appointmentCity,
+      'pettypes': pettypes,
+      'doctortypes': doctortypes,
+      'typeofAnimales': typeofAnimales,
+      'typeofDoctors': typeofDoctors,
+      'typesofmedicine2': typesofmedicine2,
+      'uploadprescription': uploadprescription,
+      'prescriptionid': prescriptionid,
+      'broadcasttitle': broadcasttitle,
+      'broadcastdesc': broadcastdesc,
+      'broadcastImg': broadcastImg,
+      'broadcasttype': broadcasttype,
+      'PrescriptionInvoiceNo': prescriptionInvoiceNo,
     }.withoutNulls,
   );
 
@@ -308,22 +406,35 @@ class JobsRecordDocumentEquality implements Equality<JobsRecord> {
         e1?.recruiterID == e2?.recruiterID &&
         e1?.patientName == e2?.patientName &&
         e1?.patientmobile == e2?.patientmobile &&
-        listEquality.equals(e1?.medicines, e2?.medicines) &&
         e1?.districtDropDown == e2?.districtDropDown &&
         e1?.createdAt == e2?.createdAt &&
         e1?.addmedicines == e2?.addmedicines &&
-        e1?.typesofmedicines == e2?.typesofmedicines &&
         e1?.districtname == e2?.districtname &&
         e1?.blockname == e2?.blockname &&
         e1?.villagename == e2?.villagename &&
         e1?.petinfoname == e2?.petinfoname &&
-        e1?.typesofmedicine2 == e2?.typesofmedicine2 &&
         e1?.prescriptionGentsVillage == e2?.prescriptionGentsVillage &&
         listEquality.equals(e1?.medicinepqty, e2?.medicinepqty) &&
         e1?.appointmentName == e2?.appointmentName &&
         e1?.appointmentMobile == e2?.appointmentMobile &&
         e1?.appointmentVill == e2?.appointmentVill &&
-        e1?.appointmentCity == e2?.appointmentCity;
+        e1?.appointmentCity == e2?.appointmentCity &&
+        e1?.pettypes == e2?.pettypes &&
+        e1?.doctortypes == e2?.doctortypes &&
+        e1?.typeofAnimales == e2?.typeofAnimales &&
+        e1?.typeofDoctors == e2?.typeofDoctors &&
+        e1?.typesofmedicine2 == e2?.typesofmedicine2 &&
+        listEquality.equals(e1?.medictimeing, e2?.medictimeing) &&
+        e1?.uploadprescription == e2?.uploadprescription &&
+        e1?.prescriptionid == e2?.prescriptionid &&
+        e1?.broadcasttitle == e2?.broadcasttitle &&
+        e1?.broadcastdesc == e2?.broadcastdesc &&
+        e1?.broadcastImg == e2?.broadcastImg &&
+        e1?.broadcasttype == e2?.broadcasttype &&
+        listEquality.equals(e1?.typesofmedicine, e2?.typesofmedicine) &&
+        listEquality.equals(e1?.medicineName, e2?.medicineName) &&
+        e1?.prescriptionInvoiceNo == e2?.prescriptionInvoiceNo &&
+        listEquality.equals(e1?.srno, e2?.srno);
   }
 
   @override
@@ -341,22 +452,35 @@ class JobsRecordDocumentEquality implements Equality<JobsRecord> {
         e?.recruiterID,
         e?.patientName,
         e?.patientmobile,
-        e?.medicines,
         e?.districtDropDown,
         e?.createdAt,
         e?.addmedicines,
-        e?.typesofmedicines,
         e?.districtname,
         e?.blockname,
         e?.villagename,
         e?.petinfoname,
-        e?.typesofmedicine2,
         e?.prescriptionGentsVillage,
         e?.medicinepqty,
         e?.appointmentName,
         e?.appointmentMobile,
         e?.appointmentVill,
-        e?.appointmentCity
+        e?.appointmentCity,
+        e?.pettypes,
+        e?.doctortypes,
+        e?.typeofAnimales,
+        e?.typeofDoctors,
+        e?.typesofmedicine2,
+        e?.medictimeing,
+        e?.uploadprescription,
+        e?.prescriptionid,
+        e?.broadcasttitle,
+        e?.broadcastdesc,
+        e?.broadcastImg,
+        e?.broadcasttype,
+        e?.typesofmedicine,
+        e?.medicineName,
+        e?.prescriptionInvoiceNo,
+        e?.srno
       ]);
 
   @override

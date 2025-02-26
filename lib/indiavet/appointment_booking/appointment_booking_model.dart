@@ -23,7 +23,7 @@ class AppointmentBookingModel
   String? Function(BuildContext, String?)?
       appointmentVillTextControllerValidator;
   // State field(s) for AppointmentCity widget.
-  FFPlace appointmentCityValue = const FFPlace();
+  FFPlace appointmentCityValue = FFPlace();
   // State field(s) for ChoiceChips widget.
   FormFieldController<List<String>>? choiceChipsValueController1;
   String? get choiceChipsValue1 =>

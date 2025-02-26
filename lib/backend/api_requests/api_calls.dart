@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
@@ -14,7 +15,7 @@ class CityCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'city',
-      apiUrl: 'https://geodb-cities-api.wirefreethought.com/v1/$countries',
+      apiUrl: 'https://geodb-cities-api.wirefreethought.com/v1/${countries}',
       callType: ApiCallType.GET,
       headers: {
         'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',

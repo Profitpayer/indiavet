@@ -1,12 +1,16 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'r_dashboard_model.dart';
 export 'r_dashboard_model.dart';
 
 class RDashboardWidget extends StatefulWidget {
   const RDashboardWidget({super.key});
+
+  static String routeName = 'RDashboard';
+  static String routePath = '/rDashboard';
 
   @override
   State<RDashboardWidget> createState() => _RDashboardWidgetState();
@@ -46,7 +50,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             floatingActionButton: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 20.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 20.0),
               child: FloatingActionButton(
                 onPressed: () {
                   print('FloatingActionButton pressed ...');
@@ -61,7 +65,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
               ),
             ),
             appBar: AppBar(
-              backgroundColor: const Color(0xFFF5F5F5),
+              backgroundColor: Color(0xFFF5F5F5),
               automaticallyImplyLeading: false,
               title: Row(
                 mainAxisSize: MainAxisSize.max,
@@ -71,13 +75,13 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                     borderRadius: 30.0,
                     borderWidth: 1.0,
                     buttonSize: 60.0,
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.home,
                       color: Color(0xFF191818),
                       size: 30.0,
                     ),
                     onPressed: () async {
-                      context.pushNamed('HomePage');
+                      context.pushNamed(HomePageWidget.routeName);
                     },
                   ),
                   Expanded(
@@ -88,7 +92,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
-                                color: const Color(0xFF101010),
+                                color: Color(0xFF101010),
                                 fontSize: 26.0,
                                 letterSpacing: 0.0,
                                 fontWeight: FontWeight.w600,
@@ -103,20 +107,20 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                       borderRadius: BorderRadius.circular(24.0),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(2.0),
+                      padding: EdgeInsets.all(2.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          context.pushNamed('Profile');
+                          context.pushNamed(ProfileWidget.routeName);
                         },
                         child: Container(
                           width: 45.0,
                           height: 45.0,
                           clipBehavior: Clip.antiAlias,
-                          decoration: const BoxDecoration(
+                          decoration: BoxDecoration(
                             shape: BoxShape.circle,
                           ),
                           child: Image.asset(
@@ -129,27 +133,27 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                   ),
                 ],
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.5,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 3.0),
                             child: Container(
                               width: 100.0,
@@ -158,7 +162,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                               ),
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -167,7 +171,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -183,7 +187,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -240,14 +244,14 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 3.0),
                             child: Container(
                               width: 100.0,
@@ -256,7 +260,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                               ),
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -265,7 +269,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -281,7 +285,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -338,14 +342,14 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 3.0),
                             child: Container(
                               width: 100.0,
@@ -354,7 +358,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                               ),
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -363,7 +367,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -379,7 +383,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -436,14 +440,14 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 3.0),
                             child: Container(
                               width: 100.0,
@@ -452,7 +456,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                               ),
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -461,7 +465,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -477,7 +481,7 @@ class _RDashboardWidgetState extends State<RDashboardWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,

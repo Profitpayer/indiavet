@@ -42,9 +42,9 @@ class _Thanks1WidgetState extends State<Thanks1Widget> {
       mainAxisSize: MainAxisSize.max,
       children: [
         Align(
-          alignment: const AlignmentDirectional(0.0, 0.0),
+          alignment: AlignmentDirectional(0.0, 0.0),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(48.0, 0.0, 48.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(48.0, 0.0, 48.0, 0.0),
             child: Container(
               width: double.infinity,
               height: 200.0,
@@ -54,19 +54,19 @@ class _Thanks1WidgetState extends State<Thanks1Widget> {
                     FlutterFlowTheme.of(context).accent4,
                     FlutterFlowTheme.of(context).accent3
                   ],
-                  stops: const [0.0, 1.0],
-                  begin: const AlignmentDirectional(0.0, -1.0),
-                  end: const AlignmentDirectional(0, 1.0),
+                  stops: [0.0, 1.0],
+                  begin: AlignmentDirectional(0.0, -1.0),
+                  end: AlignmentDirectional(0, 1.0),
                 ),
                 borderRadius: BorderRadius.circular(28.0),
               ),
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Lottie.asset(
                       'assets/jsons/Animation_-_1699331108500.json',
                       width: 150.0,
@@ -78,7 +78,7 @@ class _Thanks1WidgetState extends State<Thanks1Widget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         '7h19kkau' /* Booking Successful! */,
@@ -91,7 +91,7 @@ class _Thanks1WidgetState extends State<Thanks1Widget> {
                           ),
                     ),
                   ),
-                ].divide(const SizedBox(height: 12.0)),
+                ].divide(SizedBox(height: 12.0)),
               ),
             ),
           ),

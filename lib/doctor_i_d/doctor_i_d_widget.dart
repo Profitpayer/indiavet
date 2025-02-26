@@ -8,6 +8,9 @@ export 'doctor_i_d_model.dart';
 class DoctorIDWidget extends StatefulWidget {
   const DoctorIDWidget({super.key});
 
+  static String routeName = 'DoctorID';
+  static String routePath = '/doctorID';
+
   @override
   State<DoctorIDWidget> createState() => _DoctorIDWidgetState();
 }
@@ -56,11 +59,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
           },
           child: Scaffold(
             key: scaffoldKey,
-            backgroundColor: const Color(0xFFF0F5F5),
+            backgroundColor: Color(0xFFF0F5F5),
             appBar: AppBar(
-              backgroundColor: const Color(0xFF4A7C7C),
+              backgroundColor: Color(0xFF4A7C7C),
               automaticallyImplyLeading: false,
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -72,7 +75,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 24.0, 24.0),
                       child: Material(
                         color: Colors.transparent,
@@ -87,7 +90,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -100,7 +103,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -128,35 +131,35 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF4A7C7C),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFE6F3F3),
+                                    fillColor: Color(0xFFE6F3F3),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -191,35 +194,35 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF4A7C7C),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFE6F3F3),
+                                    fillColor: Color(0xFFE6F3F3),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -234,11 +237,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 12.0, 12.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -253,11 +256,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                        const Icon(
+                                        Icon(
                                           Icons.arrow_drop_down,
                                           color: Color(0xFF4A7C7C),
                                           size: 24.0,
@@ -289,35 +292,35 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF4A7C7C),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFE6F3F3),
+                                    fillColor: Color(0xFFE6F3F3),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -353,35 +356,35 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                           letterSpacing: 0.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF4A7C7C),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0x00000000),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
-                                    fillColor: const Color(0xFFE6F3F3),
+                                    fillColor: Color(0xFFE6F3F3),
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
@@ -397,11 +400,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         12.0, 12.0, 12.0, 12.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -414,7 +417,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -432,12 +435,12 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                           children: [
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 12.0, 8.0, 12.0),
                                                 child: Text(
@@ -459,12 +462,12 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                             ),
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 12.0, 8.0, 12.0),
                                                 child: Text(
@@ -486,12 +489,12 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                             ),
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 12.0, 8.0, 12.0),
                                                 child: Text(
@@ -513,7 +516,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                             ),
                                           ],
                                         ),
-                                      ].divide(const SizedBox(height: 8.0)),
+                                      ].divide(SizedBox(height: 8.0)),
                                     ),
                                   ),
                                 ),
@@ -528,11 +531,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 50.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0xFF4A7C7C),
+                                    color: Color(0xFF4A7C7C),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
@@ -544,14 +547,14 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                     borderRadius: BorderRadius.circular(25.0),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 20.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 24.0, 24.0),
                       child: Material(
                         color: Colors.transparent,
@@ -566,7 +569,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -579,7 +582,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -587,11 +590,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -613,7 +616,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -629,7 +632,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -643,22 +646,22 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .bodySmall
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -680,7 +683,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -696,7 +699,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
@@ -710,11 +713,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .bodySmall
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
@@ -729,11 +732,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                     width:
                                         MediaQuery.sizeOf(context).width * 1.0,
                                     height: 50.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: const Color(0xFF4A7C7C),
+                                    color: Color(0xFF4A7C7C),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .override(
@@ -745,14 +748,14 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                     borderRadius: BorderRadius.circular(25.0),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 20.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           24.0, 24.0, 24.0, 24.0),
                       child: Material(
                         color: Colors.transparent,
@@ -767,7 +770,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -780,7 +783,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -803,7 +806,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -815,7 +818,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .headlineMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -834,7 +837,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -846,7 +849,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .headlineMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -858,11 +861,11 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   height: 200.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
@@ -879,7 +882,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -891,7 +894,7 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -899,13 +902,13 @@ class _DoctorIDWidgetState extends State<DoctorIDWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 20.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 24.0)),
+                  ].divide(SizedBox(height: 24.0)),
                 ),
               ),
             ),

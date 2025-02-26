@@ -1,12 +1,16 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'my_history_model.dart';
 export 'my_history_model.dart';
 
 class MyHistoryWidget extends StatefulWidget {
   const MyHistoryWidget({super.key});
+
+  static String routeName = 'MyHistory';
+  static String routePath = '/myHistory';
 
   @override
   State<MyHistoryWidget> createState() => _MyHistoryWidgetState();
@@ -56,18 +60,18 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 0.0, 5.0, 10.0),
                             child: Container(
                               width: double.infinity,
                               height: 50.0,
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 0.0, 0.0),
                                     child: FlutterFlowIconButton(
                                       borderRadius: 90.0,
@@ -86,9 +90,9 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           50.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -110,7 +114,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 5.0, 5.0, 5.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -118,7 +122,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('Profile');
+                                context.pushNamed(ProfileWidget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,
@@ -138,16 +142,16 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Container(
                                             width: 50.0,
                                             height: 50.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
+                                            decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.asset(
@@ -159,10 +163,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -183,10 +187,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 25.0, 0.0),
                                             child: Icon(
                                               Icons.arrow_forward_ios,
@@ -198,14 +202,14 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 0.0)),
+                                    ].divide(SizedBox(width: 0.0)),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 5.0, 5.0, 5.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -213,7 +217,8 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('AppointmentHistory');
+                                context.pushNamed(
+                                    AppointmentHistoryWidget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,
@@ -234,23 +239,24 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      context.pushNamed('AppointmentHistory');
+                                      context.pushNamed(
+                                          AppointmentHistoryWidget.routeName);
                                     },
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 0.0, 0.0, 0.0),
                                             child: Container(
                                               width: 50.0,
                                               height: 50.0,
                                               clipBehavior: Clip.antiAlias,
-                                              decoration: const BoxDecoration(
+                                              decoration: BoxDecoration(
                                                 shape: BoxShape.circle,
                                               ),
                                               child: Image.network(
@@ -262,10 +268,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -289,9 +295,9 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                         Expanded(
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(1.0, 0.0),
+                                                AlignmentDirectional(1.0, 0.0),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 25.0, 0.0),
                                               child: Icon(
@@ -304,7 +310,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                             ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 0.0)),
+                                      ].divide(SizedBox(width: 0.0)),
                                     ),
                                   ),
                                 ),
@@ -312,7 +318,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 5.0, 5.0, 5.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -320,7 +326,8 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('PrescriptionHistory');
+                                context.pushNamed(
+                                    PrescriptionHistoryWidget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,
@@ -340,16 +347,16 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Container(
                                             width: 50.0,
                                             height: 50.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
+                                            decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.network(
@@ -361,10 +368,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -385,10 +392,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 25.0, 0.0),
                                             child: Icon(
                                               Icons.arrow_forward_ios,
@@ -400,14 +407,14 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 0.0)),
+                                    ].divide(SizedBox(width: 0.0)),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 5.0, 5.0, 5.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -415,7 +422,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('OrderReport');
+                                context.pushNamed(OrderReportWidget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,
@@ -430,79 +437,92 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(24.0),
                                   ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  20.0, 0.0, 0.0, 0.0),
-                                          child: Container(
-                                            width: 50.0,
-                                            height: 50.0,
-                                            clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
-                                              shape: BoxShape.circle,
-                                            ),
-                                            child: Image.asset(
-                                              'assets/images/unnamed__2_-removebg-preview.png',
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  20.0, 0.0, 0.0, 0.0),
-                                          child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'pikyztsi' /* Order Report */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  fontSize: 18.0,
-                                                  letterSpacing: 0.0,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        child: Align(
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed(
+                                          PurchaseOrderWidget.routeName);
+                                    },
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 25.0, 0.0),
-                                            child: Icon(
-                                              Icons.arrow_forward_ios,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              size: 25.0,
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    20.0, 0.0, 0.0, 0.0),
+                                            child: Container(
+                                              width: 50.0,
+                                              height: 50.0,
+                                              clipBehavior: Clip.antiAlias,
+                                              decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                              ),
+                                              child: Image.asset(
+                                                'assets/images/unnamed__2_-removebg-preview.png',
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      ),
-                                    ].divide(const SizedBox(width: 0.0)),
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(-1.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    20.0, 0.0, 0.0, 0.0),
+                                            child: Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'pikyztsi' /* New Order Report */,
+                                              ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        fontSize: 18.0,
+                                                        letterSpacing: 0.0,
+                                                        fontWeight:
+                                                            FontWeight.w600,
+                                                      ),
+                                            ),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Align(
+                                            alignment:
+                                                AlignmentDirectional(1.0, 0.0),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 25.0, 0.0),
+                                              child: Icon(
+                                                Icons.arrow_forward_ios,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                                size: 25.0,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ].divide(SizedBox(width: 0.0)),
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 5.0, 5.0, 5.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -510,7 +530,8 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('PharmacyReport');
+                                context
+                                    .pushNamed(PharmacyReportWidget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,
@@ -530,16 +551,16 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Container(
                                             width: 50.0,
                                             height: 50.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
+                                            decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.network(
@@ -551,10 +572,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -575,10 +596,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 25.0, 0.0),
                                             child: Icon(
                                               Icons.arrow_forward_ios,
@@ -590,14 +611,14 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 0.0)),
+                                    ].divide(SizedBox(width: 0.0)),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 5.0, 5.0, 5.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -605,7 +626,8 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('WithdrawalEnquiry');
+                                context.pushNamed(
+                                    WithdrawalEnquiryWidget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,
@@ -625,16 +647,16 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Container(
                                             width: 50.0,
                                             height: 50.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
+                                            decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.network(
@@ -646,10 +668,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -670,10 +692,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 25.0, 0.0),
                                             child: Icon(
                                               Icons.arrow_forward_ios,
@@ -685,14 +707,14 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 0.0)),
+                                    ].divide(SizedBox(width: 0.0)),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 5.0, 5.0, 5.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -700,7 +722,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('bankkyc');
+                                context.pushNamed(BankkycWidget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,
@@ -720,16 +742,16 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Container(
                                             width: 50.0,
                                             height: 50.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
+                                            decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.network(
@@ -741,10 +763,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -765,10 +787,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 25.0, 0.0),
                                             child: Icon(
                                               Icons.arrow_forward_ios,
@@ -780,14 +802,14 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 0.0)),
+                                    ].divide(SizedBox(width: 0.0)),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 5.0, 5.0, 5.0, 5.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -795,7 +817,8 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('bankkyc');
+                                context
+                                    .pushNamed(Referralcode1Widget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,
@@ -815,16 +838,16 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Container(
                                             width: 50.0,
                                             height: 50.0,
                                             clipBehavior: Clip.antiAlias,
-                                            decoration: const BoxDecoration(
+                                            decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                             ),
                                             child: Image.network(
@@ -836,10 +859,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -860,10 +883,10 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 25.0, 0.0),
                                             child: Icon(
                                               Icons.arrow_forward_ios,
@@ -875,7 +898,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 0.0)),
+                                    ].divide(SizedBox(width: 0.0)),
                                   ),
                                 ),
                               ),

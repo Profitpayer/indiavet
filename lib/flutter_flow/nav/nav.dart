@@ -2,11 +2,15 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
-import '/index.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+
+import '/index.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -74,304 +78,409 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const WelcomeWidget() : const HomePageWidget(),
+          appStateNotifier.loggedIn ? WelcomeWidget() : HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? const WelcomeWidget() : const HomePageWidget(),
+              appStateNotifier.loggedIn ? WelcomeWidget() : HomePageWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          name: HomePageWidget.routeName,
+          path: HomePageWidget.routePath,
+          builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
-          name: 'AppointmentBooking',
-          path: '/appointmentBooking',
-          builder: (context, params) => const AppointmentBookingWidget(),
+          name: AppointmentBookingWidget.routeName,
+          path: AppointmentBookingWidget.routePath,
+          builder: (context, params) => AppointmentBookingWidget(),
         ),
         FFRoute(
-          name: 'SalesManagement',
-          path: '/salesManagement',
-          builder: (context, params) => const SalesManagementWidget(),
+          name: SalesManagementWidget.routeName,
+          path: SalesManagementWidget.routePath,
+          builder: (context, params) => SalesManagementWidget(),
         ),
         FFRoute(
-          name: 'OrderManagement',
-          path: '/orderManagement',
-          builder: (context, params) => const OrderManagementWidget(),
+          name: OrderManagementWidget.routeName,
+          path: OrderManagementWidget.routePath,
+          builder: (context, params) => OrderManagementWidget(),
         ),
         FFRoute(
-          name: 'DoctorID',
-          path: '/doctorID',
-          builder: (context, params) => const DoctorIDWidget(),
+          name: DoctorIDWidget.routeName,
+          path: DoctorIDWidget.routePath,
+          builder: (context, params) => DoctorIDWidget(),
         ),
         FFRoute(
-          name: 'VeterinaryServicesTermsandConditions',
-          path: '/veterinaryServicesTermsandConditions',
+          name: VeterinaryServicesTermsandConditionsWidget.routeName,
+          path: VeterinaryServicesTermsandConditionsWidget.routePath,
           builder: (context, params) =>
-              const VeterinaryServicesTermsandConditionsWidget(),
+              VeterinaryServicesTermsandConditionsWidget(),
         ),
         FFRoute(
-          name: 'HomeDashboard',
-          path: '/homeDashboard',
-          builder: (context, params) => const HomeDashboardWidget(),
+          name: HomeDashboardWidget.routeName,
+          path: HomeDashboardWidget.routePath,
+          builder: (context, params) => HomeDashboardWidget(),
         ),
         FFRoute(
-          name: 'DoctorList',
-          path: '/doctorList',
-          builder: (context, params) => const DoctorListWidget(),
+          name: OnboardingWidget.routeName,
+          path: OnboardingWidget.routePath,
+          builder: (context, params) => OnboardingWidget(),
         ),
         FFRoute(
-          name: 'Onboarding',
-          path: '/onboarding',
-          builder: (context, params) => const OnboardingWidget(),
+          name: DoctorPanelWidget.routeName,
+          path: DoctorPanelWidget.routePath,
+          builder: (context, params) => DoctorPanelWidget(),
         ),
         FFRoute(
-          name: 'DoctorPanel',
-          path: '/doctorPanel',
-          builder: (context, params) => const DoctorPanelWidget(),
+          name: MyHistoryWidget.routeName,
+          path: MyHistoryWidget.routePath,
+          builder: (context, params) => MyHistoryWidget(),
         ),
         FFRoute(
-          name: 'MyHistory',
-          path: '/myHistory',
-          builder: (context, params) => const MyHistoryWidget(),
+          name: CreateAccountWidget.routeName,
+          path: CreateAccountWidget.routePath,
+          builder: (context, params) => CreateAccountWidget(),
         ),
         FFRoute(
-          name: 'CreateAccount',
-          path: '/createAccount',
-          builder: (context, params) => const CreateAccountWidget(),
+          name: LoginWidget.routeName,
+          path: LoginWidget.routePath,
+          builder: (context, params) => LoginWidget(),
         ),
         FFRoute(
-          name: 'Login',
-          path: '/login',
-          builder: (context, params) => const LoginWidget(),
+          name: FarmerWidget.routeName,
+          path: FarmerWidget.routePath,
+          builder: (context, params) => FarmerWidget(),
         ),
         FFRoute(
-          name: 'Farmer',
-          path: '/farmer',
-          builder: (context, params) => const FarmerWidget(),
+          name: MedicalrepresentativepaneWidget.routeName,
+          path: MedicalrepresentativepaneWidget.routePath,
+          builder: (context, params) => MedicalrepresentativepaneWidget(),
         ),
         FFRoute(
-          name: 'Medicalrepresentativepane',
-          path: '/medicalrepresentativepane',
-          builder: (context, params) => const MedicalrepresentativepaneWidget(),
+          name: AdminhomeWidget.routeName,
+          path: AdminhomeWidget.routePath,
+          builder: (context, params) => AdminhomeWidget(),
         ),
         FFRoute(
-          name: 'Adminhome',
-          path: '/adminhome',
-          builder: (context, params) => const AdminhomeWidget(),
+          name: AdminCommissionWidget.routeName,
+          path: AdminCommissionWidget.routePath,
+          builder: (context, params) => AdminCommissionWidget(),
         ),
         FFRoute(
-          name: 'AdminCommission',
-          path: '/adminCommission',
-          builder: (context, params) => const AdminCommissionWidget(),
+          name: GeneratePrescriptionWidget.routeName,
+          path: GeneratePrescriptionWidget.routePath,
+          builder: (context, params) => GeneratePrescriptionWidget(),
         ),
         FFRoute(
-          name: 'Generate_Prescription',
-          path: '/generatePrescription',
-          builder: (context, params) => const GeneratePrescriptionWidget(),
+          name: NoticeWidget.routeName,
+          path: NoticeWidget.routePath,
+          builder: (context, params) => NoticeWidget(),
         ),
         FFRoute(
-          name: 'Notice',
-          path: '/notice',
-          builder: (context, params) => const NoticeWidget(),
+          name: MImsWidget.routeName,
+          path: MImsWidget.routePath,
+          builder: (context, params) => MImsWidget(),
         ),
         FFRoute(
-          name: 'M_IMS',
-          path: '/mIms',
-          builder: (context, params) => const MImsWidget(),
+          name: PrescriptionHistoryWidget.routeName,
+          path: PrescriptionHistoryWidget.routePath,
+          builder: (context, params) => PrescriptionHistoryWidget(),
         ),
         FFRoute(
-          name: 'PrescriptionHistory',
-          path: '/prescriptionHistory',
-          builder: (context, params) => const PrescriptionHistoryWidget(),
+          name: ProfileWidget.routeName,
+          path: ProfileWidget.routePath,
+          builder: (context, params) => ProfileWidget(),
         ),
         FFRoute(
-          name: 'Profile',
-          path: '/profile',
-          builder: (context, params) => const ProfileWidget(),
+          name: OurDoctorsWidget.routeName,
+          path: OurDoctorsWidget.routePath,
+          builder: (context, params) => OurDoctorsWidget(),
         ),
         FFRoute(
-          name: 'JobDashboard',
-          path: '/jobDashboard',
-          builder: (context, params) => const JobDashboardWidget(),
+          name: SearchResultsWidget.routeName,
+          path: SearchResultsWidget.routePath,
+          builder: (context, params) => SearchResultsWidget(),
         ),
         FFRoute(
-          name: 'SearchResults',
-          path: '/searchResults',
-          builder: (context, params) => const SearchResultsWidget(),
+          name: JobDetailsWidget.routeName,
+          path: JobDetailsWidget.routePath,
+          builder: (context, params) => JobDetailsWidget(),
         ),
         FFRoute(
-          name: 'JobDetails',
-          path: '/jobDetails',
-          builder: (context, params) => const JobDetailsWidget(),
+          name: RDashboardWidget.routeName,
+          path: RDashboardWidget.routePath,
+          builder: (context, params) => RDashboardWidget(),
         ),
         FFRoute(
-          name: 'RDashboard',
-          path: '/rDashboard',
-          builder: (context, params) => const RDashboardWidget(),
+          name: RJobDetailsWidget.routeName,
+          path: RJobDetailsWidget.routePath,
+          builder: (context, params) => RJobDetailsWidget(),
         ),
         FFRoute(
-          name: 'RJobDetails',
-          path: '/rJobDetails',
-          builder: (context, params) => const RJobDetailsWidget(),
+          name: ApplicantsWidget.routeName,
+          path: ApplicantsWidget.routePath,
+          builder: (context, params) => ApplicantsWidget(),
         ),
         FFRoute(
-          name: 'Applicants',
-          path: '/applicants',
-          builder: (context, params) => const ApplicantsWidget(),
+          name: ApplicantDetailsWidget.routeName,
+          path: ApplicantDetailsWidget.routePath,
+          builder: (context, params) => ApplicantDetailsWidget(),
         ),
         FFRoute(
-          name: 'ApplicantDetails',
-          path: '/applicantDetails',
-          builder: (context, params) => const ApplicantDetailsWidget(),
+          name: EditGeneratePrescriptionWidget.routeName,
+          path: EditGeneratePrescriptionWidget.routePath,
+          builder: (context, params) => EditGeneratePrescriptionWidget(),
         ),
         FFRoute(
-          name: 'Edit_Generate_Prescription',
-          path: '/editGeneratePrescription',
-          builder: (context, params) => const EditGeneratePrescriptionWidget(),
+          name: WelcomeWidget.routeName,
+          path: WelcomeWidget.routePath,
+          builder: (context, params) => WelcomeWidget(),
         ),
         FFRoute(
-          name: 'welcome',
-          path: '/welcome',
-          builder: (context, params) => const WelcomeWidget(),
+          name: BankkycWidget.routeName,
+          path: BankkycWidget.routePath,
+          builder: (context, params) => BankkycWidget(),
         ),
         FFRoute(
-          name: 'bankkyc',
-          path: '/bankkyc',
-          builder: (context, params) => const BankkycWidget(),
+          name: WithdrawalEnquiryWidget.routeName,
+          path: WithdrawalEnquiryWidget.routePath,
+          builder: (context, params) => WithdrawalEnquiryWidget(),
         ),
         FFRoute(
-          name: 'WithdrawalEnquiry',
-          path: '/withdrawalEnquiry',
-          builder: (context, params) => const WithdrawalEnquiryWidget(),
+          name: AppointmentHistoryWidget.routeName,
+          path: AppointmentHistoryWidget.routePath,
+          builder: (context, params) => AppointmentHistoryWidget(),
         ),
         FFRoute(
-          name: 'AppointmentHistory',
-          path: '/appointmentHistory',
-          builder: (context, params) => const AppointmentHistoryWidget(),
+          name: OrderReportWidget.routeName,
+          path: OrderReportWidget.routePath,
+          builder: (context, params) => OrderReportWidget(),
         ),
         FFRoute(
-          name: 'OrderReport',
-          path: '/orderReport',
-          builder: (context, params) => const OrderReportWidget(),
+          name: PharmacyReportWidget.routeName,
+          path: PharmacyReportWidget.routePath,
+          builder: (context, params) => PharmacyReportWidget(),
         ),
         FFRoute(
-          name: 'PharmacyReport',
-          path: '/pharmacyReport',
-          builder: (context, params) => const PharmacyReportWidget(),
+          name: ForgotPasswordWidget.routeName,
+          path: ForgotPasswordWidget.routePath,
+          builder: (context, params) => ForgotPasswordWidget(),
         ),
         FFRoute(
-          name: 'ForgotPassword',
-          path: '/forgotPassword',
-          builder: (context, params) => const ForgotPasswordWidget(),
+          name: AllPrescriptionHistoryWidget.routeName,
+          path: AllPrescriptionHistoryWidget.routePath,
+          builder: (context, params) => AllPrescriptionHistoryWidget(),
         ),
         FFRoute(
-          name: 'AllPrescriptionHistory',
-          path: '/allPrescriptionHistory',
-          builder: (context, params) => const AllPrescriptionHistoryWidget(),
+          name: MedicalStoreWidget.routeName,
+          path: MedicalStoreWidget.routePath,
+          builder: (context, params) => MedicalStoreWidget(),
         ),
         FFRoute(
-          name: 'MedicalStore',
-          path: '/MedicalStore',
-          builder: (context, params) => const MedicalStoreWidget(),
+          name: VeterinaryMedicineWidget.routeName,
+          path: VeterinaryMedicineWidget.routePath,
+          builder: (context, params) => VeterinaryMedicineWidget(),
         ),
         FFRoute(
-          name: 'VeterinaryMedicine',
-          path: '/veterinaryMedicine',
-          builder: (context, params) => const VeterinaryMedicineWidget(),
+          name: NewProductWidget.routeName,
+          path: NewProductWidget.routePath,
+          builder: (context, params) => NewProductWidget(),
         ),
         FFRoute(
-          name: 'AdminListing',
-          path: '/adminListing',
-          builder: (context, params) => const AdminListingWidget(),
+          name: SearchWidget.routeName,
+          path: SearchWidget.routePath,
+          builder: (context, params) => SearchWidget(),
         ),
         FFRoute(
-          name: 'Thanks',
-          path: '/thanks',
-          builder: (context, params) => const ThanksWidget(),
+          name: NewsOffersBroadcastingWidget.routeName,
+          path: NewsOffersBroadcastingWidget.routePath,
+          builder: (context, params) => NewsOffersBroadcastingWidget(),
         ),
         FFRoute(
-          name: 'search',
-          path: '/search',
-          builder: (context, params) => const SearchWidget(),
+          name: ReviewWidget.routeName,
+          path: ReviewWidget.routePath,
+          builder: (context, params) => ReviewWidget(),
         ),
         FFRoute(
-          name: 'News_Offers_broadcasting',
-          path: '/newsOffersBroadcasting',
-          builder: (context, params) => const NewsOffersBroadcastingWidget(),
+          name: CrmpageWidget.routeName,
+          path: CrmpageWidget.routePath,
+          builder: (context, params) => CrmpageWidget(),
         ),
         FFRoute(
-          name: 'Review',
-          path: '/review',
-          builder: (context, params) => const ReviewWidget(),
+          name: Home22DashboardResponsiveWidget.routeName,
+          path: Home22DashboardResponsiveWidget.routePath,
+          builder: (context, params) => Home22DashboardResponsiveWidget(),
         ),
         FFRoute(
-          name: 'crmpage',
-          path: '/crmpage',
-          builder: (context, params) => const CrmpageWidget(),
+          name: EditProfileWidget.routeName,
+          path: EditProfileWidget.routePath,
+          builder: (context, params) => EditProfileWidget(),
         ),
         FFRoute(
-          name: 'Home22DashboardResponsive',
-          path: '/home22DashboardResponsive',
-          builder: (context, params) => const Home22DashboardResponsiveWidget(),
+          name: TestWidget.routeName,
+          path: TestWidget.routePath,
+          builder: (context, params) => TestWidget(),
         ),
         FFRoute(
-          name: 'EditProfile',
-          path: '/editProfile',
-          builder: (context, params) => const EditProfileWidget(),
+          name: MyProductListWidget.routeName,
+          path: MyProductListWidget.routePath,
+          builder: (context, params) => MyProductListWidget(),
         ),
         FFRoute(
-          name: 'tp1',
-          path: '/TP1',
-          builder: (context, params) => const Tp1Widget(),
+          name: AddProductWidget.routeName,
+          path: AddProductWidget.routePath,
+          builder: (context, params) => AddProductWidget(),
         ),
         FFRoute(
-          name: 'Test',
-          path: '/test',
-          builder: (context, params) => const TestWidget(),
+          name: FarmerlistWidget.routeName,
+          path: FarmerlistWidget.routePath,
+          builder: (context, params) => FarmerlistWidget(),
         ),
         FFRoute(
-          name: 'AllAppointmentHistory',
-          path: '/allAppointmentHistory',
-          builder: (context, params) => const AllAppointmentHistoryWidget(),
+          name: CommissionDashboardWidget.routeName,
+          path: CommissionDashboardWidget.routePath,
+          builder: (context, params) => CommissionDashboardWidget(),
         ),
         FFRoute(
-          name: 'MyProductList',
-          path: '/myProductList',
-          builder: (context, params) => const MyProductListWidget(),
+          name: MRListWidget.routeName,
+          path: MRListWidget.routePath,
+          builder: (context, params) => MRListWidget(),
         ),
         FFRoute(
-          name: 'Medicalshop',
-          path: '/medicalshop',
-          builder: (context, params) => const MedicalshopWidget(),
+          name: HomeWidget.routeName,
+          path: HomeWidget.routePath,
+          builder: (context, params) => HomeWidget(),
         ),
         FFRoute(
-          name: 'AddProduct',
-          path: '/addProduct',
-          builder: (context, params) => const AddProductWidget(),
+          name: Doctor111111Widget.routeName,
+          path: Doctor111111Widget.routePath,
+          builder: (context, params) => Doctor111111Widget(),
         ),
         FFRoute(
-          name: 'Farmerlist',
-          path: '/farmerlist',
-          builder: (context, params) => const FarmerlistWidget(),
+          name: ProductCategoryWidget.routeName,
+          path: ProductCategoryWidget.routePath,
+          builder: (context, params) => ProductCategoryWidget(),
         ),
         FFRoute(
-          name: 'CommissionDashboard',
-          path: '/commissionDashboard',
-          builder: (context, params) => const CommissionDashboardWidget(),
+          name: ProdectaddtocardWidget.routeName,
+          path: ProdectaddtocardWidget.routePath,
+          builder: (context, params) => ProdectaddtocardWidget(),
         ),
         FFRoute(
-          name: 'MRList',
-          path: '/mRList',
-          builder: (context, params) => const MRListWidget(),
+          name: Home09DashboardWidget.routeName,
+          path: Home09DashboardWidget.routePath,
+          builder: (context, params) => Home09DashboardWidget(),
         ),
         FFRoute(
-          name: 'medicalrepresentative',
-          path: '/medicalrepresentative',
-          builder: (context, params) => const MedicalrepresentativeWidget(),
+          name: Details43WorkoutSummaryWidget.routeName,
+          path: Details43WorkoutSummaryWidget.routePath,
+          builder: (context, params) => Details43WorkoutSummaryWidget(),
+        ),
+        FFRoute(
+          name: Home24BankFintechDashboardWidget.routeName,
+          path: Home24BankFintechDashboardWidget.routePath,
+          builder: (context, params) => Home24BankFintechDashboardWidget(),
+        ),
+        FFRoute(
+          name: AppunderdevelopmentWidget.routeName,
+          path: AppunderdevelopmentWidget.routePath,
+          builder: (context, params) => AppunderdevelopmentWidget(),
+        ),
+        FFRoute(
+          name: FeedbackWidget.routeName,
+          path: FeedbackWidget.routePath,
+          builder: (context, params) => FeedbackWidget(),
+        ),
+        FFRoute(
+          name: OurPharmacyWidget.routeName,
+          path: OurPharmacyWidget.routePath,
+          builder: (context, params) => OurPharmacyWidget(),
+        ),
+        FFRoute(
+          name: OurFarmerWidget.routeName,
+          path: OurFarmerWidget.routePath,
+          builder: (context, params) => OurFarmerWidget(),
+        ),
+        FFRoute(
+          name: OurMRWidget.routeName,
+          path: OurMRWidget.routePath,
+          builder: (context, params) => OurMRWidget(),
+        ),
+        FFRoute(
+          name: EditAddproductWidget.routeName,
+          path: EditAddproductWidget.routePath,
+          builder: (context, params) => EditAddproductWidget(),
+        ),
+        FFRoute(
+          name: PleceOrderWidget.routeName,
+          path: PleceOrderWidget.routePath,
+          builder: (context, params) => PleceOrderWidget(),
+        ),
+        FFRoute(
+          name: CheckoutorderWidget.routeName,
+          path: CheckoutorderWidget.routePath,
+          builder: (context, params) => CheckoutorderWidget(),
+        ),
+        FFRoute(
+          name: ChekoutOrderWidget.routeName,
+          path: ChekoutOrderWidget.routePath,
+          builder: (context, params) => ChekoutOrderWidget(),
+        ),
+        FFRoute(
+          name: Referralcode1Widget.routeName,
+          path: Referralcode1Widget.routePath,
+          builder: (context, params) => Referralcode1Widget(),
+        ),
+        FFRoute(
+          name: EarnmonryWidget.routeName,
+          path: EarnmonryWidget.routePath,
+          builder: (context, params) => EarnmonryWidget(),
+        ),
+        FFRoute(
+          name: PrescriptionHistoryCopyWidget.routeName,
+          path: PrescriptionHistoryCopyWidget.routePath,
+          builder: (context, params) => PrescriptionHistoryCopyWidget(),
+        ),
+        FFRoute(
+          name: EditaddprodecutWidget.routeName,
+          path: EditaddprodecutWidget.routePath,
+          builder: (context, params) => EditaddprodecutWidget(),
+        ),
+        FFRoute(
+          name: PurchaseOrderWidget.routeName,
+          path: PurchaseOrderWidget.routePath,
+          builder: (context, params) => PurchaseOrderWidget(),
+        ),
+        FFRoute(
+          name: PrescriptionSaleOutWidget.routeName,
+          path: PrescriptionSaleOutWidget.routePath,
+          builder: (context, params) => PrescriptionSaleOutWidget(),
+        ),
+        FFRoute(
+          name: OutstandingReportsWidget.routeName,
+          path: OutstandingReportsWidget.routePath,
+          builder: (context, params) => OutstandingReportsWidget(),
+        ),
+        FFRoute(
+          name: VisitreportWidget.routeName,
+          path: VisitreportWidget.routePath,
+          builder: (context, params) => VisitreportWidget(),
+        ),
+        FFRoute(
+          name: Create06BookAppointmentWidget.routeName,
+          path: Create06BookAppointmentWidget.routePath,
+          builder: (context, params) => Create06BookAppointmentWidget(),
+        ),
+        FFRoute(
+          name: Authentication2Widget.routeName,
+          path: Authentication2Widget.routePath,
+          builder: (context, params) => Authentication2Widget(),
+        ),
+        FFRoute(
+          name: PasscodeWidget.routeName,
+          path: PasscodeWidget.routePath,
+          builder: (context, params) => PasscodeWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -492,6 +601,7 @@ class FFParameters {
     ParamType type, {
     bool isList = false,
     List<String>? collectionNamePath,
+    StructBuilder<T>? structBuilder,
   }) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -510,6 +620,7 @@ class FFParameters {
       type,
       isList,
       collectionNamePath: collectionNamePath,
+      structBuilder: structBuilder,
     );
   }
 }
@@ -558,10 +669,10 @@ class FFRoute {
               : builder(context, ffParams);
           final child = appStateNotifier.loading
               ? Container(
-                  color: Colors.transparent,
+                  color: FlutterFlowTheme.of(context).primaryBackground,
                   child: Image.asset(
-                    'assets/images/Inidavet_Logo.jpg',
-                    fit: BoxFit.cover,
+                    'assets/images/log1-removebg-preview.png',
+                    fit: BoxFit.fill,
                   ),
                 )
               : page;
@@ -606,7 +717,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

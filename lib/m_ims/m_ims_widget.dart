@@ -5,9 +5,12 @@ import 'package:flutter/material.dart';
 import 'm_ims_model.dart';
 export 'm_ims_model.dart';
 
+/// MedicineInventoryManagementSystem
 class MImsWidget extends StatefulWidget {
-  /// MedicineInventoryManagementSystem
   const MImsWidget({super.key});
+
+  static String routeName = 'M_IMS';
+  static String routePath = '/mIms';
 
   @override
   State<MImsWidget> createState() => _MImsWidgetState();
@@ -77,7 +80,7 @@ class _MImsWidgetState extends State<MImsWidget> {
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -97,7 +100,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -185,7 +188,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -237,7 +240,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 16.0, 16.0, 16.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -290,7 +293,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -394,7 +397,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                                                 ),
                                               ],
                                             ),
-                                          ].divide(const SizedBox(width: 12.0)),
+                                          ].divide(SizedBox(width: 12.0)),
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
@@ -477,7 +480,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                                                 ),
                                               ],
                                             ),
-                                          ].divide(const SizedBox(width: 12.0)),
+                                          ].divide(SizedBox(width: 12.0)),
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
@@ -495,9 +498,9 @@ class _MImsWidgetState extends State<MImsWidget> {
                                         ),
                                       ],
                                     ),
-                                  ].divide(const SizedBox(height: 16.0)),
+                                  ].divide(SizedBox(height: 16.0)),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -516,7 +519,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -569,7 +572,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 8.0)),
+                                      ].divide(SizedBox(height: 8.0)),
                                     ),
                                     Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -603,7 +606,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 8.0)),
+                                      ].divide(SizedBox(height: 8.0)),
                                     ),
                                     Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -637,11 +640,11 @@ class _MImsWidgetState extends State<MImsWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 8.0)),
+                                      ].divide(SizedBox(height: 8.0)),
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -660,7 +663,7 @@ class _MImsWidgetState extends State<MImsWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -769,12 +772,12 @@ class _MImsWidgetState extends State<MImsWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),

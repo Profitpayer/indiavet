@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'edit_profile_widget.dart' show EditProfileWidget;
 import 'package:flutter/material.dart';
 
@@ -30,7 +31,7 @@ class EditProfileModel extends FlutterFlowModel<EditProfileWidget> {
   TextEditingController? editMobilenoTextController;
   String? Function(BuildContext, String?)? editMobilenoTextControllerValidator;
   // State field(s) for Edit_PlacePicker widget.
-  FFPlace editPlacePickerValue = const FFPlace();
+  FFPlace editPlacePickerValue = FFPlace();
   // State field(s) for Edit_designation widget.
   FocusNode? editDesignationFocusNode;
   TextEditingController? editDesignationTextController;

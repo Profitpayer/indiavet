@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -16,6 +17,9 @@ export 'edit_profile_model.dart';
 
 class EditProfileWidget extends StatefulWidget {
   const EditProfileWidget({super.key});
+
+  static String routeName = 'EditProfile';
+  static String routePath = '/editProfile';
 
   @override
   State<EditProfileWidget> createState() => _EditProfileWidgetState();
@@ -58,18 +62,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
     _model.editskilledTextController ??= TextEditingController();
     _model.editskilledFocusNode ??= FocusNode();
 
-    _model.editShopnameTextController ??= TextEditingController();
+    _model.editShopnameTextController ??= TextEditingController(
+        text: valueOrDefault(currentUserDocument?.shopname, ''));
     _model.editShopnameFocusNode ??= FocusNode();
 
-    _model.editShopLicencenoTextController ??= TextEditingController();
+    _model.editShopLicencenoTextController ??= TextEditingController(
+        text: valueOrDefault(currentUserDocument?.licenceno, ''));
     _model.editShopLicencenoFocusNode ??= FocusNode();
 
-    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {
-          _model.editShopnameTextController?.text =
-              FFLocalizations.of(context).getText(
-            'qwpc9hb4' /* Shop Name */,
-          );
-        }));
+    WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
   @override
@@ -116,14 +117,14 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -143,7 +144,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -240,83 +241,81 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             return;
                                           }
                                         }
+
+                                        safeSetState(() {});
                                       },
-                                      child: SizedBox(
+                                      child: Container(
                                         width: 120.0,
                                         height: 120.0,
                                         child: Stack(
                                           children: [
-                                            Container(
-                                              width: 120.0,
-                                              height: 120.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .accent1,
-                                                borderRadius:
-                                                    BorderRadius.circular(60.0),
-                                                border: Border.all(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primary,
-                                                  width: 2.0,
-                                                ),
-                                              ),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.max,
-                                                children: [
-                                                  Builder(
-                                                    builder: (context) {
-                                                      if (_model.uploadedFileUrl !=
-                                                              '') {
-                                                        return ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                          child: Image.network(
-                                                            _model
-                                                                .uploadedFileUrl,
-                                                            width: 120.0,
-                                                            height: 120.0,
-                                                            fit: BoxFit.cover,
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Builder(
+                                                  builder: (context) {
+                                                    if (currentUserPhoto !=
+                                                            '') {
+                                                      return Container(
+                                                        width: 100.0,
+                                                        height: 100.0,
+                                                        clipBehavior:
+                                                            Clip.antiAlias,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          shape:
+                                                              BoxShape.circle,
+                                                        ),
+                                                        child: Image.network(
+                                                          currentUserPhoto,
+                                                          fit: BoxFit.cover,
+                                                        ),
+                                                      );
+                                                    } else if (_model.uploadedFileUrl !=
+                                                            '') {
+                                                      return Container(
+                                                        width: 100.0,
+                                                        height: 100.0,
+                                                        clipBehavior:
+                                                            Clip.antiAlias,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          shape:
+                                                              BoxShape.circle,
+                                                        ),
+                                                        child: Image.network(
+                                                          _model
+                                                              .uploadedFileUrl,
+                                                          fit: BoxFit.cover,
+                                                        ),
+                                                      );
+                                                    } else {
+                                                      return Padding(
+                                                        padding:
+                                                            EdgeInsets.all(8.0),
+                                                        child: Container(
+                                                          width: 100.0,
+                                                          height: 100.0,
+                                                          clipBehavior:
+                                                              Clip.antiAlias,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            shape:
+                                                                BoxShape.circle,
                                                           ),
-                                                        );
-                                                      } else if (currentUserPhoto ==
-                                                          '') {
-                                                        return ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                          child: Image.network(
-                                                            currentUserPhoto,
-                                                            width: 120.0,
-                                                            height: 120.0,
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        );
-                                                      } else {
-                                                        return ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
                                                           child: Image.asset(
-                                                            'assets/images/Read-more-image2.png',
-                                                            width: 120.0,
-                                                            height: 120.0,
-                                                            fit: BoxFit.cover,
+                                                            'assets/images/log1.jpeg',
+                                                            fit: BoxFit.fill,
                                                           ),
-                                                        );
-                                                      }
-                                                    },
-                                                  ),
-                                                ],
-                                              ),
+                                                        ),
+                                                      );
+                                                    }
+                                                  },
+                                                ),
+                                              ],
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   1.0, 1.0),
                                               child: Material(
                                                 color: Colors.transparent,
@@ -353,7 +352,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -372,7 +371,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -422,7 +421,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -430,7 +429,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       errorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -438,7 +437,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -495,7 +494,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -503,7 +502,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       errorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -511,7 +510,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Color(0x00000000),
                                           width: 1.0,
                                         ),
@@ -583,7 +582,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -605,7 +604,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 20.0, 20.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -655,7 +654,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -663,7 +662,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         errorBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -671,7 +670,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -726,7 +725,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -734,7 +733,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         errorBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -742,7 +741,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -775,7 +774,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Expanded(
-                                          child: SizedBox(
+                                          child: Container(
                                             width: double.infinity,
                                             child: TextFormField(
                                               controller: _model
@@ -823,7 +822,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                 ),
                                                 focusedBorder:
                                                     OutlineInputBorder(
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Color(0x00000000),
                                                     width: 1.0,
                                                   ),
@@ -880,7 +879,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: FlutterFlowIconButton(
                                             borderRadius: 8.0,
@@ -916,15 +915,15 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                     return WebViewAware(
                                                       child: AlertDialog(
                                                         title:
-                                                            const Text('Dear Sir, '),
-                                                        content: const Text(
+                                                            Text('Dear Sir, '),
+                                                        content: Text(
                                                             'Please fill Your Skills'),
                                                         actions: [
                                                           TextButton(
                                                             onPressed: () =>
                                                                 Navigator.pop(
                                                                     alertDialogContext),
-                                                            child: const Text('Ok'),
+                                                            child: Text('Ok'),
                                                           ),
                                                         ],
                                                       ),
@@ -982,7 +981,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     2.0,
@@ -1010,14 +1009,16 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                         ],
                                       ),
                                     ),
-                                  ].divide(const SizedBox(height: 16.0)),
+                                  ].divide(SizedBox(height: 16.0)),
                                 ),
                               ),
                             ),
                           ),
                         ),
-                      if (valueOrDefault(currentUserDocument?.role, '') !=
-                          'Farmer')
+                      if ((valueOrDefault(currentUserDocument?.role, '') !=
+                              'Farmer') &&
+                          (valueOrDefault(currentUserDocument?.role, '') !=
+                              'MR'))
                         AuthUserStreamWidget(
                           builder: (context) => Material(
                             color: Colors.transparent,
@@ -1033,15 +1034,27 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                 borderRadius: BorderRadius.circular(16.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 20.0, 20.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        '6e3se2lb' /* Shop Name */,
-                                      ),
+                                      () {
+                                        if (valueOrDefault(
+                                                currentUserDocument?.role,
+                                                '') ==
+                                            'Doctor') {
+                                          return 'Doctor Details';
+                                        } else if (valueOrDefault(
+                                                currentUserDocument?.role,
+                                                '') ==
+                                            'MR') {
+                                          return 'Medical Representative Details';
+                                        } else {
+                                          return 'Shop Details';
+                                        }
+                                      }(),
                                       style: FlutterFlowTheme.of(context)
                                           .headlineSmall
                                           .override(
@@ -1082,7 +1095,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -1090,7 +1103,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         errorBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -1098,7 +1111,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -1158,7 +1171,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -1166,7 +1179,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         errorBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -1174,7 +1187,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                               BorderRadius.circular(8.0),
                                         ),
                                         focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Color(0x00000000),
                                             width: 1.0,
                                           ),
@@ -1203,7 +1216,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                           .editShopLicencenoTextControllerValidator
                                           .asValidator(context),
                                     ),
-                                  ].divide(const SizedBox(height: 16.0)),
+                                  ].divide(SizedBox(height: 16.0)),
                                 ),
                               ),
                             ),
@@ -1235,6 +1248,10 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                                   location: _model.editPlacePickerValue.address,
                                   postname:
                                       _model.editDesignationTextController.text,
+                                  shopname:
+                                      _model.editShopnameTextController.text,
+                                  licenceno: _model
+                                      .editShopLicencenoTextController.text,
                                 ),
                                 ...mapToFirestore(
                                   {
@@ -1246,22 +1263,22 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                               });
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
-                                  content: const Text(
+                                  content: Text(
                                     'Profile Updated Successfully',
                                     style: TextStyle(
                                       color: Color(0xFFFCFDFF),
                                     ),
                                   ),
-                                  duration: const Duration(milliseconds: 4000),
+                                  duration: Duration(milliseconds: 4000),
                                   backgroundColor:
                                       FlutterFlowTheme.of(context).secondary,
                                 ),
                               );
 
-                              context.pushNamed('Profile');
+                              context.pushNamed(ProfileWidget.routeName);
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
+                                SnackBar(
                                   content: Text(
                                     'Please Fill mandatory fields *',
                                     style: TextStyle(
@@ -1298,22 +1315,22 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                               });
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
-                                  content: const Text(
+                                  content: Text(
                                     'Profile Updated Successfully',
                                     style: TextStyle(
                                       color: Color(0xFFFCFDFF),
                                     ),
                                   ),
-                                  duration: const Duration(milliseconds: 4000),
+                                  duration: Duration(milliseconds: 4000),
                                   backgroundColor:
                                       FlutterFlowTheme.of(context).secondary,
                                 ),
                               );
 
-                              context.pushNamed('Profile');
+                              context.pushNamed(ProfileWidget.routeName);
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
+                                SnackBar(
                                   content: Text(
                                     'Please Fill mandatory fields *',
                                     style: TextStyle(
@@ -1333,9 +1350,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         options: FFButtonOptions(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 56.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -1348,7 +1365,7 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                           borderRadius: BorderRadius.circular(28.0),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),

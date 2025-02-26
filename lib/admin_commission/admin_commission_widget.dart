@@ -7,6 +7,9 @@ export 'admin_commission_model.dart';
 class AdminCommissionWidget extends StatefulWidget {
   const AdminCommissionWidget({super.key});
 
+  static String routeName = 'AdminCommission';
+  static String routePath = '/adminCommission';
+
   @override
   State<AdminCommissionWidget> createState() => _AdminCommissionWidgetState();
 }
@@ -43,9 +46,9 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
           },
           child: Scaffold(
             key: scaffoldKey,
-            backgroundColor: const Color(0xFFF0F5F5),
+            backgroundColor: Color(0xFFF0F5F5),
             appBar: AppBar(
-              backgroundColor: const Color(0xFF4A7C7C),
+              backgroundColor: Color(0xFF4A7C7C),
               automaticallyImplyLeading: false,
               title: Text(
                 FFLocalizations.of(context).getText(
@@ -57,14 +60,14 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
+                padding: EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 24.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -82,7 +85,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -95,7 +98,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -118,7 +121,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -130,7 +133,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                               .headlineMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -149,7 +152,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -161,7 +164,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                               .headlineMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -180,7 +183,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                               .bodyLarge
                                               .override(
                                                 fontFamily: 'Plus Jakarta Sans',
-                                                color: const Color(0xFF34495E),
+                                                color: Color(0xFF34495E),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -192,7 +195,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                               .headlineMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
@@ -200,7 +203,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 20.0)),
+                              ].divide(SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
@@ -218,7 +221,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -236,24 +239,24 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                           .headlineSmall
                                           .override(
                                             fontFamily: 'Outfit',
-                                            color: const Color(0xFF2C3E50),
+                                            color: Color(0xFF2C3E50),
                                             letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                           ),
                                     ),
                                     Container(
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFE6F3F3),
+                                        color: Color(0xFFE6F3F3),
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             8.0, 16.0, 8.0, 16.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            const Icon(
+                                            Icon(
                                               Icons.filter_list,
                                               color: Color(0xFF4A7C7C),
                                               size: 20.0,
@@ -270,11 +273,11 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF4A7C7C),
+                                                            Color(0xFF4A7C7C),
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
-                                          ].divide(const SizedBox(width: 8.0)),
+                                          ].divide(SizedBox(width: 8.0)),
                                         ),
                                       ),
                                     ),
@@ -283,11 +286,11 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -308,7 +311,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF34495E),
+                                                    color: Color(0xFF34495E),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -324,7 +327,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF4A7C7C),
+                                                    color: Color(0xFF4A7C7C),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -352,7 +355,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -368,18 +371,18 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            Container(
                                               width: double.infinity,
                                               child: Slider(
-                                                activeColor: const Color(0xFF4A7C7C),
+                                                activeColor: Color(0xFF4A7C7C),
                                                 inactiveColor:
-                                                    const Color(0xFFCCE6E6),
+                                                    Color(0xFFCCE6E6),
                                                 min: 0.0,
                                                 max: 100.0,
                                                 value: _model.sliderValue1 ??=
@@ -393,20 +396,20 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                 },
                                               ),
                                             ),
-                                          ].divide(const SizedBox(height: 8.0)),
+                                          ].divide(SizedBox(height: 8.0)),
                                         ),
-                                      ].divide(const SizedBox(height: 16.0)),
+                                      ].divide(SizedBox(height: 16.0)),
                                     ),
                                   ),
                                 ),
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -427,7 +430,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF34495E),
+                                                    color: Color(0xFF34495E),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -443,7 +446,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF4A7C7C),
+                                                    color: Color(0xFF4A7C7C),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -471,7 +474,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -487,18 +490,18 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            Container(
                                               width: double.infinity,
                                               child: Slider(
-                                                activeColor: const Color(0xFF4A7C7C),
+                                                activeColor: Color(0xFF4A7C7C),
                                                 inactiveColor:
-                                                    const Color(0xFFCCE6E6),
+                                                    Color(0xFFCCE6E6),
                                                 min: 0.0,
                                                 max: 100.0,
                                                 value: _model.sliderValue2 ??=
@@ -512,20 +515,20 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                 },
                                               ),
                                             ),
-                                          ].divide(const SizedBox(height: 8.0)),
+                                          ].divide(SizedBox(height: 8.0)),
                                         ),
-                                      ].divide(const SizedBox(height: 16.0)),
+                                      ].divide(SizedBox(height: 16.0)),
                                     ),
                                   ),
                                 ),
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -546,7 +549,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF34495E),
+                                                    color: Color(0xFF34495E),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -562,7 +565,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                   .override(
                                                     fontFamily:
                                                         'Plus Jakarta Sans',
-                                                    color: const Color(0xFF4A7C7C),
+                                                    color: Color(0xFF4A7C7C),
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                   ),
@@ -590,7 +593,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -606,18 +609,18 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            Container(
                                               width: double.infinity,
                                               child: Slider(
-                                                activeColor: const Color(0xFF4A7C7C),
+                                                activeColor: Color(0xFF4A7C7C),
                                                 inactiveColor:
-                                                    const Color(0xFFCCE6E6),
+                                                    Color(0xFFCCE6E6),
                                                 min: 0.0,
                                                 max: 100.0,
                                                 value: _model.sliderValue3 ??=
@@ -631,13 +634,13 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                 },
                                               ),
                                             ),
-                                          ].divide(const SizedBox(height: 8.0)),
+                                          ].divide(SizedBox(height: 8.0)),
                                         ),
-                                      ].divide(const SizedBox(height: 16.0)),
+                                      ].divide(SizedBox(height: 16.0)),
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
@@ -655,7 +658,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 24.0, 24.0, 24.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -668,7 +671,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                       .headlineSmall
                                       .override(
                                         fontFamily: 'Outfit',
-                                        color: const Color(0xFF2C3E50),
+                                        color: Color(0xFF2C3E50),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -676,11 +679,11 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -707,7 +710,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
@@ -725,7 +728,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -733,12 +736,12 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                             ),
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 16.0, 8.0, 16.0),
                                                 child: Text(
@@ -760,18 +763,18 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                             ),
                                           ],
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
                                 Container(
                                   width: MediaQuery.sizeOf(context).width * 1.0,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFFE6F3F3),
+                                    color: Color(0xFFE6F3F3),
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 16.0, 16.0, 16.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -798,7 +801,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w600,
@@ -816,7 +819,7 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                                         fontFamily:
                                                             'Plus Jakarta Sans',
                                                         color:
-                                                            const Color(0xFF34495E),
+                                                            Color(0xFF34495E),
                                                         letterSpacing: 0.0,
                                                       ),
                                                 ),
@@ -824,12 +827,12 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                             ),
                                             Container(
                                               decoration: BoxDecoration(
-                                                color: const Color(0xFF4A7C7C),
+                                                color: Color(0xFF4A7C7C),
                                                 borderRadius:
                                                     BorderRadius.circular(16.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         8.0, 16.0, 8.0, 16.0),
                                                 child: Text(
@@ -851,16 +854,16 @@ class _AdminCommissionWidgetState extends State<AdminCommissionWidget> {
                                             ),
                                           ],
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 24.0)),
+                    ].divide(SizedBox(height: 24.0)),
                   ),
                 ),
               ),

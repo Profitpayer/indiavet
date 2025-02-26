@@ -1,12 +1,16 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:flutter/material.dart';
 import 'search_results_model.dart';
 export 'search_results_model.dart';
 
 class SearchResultsWidget extends StatefulWidget {
   const SearchResultsWidget({super.key});
+
+  static String routeName = 'SearchResults';
+  static String routePath = '/searchResults';
 
   @override
   State<SearchResultsWidget> createState() => _SearchResultsWidgetState();
@@ -46,7 +50,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
             key: scaffoldKey,
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             appBar: AppBar(
-              backgroundColor: const Color(0xFFF5F5F5),
+              backgroundColor: Color(0xFFF5F5F5),
               automaticallyImplyLeading: false,
               title: Row(
                 mainAxisSize: MainAxisSize.max,
@@ -56,18 +60,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                     borderRadius: 40.0,
                     borderWidth: 1.0,
                     buttonSize: 40.0,
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.arrow_back,
                       color: Color(0xFF191818),
                       size: 30.0,
                     ),
                     onPressed: () async {
-                      context.pushNamed('HomePage');
+                      context.pushNamed(HomePageWidget.routeName);
                     },
                   ),
                   Expanded(
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'g6x0yr3q' /* Search Results */,
@@ -76,7 +80,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                             .headlineMedium
                             .override(
                               fontFamily: 'Outfit',
-                              color: const Color(0xFF101010),
+                              color: Color(0xFF101010),
                               fontSize: 20.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
@@ -86,27 +90,27 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                   ),
                 ],
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.5,
             ),
             body: SafeArea(
               top: true,
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 3.0),
                             child: Container(
                               width: 100.0,
@@ -122,14 +126,14 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 358.0,
                                           height: 39.0,
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -154,7 +158,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 15.0, 0.0),
                                                 child: Text(
@@ -186,7 +190,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -202,7 +206,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -251,25 +255,25 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 5.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.shopping_bag_rounded,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -292,18 +296,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.location_on,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -326,18 +330,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.currency_rupee,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -362,7 +366,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 0.0, 3.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -391,7 +395,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -422,7 +426,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -453,7 +457,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -486,14 +490,14 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 3.0),
                             child: Container(
                               width: 100.0,
@@ -509,14 +513,14 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 358.0,
                                           height: 39.0,
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -541,7 +545,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 15.0, 0.0),
                                                 child: Text(
@@ -573,7 +577,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -589,7 +593,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -638,25 +642,25 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 5.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.shopping_bag_rounded,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -679,18 +683,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.location_on,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -713,18 +717,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.currency_rupee,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -749,7 +753,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 0.0, 3.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -778,7 +782,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -809,7 +813,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -840,7 +844,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -873,14 +877,14 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 3.0),
                             child: Container(
                               width: 100.0,
@@ -896,14 +900,14 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 358.0,
                                           height: 39.0,
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -928,7 +932,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 15.0, 0.0),
                                                 child: Text(
@@ -960,7 +964,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -976,7 +980,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -1025,25 +1029,25 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 5.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.shopping_bag_rounded,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -1066,18 +1070,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.location_on,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -1100,18 +1104,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.currency_rupee,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -1136,7 +1140,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 0.0, 3.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1165,7 +1169,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -1196,7 +1200,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -1227,7 +1231,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -1260,14 +1264,14 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 5.0, 0.0, 3.0),
                             child: Container(
                               width: 100.0,
@@ -1283,14 +1287,14 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 0.0, 0.0),
                                         child: Container(
                                           width: 358.0,
                                           height: 39.0,
-                                          decoration: const BoxDecoration(),
+                                          decoration: BoxDecoration(),
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -1315,7 +1319,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 15.0, 0.0),
                                                 child: Text(
@@ -1347,7 +1351,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -1363,7 +1367,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -1412,25 +1416,25 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 5.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.shopping_bag_rounded,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -1453,18 +1457,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.location_on,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -1487,18 +1491,18 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              const Icon(
+                                              Icon(
                                                 Icons.currency_rupee,
                                                 color: Color(0xFFBF4623),
                                                 size: 24.0,
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -1523,7 +1527,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 5.0, 0.0, 3.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -1552,7 +1556,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -1583,7 +1587,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(
@@ -1614,7 +1618,7 @@ class _SearchResultsWidgetState extends State<SearchResultsWidget> {
                                                     BorderRadius.circular(8.0),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 3.0, 5.0, 2.0),
                                                 child: Text(

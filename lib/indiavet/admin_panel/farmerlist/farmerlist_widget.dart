@@ -4,12 +4,14 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'farmerlist_model.dart';
 export 'farmerlist_model.dart';
 
 class FarmerlistWidget extends StatefulWidget {
   const FarmerlistWidget({super.key});
+
+  static String routeName = 'Farmerlist';
+  static String routePath = '/farmerlist';
 
   @override
   State<FarmerlistWidget> createState() => _FarmerlistWidgetState();
@@ -73,7 +75,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -110,7 +112,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                   ),
                 ],
               ),
-              actions: const [],
+              actions: [],
               centerTitle: false,
               elevation: 0.0,
             ),
@@ -123,7 +125,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                         child: LinearPercentIndicator(
                           percent: 1.0,
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -131,14 +133,14 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                           animation: true,
                           animateFromLastPercent: true,
                           progressColor: FlutterFlowTheme.of(context).secondary,
-                          backgroundColor: const Color(0xFFE0E3E7),
-                          barRadius: const Radius.circular(0.0),
+                          backgroundColor: Color(0xFFE0E3E7),
+                          barRadius: Radius.circular(0.0),
                           padding: EdgeInsets.zero,
                         ),
                       ),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -146,7 +148,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                             children: [
                               Expanded(
                                 child: Container(
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.network(
@@ -168,7 +170,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     10.0, 12.0, 10.0, 0.0),
                                 child: StreamBuilder<List<UsersRecord>>(
                                   stream: queryUsersRecord(),
@@ -203,7 +205,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                                                 listViewIndex];
                                         return Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 8.0),
                                           child: Container(
                                             width: 100.0,
@@ -225,7 +227,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           8.0, 0.0, 0.0, 0.0),
                                                   child: Card(
@@ -243,7 +245,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(2.0),
+                                                          EdgeInsets.all(2.0),
                                                       child: ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
@@ -254,7 +256,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                                                           width: 44.0,
                                                           height: 44.0,
                                                           fit: BoxFit.contain,
-                                                          alignment: const Alignment(
+                                                          alignment: Alignment(
                                                               0.0, 0.0),
                                                         ),
                                                       ),
@@ -326,7 +328,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                                                             ListTileControlAffinity
                                                                 .trailing,
                                                         contentPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -344,7 +346,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 8.0, 0.0),
                                                   child: FlutterFlowIconButton(
@@ -355,7 +357,7 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                                                                 context)
                                                             .primary,
                                                     hoverColor:
-                                                        const Color(0xFF54CC27),
+                                                        Color(0xFF54CC27),
                                                     icon: Icon(
                                                       Icons.call_sharp,
                                                       color:
@@ -364,13 +366,9 @@ class _FarmerlistWidgetState extends State<FarmerlistWidget> {
                                                               .info,
                                                       size: 24.0,
                                                     ),
-                                                    onPressed: () async {
-                                                      await launchUrl(Uri(
-                                                        scheme: 'tel',
-                                                        path:
-                                                            listViewUsersRecord
-                                                                .phoneNumber,
-                                                      ));
+                                                    onPressed: () {
+                                                      print(
+                                                          'IconButton pressed ...');
                                                     },
                                                   ),
                                                 ),

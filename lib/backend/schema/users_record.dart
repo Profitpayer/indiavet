@@ -3,16 +3,15 @@ import 'dart:async';
 import 'package:collection/collection.dart';
 
 import '/backend/schema/util/firestore_util.dart';
-import '/backend/schema/util/schema_util.dart';
 
 import 'index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 class UsersRecord extends FirestoreRecord {
   UsersRecord._(
-    super.reference,
-    super.data,
-  ) {
+    DocumentReference reference,
+    Map<String, dynamic> data,
+  ) : super(reference, data) {
     _initializeFields();
   }
 
@@ -81,11 +80,6 @@ class UsersRecord extends FirestoreRecord {
   String get ifscCode => _ifscCode ?? '';
   bool hasIfscCode() => _ifscCode != null;
 
-  // "medicines" field.
-  List<String>? _medicines;
-  List<String> get medicines => _medicines ?? const [];
-  bool hasMedicines() => _medicines != null;
-
   // "referCode" field.
   String? _referCode;
   String get referCode => _referCode ?? '';
@@ -95,11 +89,6 @@ class UsersRecord extends FirestoreRecord {
   List<DocumentReference>? _referUser;
   List<DocumentReference> get referUser => _referUser ?? const [];
   bool hasReferUser() => _referUser != null;
-
-  // "typeofmedi" field.
-  List<String>? _typeofmedi;
-  List<String> get typeofmedi => _typeofmedi ?? const [];
-  bool hasTypeofmedi() => _typeofmedi != null;
 
   // "bank_name" field.
   String? _bankName;
@@ -131,6 +120,31 @@ class UsersRecord extends FirestoreRecord {
   String get bankAccountHoldername => _bankAccountHoldername ?? '';
   bool hasBankAccountHoldername() => _bankAccountHoldername != null;
 
+  // "creditpoints" field.
+  int? _creditpoints;
+  int get creditpoints => _creditpoints ?? 0;
+  bool hasCreditpoints() => _creditpoints != null;
+
+  // "shopname" field.
+  String? _shopname;
+  String get shopname => _shopname ?? '';
+  bool hasShopname() => _shopname != null;
+
+  // "licenceno" field.
+  String? _licenceno;
+  String get licenceno => _licenceno ?? '';
+  bool hasLicenceno() => _licenceno != null;
+
+  // "UserID" field.
+  String? _userID;
+  String get userID => _userID ?? '';
+  bool hasUserID() => _userID != null;
+
+  // "point" field.
+  int? _point;
+  int get point => _point ?? 0;
+  bool hasPoint() => _point != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -145,16 +159,19 @@ class UsersRecord extends FirestoreRecord {
     _experience = snapshotData['experience'] as String?;
     _bankaccountno = snapshotData['bankaccountno'] as String?;
     _ifscCode = snapshotData['ifsc_Code'] as String?;
-    _medicines = getDataList(snapshotData['medicines']);
     _referCode = snapshotData['referCode'] as String?;
     _referUser = getDataList(snapshotData['referUser']);
-    _typeofmedi = getDataList(snapshotData['typeofmedi']);
     _bankName = snapshotData['bank_name'] as String?;
     _location = snapshotData['location'] as String?;
     _registrationNo = snapshotData['RegistrationNo'] as String?;
     _postname = snapshotData['Postname'] as String?;
     _skilled = getDataList(snapshotData['skilled']);
     _bankAccountHoldername = snapshotData['BankAccountHoldername'] as String?;
+    _creditpoints = castToType<int>(snapshotData['creditpoints']);
+    _shopname = snapshotData['shopname'] as String?;
+    _licenceno = snapshotData['licenceno'] as String?;
+    _userID = snapshotData['UserID'] as String?;
+    _point = castToType<int>(snapshotData['point']);
   }
 
   static CollectionReference get collection =>
@@ -209,6 +226,11 @@ Map<String, dynamic> createUsersRecordData({
   String? registrationNo,
   String? postname,
   String? bankAccountHoldername,
+  int? creditpoints,
+  String? shopname,
+  String? licenceno,
+  String? userID,
+  int? point,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -230,6 +252,11 @@ Map<String, dynamic> createUsersRecordData({
       'RegistrationNo': registrationNo,
       'Postname': postname,
       'BankAccountHoldername': bankAccountHoldername,
+      'creditpoints': creditpoints,
+      'shopname': shopname,
+      'licenceno': licenceno,
+      'UserID': userID,
+      'point': point,
     }.withoutNulls,
   );
 
@@ -255,16 +282,19 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.experience == e2?.experience &&
         e1?.bankaccountno == e2?.bankaccountno &&
         e1?.ifscCode == e2?.ifscCode &&
-        listEquality.equals(e1?.medicines, e2?.medicines) &&
         e1?.referCode == e2?.referCode &&
         listEquality.equals(e1?.referUser, e2?.referUser) &&
-        listEquality.equals(e1?.typeofmedi, e2?.typeofmedi) &&
         e1?.bankName == e2?.bankName &&
         e1?.location == e2?.location &&
         e1?.registrationNo == e2?.registrationNo &&
         e1?.postname == e2?.postname &&
         listEquality.equals(e1?.skilled, e2?.skilled) &&
-        e1?.bankAccountHoldername == e2?.bankAccountHoldername;
+        e1?.bankAccountHoldername == e2?.bankAccountHoldername &&
+        e1?.creditpoints == e2?.creditpoints &&
+        e1?.shopname == e2?.shopname &&
+        e1?.licenceno == e2?.licenceno &&
+        e1?.userID == e2?.userID &&
+        e1?.point == e2?.point;
   }
 
   @override
@@ -282,16 +312,19 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.experience,
         e?.bankaccountno,
         e?.ifscCode,
-        e?.medicines,
         e?.referCode,
         e?.referUser,
-        e?.typeofmedi,
         e?.bankName,
         e?.location,
         e?.registrationNo,
         e?.postname,
         e?.skilled,
-        e?.bankAccountHoldername
+        e?.bankAccountHoldername,
+        e?.creditpoints,
+        e?.shopname,
+        e?.licenceno,
+        e?.userID,
+        e?.point
       ]);
 
   @override

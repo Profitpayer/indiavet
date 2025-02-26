@@ -40,9 +40,9 @@ class _LanguageWidgetState extends State<LanguageWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
         child: Container(
           width: double.infinity,
           decoration: BoxDecoration(
@@ -50,7 +50,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
             borderRadius: BorderRadius.circular(12.0),
           ),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
+            padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -70,7 +70,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
                   height: 40.0,
                   backgroundColor:
                       FlutterFlowTheme.of(context).secondaryBackground,
-                  borderColor: Colors.transparent,
+                  borderColor: FlutterFlowTheme.of(context).primaryText,
                   dropdownIconColor: FlutterFlowTheme.of(context).secondaryText,
                   borderRadius: 8.0,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -96,9 +96,9 @@ class _LanguageWidgetState extends State<LanguageWidget> {
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                     iconPadding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Plus Jakarta Sans',
@@ -109,7 +109,7 @@ class _LanguageWidgetState extends State<LanguageWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
-              ].divide(const SizedBox(height: 16.0)),
+              ].divide(SizedBox(height: 16.0)),
             ),
           ),
         ),
