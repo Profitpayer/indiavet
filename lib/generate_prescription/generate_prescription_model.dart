@@ -178,6 +178,10 @@ class GeneratePrescriptionModel
   FocusNode? patientvillFocusNode;
   TextEditingController? patientvillTextController;
   String? Function(BuildContext, String?)? patientvillTextControllerValidator;
+  // State field(s) for DoctorID1 widget.
+  FocusNode? doctorID1FocusNode;
+  TextEditingController? doctorID1TextController;
+  String? Function(BuildContext, String?)? doctorID1TextControllerValidator;
   // State field(s) for ChoiceChips-2 widget.
   FormFieldController<List<String>>? choiceChips2ValueController;
   String? get choiceChips2Value =>
@@ -227,6 +231,9 @@ class GeneratePrescriptionModel
 
     patientvillFocusNode?.dispose();
     patientvillTextController?.dispose();
+
+    doctorID1FocusNode?.dispose();
+    doctorID1TextController?.dispose();
 
     medicinename1FocusNode?.dispose();
     medicinename1TextController?.dispose();

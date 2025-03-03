@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'prescription_history_copy_widget.dart'
     show PrescriptionHistoryCopyWidget;
 import 'package:flutter/material.dart';

@@ -41,6 +41,10 @@ class FFAppState extends ChangeNotifier {
       _prooffferCode = await secureStorage.getStringList('ff_prooffferCode') ??
           _prooffferCode;
     });
+    await _safeInitAsync(() async {
+      _creditpoint =
+          await secureStorage.getInt('ff_creditpoint') ?? _creditpoint;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -85,12 +89,6 @@ class FFAppState extends ChangeNotifier {
     City.insert(index, value);
   }
 
-  int _PrescriptionOrder = 0;
-  int get PrescriptionOrder => _PrescriptionOrder;
-  set PrescriptionOrder(int value) {
-    _PrescriptionOrder = value;
-  }
-
   int _RegistrationNo = 0;
   int get RegistrationNo => _RegistrationNo;
   set RegistrationNo(int value) {
@@ -113,7 +111,7 @@ class FFAppState extends ChangeNotifier {
     secureStorage.delete(key: 'ff_Point');
   }
 
-  int _PrescriptionInvoiceNo = 0;
+  int _PrescriptionInvoiceNo = 20250001;
   int get PrescriptionInvoiceNo => _PrescriptionInvoiceNo;
   set PrescriptionInvoiceNo(int value) {
     _PrescriptionInvoiceNo = value;
@@ -206,6 +204,41 @@ class FFAppState extends ChangeNotifier {
   void insertAtIndexInProoffferCode(int index, String value) {
     prooffferCode.insert(index, value);
     secureStorage.setStringList('ff_prooffferCode', _prooffferCode);
+  }
+
+  String _createPDF = '';
+  String get createPDF => _createPDF;
+  set createPDF(String value) {
+    _createPDF = value;
+  }
+
+  String _downloadpdf = '';
+  String get downloadpdf => _downloadpdf;
+  set downloadpdf(String value) {
+    _downloadpdf = value;
+  }
+
+  int _creditpoint = 0;
+  int get creditpoint => _creditpoint;
+  set creditpoint(int value) {
+    _creditpoint = value;
+    secureStorage.setInt('ff_creditpoint', value);
+  }
+
+  void deleteCreditpoint() {
+    secureStorage.delete(key: 'ff_creditpoint');
+  }
+
+  String _upercase = '';
+  String get upercase => _upercase;
+  set upercase(String value) {
+    _upercase = value;
+  }
+
+  String _Notification = '';
+  String get Notification => _Notification;
+  set Notification(String value) {
+    _Notification = value;
   }
 }
 

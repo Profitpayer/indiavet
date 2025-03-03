@@ -43,7 +43,8 @@ class _DoctorPanelWidgetState extends State<DoctorPanelWidget> {
       await currentUserReference!.update(createUsersRecordData(
         creditpoints: 100,
       ));
-      _model.credit = valueOrDefault(currentUserDocument?.creditpoints, 0);
+      _model.credit =
+          _model.credit + valueOrDefault(currentUserDocument?.creditpoints, 0);
       safeSetState(() {});
     });
 
@@ -176,14 +177,31 @@ class _DoctorPanelWidgetState extends State<DoctorPanelWidget> {
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 20.0, 0.0),
+                                      child: AuthUserStreamWidget(
+                                        builder: (context) => Text(
+                                          valueOrDefault<String>(
+                                            valueOrDefault(
+                                                currentUserDocument?.location,
+                                                ''),
+                                            'Kanpur',
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Plus Jakarta Sans',
+                                                color: Color(0xFFEBE9E9),
+                                                fontSize: 16.0,
+                                                letterSpacing: 0.0,
+                                              ),
+                                        ),
+                                      ),
+                                    ),
                                     AuthUserStreamWidget(
                                       builder: (context) => Text(
-                                        valueOrDefault<String>(
-                                          valueOrDefault(
-                                              currentUserDocument?.location,
-                                              ''),
-                                          'Kanpur',
-                                        ),
+                                        'Credit Point  ${valueOrDefault(currentUserDocument?.creditpoints, 0).toString()}',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -294,13 +312,24 @@ class _DoctorPanelWidgetState extends State<DoctorPanelWidget> {
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 15.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/Baner.jpeg',
-                                    width: 376.0,
-                                    height: 200.0,
-                                    fit: BoxFit.fill,
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed(
+                                        PrescriptionHistoryCopyWidget
+                                            .routeName);
+                                  },
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    child: Image.asset(
+                                      'assets/images/Baner.jpeg',
+                                      width: 376.0,
+                                      height: 200.0,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -1669,6 +1698,158 @@ class _DoctorPanelWidgetState extends State<DoctorPanelWidget> {
                                                                             context)
                                                                         .getText(
                                                                       'xd49gylz' /* Prescription Generate */,
+                                                                    ),
+                                                                    textAlign:
+                                                                        TextAlign
+                                                                            .center,
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodySmall
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Plus Jakarta Sans',
+                                                                          color:
+                                                                              Color(0xFF34495E),
+                                                                          letterSpacing:
+                                                                              0.0,
+                                                                          fontWeight:
+                                                                              FontWeight.bold,
+                                                                        ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ].divide(SizedBox(
+                                                          height: 8.0)),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 10.0, 0.0),
+                                                  child: InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
+                                                    onTap: () async {
+                                                      context.pushNamed(
+                                                          PrescriptionHistoryCopyWidget
+                                                              .routeName);
+                                                    },
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Material(
+                                                          color: Colors
+                                                              .transparent,
+                                                          elevation: 2.0,
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .only(
+                                                              bottomLeft: Radius
+                                                                  .circular(
+                                                                      10.0),
+                                                              bottomRight:
+                                                                  Radius
+                                                                      .circular(
+                                                                          10.0),
+                                                              topLeft: Radius
+                                                                  .circular(
+                                                                      10.0),
+                                                              topRight: Radius
+                                                                  .circular(
+                                                                      10.0),
+                                                            ),
+                                                          ),
+                                                          child: Container(
+                                                            width: 80.0,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: Color(
+                                                                  0xFFEEEAEA),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                bottomLeft: Radius
+                                                                    .circular(
+                                                                        10.0),
+                                                                bottomRight: Radius
+                                                                    .circular(
+                                                                        10.0),
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        10.0),
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        10.0),
+                                                              ),
+                                                            ),
+                                                            child: Column(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .max,
+                                                              children: [
+                                                                Align(
+                                                                  alignment:
+                                                                      AlignmentDirectional(
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            5.0,
+                                                                            0.0,
+                                                                            3.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          60.0,
+                                                                      height:
+                                                                          60.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .asset(
+                                                                        'assets/images/Screenshot_2025-01-20_165434-removebg-preview.png',
+                                                                        fit: BoxFit
+                                                                            .cover,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          5.0),
+                                                                  child: Text(
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'c9svdnjx' /* Prescription Generate */,
                                                                     ),
                                                                     textAlign:
                                                                         TextAlign

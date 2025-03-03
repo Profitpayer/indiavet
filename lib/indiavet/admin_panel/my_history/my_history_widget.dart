@@ -327,7 +327,7 @@ class _MyHistoryWidgetState extends State<MyHistoryWidget> {
                               highlightColor: Colors.transparent,
                               onTap: () async {
                                 context.pushNamed(
-                                    PrescriptionHistoryWidget.routeName);
+                                    PrescriptionHistoryCopyWidget.routeName);
                               },
                               child: Material(
                                 color: Colors.transparent,

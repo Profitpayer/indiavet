@@ -74,7 +74,6 @@ export '/indiavet/admin_panel/farmerlist/farmerlist_widget.dart'
 export '/commission_dashboard/commission_dashboard_widget.dart'
     show CommissionDashboardWidget;
 export '/indiavet/admin_panel/m_r_list/m_r_list_widget.dart' show MRListWidget;
-export '/home/home_widget.dart' show HomeWidget;
 export '/doctor111111/doctor111111_widget.dart' show Doctor111111Widget;
 export '/product_category/product_category_widget.dart'
     show ProductCategoryWidget;
@@ -112,4 +111,10 @@ export '/create06_book_appointment/create06_book_appointment_widget.dart'
     show Create06BookAppointmentWidget;
 export '/authentication2/authentication2_widget.dart'
     show Authentication2Widget;
-export '/passcode/passcode_widget.dart' show PasscodeWidget;
+export '/details_page/details_page_widget.dart' show DetailsPageWidget;
+export '/my_team_marketplace/my_team_marketplace_widget.dart'
+    show MyTeamMarketplaceWidget;
+export '/pdf/pdf_widget.dart' show PdfWidget;
+export '/user_list/user_list_widget.dart' show UserListWidget;
+export '/test1/test1_widget.dart' show Test1Widget;
+export '/notification/notification_widget.dart' show NotificationWidget;

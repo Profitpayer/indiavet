@@ -1,3 +1,4 @@
+import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -142,18 +143,23 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        'emwsbku4' /* $5,200 */,
+                                    AuthUserStreamWidget(
+                                      builder: (context) => Text(
+                                        valueOrDefault(
+                                                currentUserDocument
+                                                    ?.creditpoints,
+                                                0)
+                                            .toString(),
+                                        style: FlutterFlowTheme.of(context)
+                                            .headlineMedium
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
+                                              letterSpacing: 0.0,
+                                            ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .headlineMedium
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            letterSpacing: 0.0,
-                                          ),
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(
@@ -207,18 +213,23 @@ class _CommissionDashboardWidgetState extends State<CommissionDashboardWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        '0kaigvvi' /* $1,000 */,
+                                    AuthUserStreamWidget(
+                                      builder: (context) => Text(
+                                        valueOrDefault(
+                                                currentUserDocument
+                                                    ?.creditpoints,
+                                                0)
+                                            .toString(),
+                                        style: FlutterFlowTheme.of(context)
+                                            .headlineMedium
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .tertiary,
+                                              letterSpacing: 0.0,
+                                            ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .headlineMedium
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: FlutterFlowTheme.of(context)
-                                                .tertiary,
-                                            letterSpacing: 0.0,
-                                          ),
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(

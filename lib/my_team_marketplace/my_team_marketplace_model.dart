@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'passcode_widget.dart' show PasscodeWidget;
+import 'my_team_marketplace_widget.dart' show MyTeamMarketplaceWidget;
 import 'package:flutter/material.dart';
 
-class PasscodeModel extends FlutterFlowModel<PasscodeWidget> {
+class MyTeamMarketplaceModel extends FlutterFlowModel<MyTeamMarketplaceWidget> {
   @override
   void initState(BuildContext context) {}
 

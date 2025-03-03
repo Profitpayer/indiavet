@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:map_launcher/map_launcher.dart' as $ml;
 import 'package:flutter/material.dart';
 import 'visitreport_model.dart';
 export 'visitreport_model.dart';
@@ -20,6 +21,7 @@ class _VisitreportWidgetState extends State<VisitreportWidget> {
   late VisitreportModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+  LatLng? currentUserLocationValue;
 
   @override
   void initState() {
@@ -340,11 +342,28 @@ class _VisitreportWidgetState extends State<VisitreportWidget> {
                                         ),
                                       ],
                                     ),
-                                    Icon(
-                                      Icons.place,
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      size: 24.0,
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        currentUserLocationValue =
+                                            await getCurrentUserLocation(
+                                                defaultLocation:
+                                                    LatLng(0.0, 0.0));
+                                        await launchMap(
+                                          mapType: $ml.MapType.google,
+                                          location: currentUserLocationValue,
+                                          title: '',
+                                        );
+                                      },
+                                      child: Icon(
+                                        Icons.place,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 24.0,
+                                      ),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -392,11 +411,27 @@ class _VisitreportWidgetState extends State<VisitreportWidget> {
                                         ),
                                       ],
                                     ),
-                                    Icon(
-                                      Icons.directions_walk,
-                                      color:
-                                          FlutterFlowTheme.of(context).primary,
-                                      size: 24.0,
+                                    InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        currentUserLocationValue =
+                                            await getCurrentUserLocation(
+                                                defaultLocation:
+                                                    LatLng(0.0, 0.0));
+                                        await launchMap(
+                                          location: currentUserLocationValue,
+                                          title: '',
+                                        );
+                                      },
+                                      child: Icon(
+                                        Icons.directions_walk,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
+                                        size: 24.0,
+                                      ),
                                     ),
                                   ].divide(SizedBox(height: 12.0)),
                                 ),

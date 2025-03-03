@@ -7,7 +7,9 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:webviewx_plus/webviewx_plus.dart';
 import 'medical_store_model.dart';
 export 'medical_store_model.dart';
@@ -32,6 +34,13 @@ class _MedicalStoreWidgetState extends State<MedicalStoreWidget> {
     super.initState();
     _model = createModel(context, () => MedicalStoreModel());
 
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      FFAppState().creditpoint = FFAppState().creditpoint +
+          valueOrDefault(currentUserDocument?.creditpoints, 0);
+      safeSetState(() {});
+    });
+
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
 
@@ -44,6 +53,8 @@ class _MedicalStoreWidgetState extends State<MedicalStoreWidget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Title(
         title: 'MedicalStore',
         color: FlutterFlowTheme.of(context).primary.withAlpha(0XFF),
@@ -161,13 +172,31 @@ class _MedicalStoreWidgetState extends State<MedicalStoreWidget> {
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 25.0, 0.0),
+                                    child: AuthUserStreamWidget(
+                                      builder: (context) => Text(
+                                        valueOrDefault<String>(
+                                          valueOrDefault(
+                                              currentUserDocument?.location,
+                                              ''),
+                                          'Kanpur',
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: Color(0xFFEBE9E9),
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
+                                            ),
+                                      ),
+                                    ),
+                                  ),
                                   AuthUserStreamWidget(
                                     builder: (context) => Text(
-                                      valueOrDefault<String>(
-                                        valueOrDefault(
-                                            currentUserDocument?.location, ''),
-                                        'Kanpur',
-                                      ),
+                                      'Credit Point ${valueOrDefault(currentUserDocument?.creditpoints, 0).toString()}',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -1538,7 +1567,7 @@ class _MedicalStoreWidgetState extends State<MedicalStoreWidget> {
                                                   Colors.transparent,
                                               onTap: () async {
                                                 context.pushNamed(
-                                                    PrescriptionHistoryWidget
+                                                    PrescriptionHistoryCopyWidget
                                                         .routeName);
                                               },
                                               child: Column(
@@ -3600,55 +3629,42 @@ class _MedicalStoreWidgetState extends State<MedicalStoreWidget> {
                                           ].divide(SizedBox(height: 8.0)),
                                         ),
                                       ),
-                                      InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          context.pushNamed(
-                                              PrescriptionSaleOutWidget
-                                                  .routeName);
-                                        },
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              width: 60.0,
-                                              height: 60.0,
-                                              decoration: BoxDecoration(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                borderRadius:
-                                                    BorderRadius.circular(30.0),
-                                              ),
-                                              child: Icon(
-                                                Icons.indeterminate_check_box,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .info,
-                                                size: 30.0,
-                                              ),
-                                            ),
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'tbl3nl34' /* Prescription Sale  */,
-                                              ),
-                                              style:
+                                      Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: 60.0,
+                                            height: 60.0,
+                                            decoration: BoxDecoration(
+                                              color:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodySmall
-                                                      .override(
-                                                        fontFamily:
-                                                            'Plus Jakarta Sans',
-                                                        letterSpacing: 0.0,
-                                                      ),
+                                                      .primary,
+                                              borderRadius:
+                                                  BorderRadius.circular(30.0),
                                             ),
-                                          ].divide(SizedBox(height: 8.0)),
-                                        ),
+                                            child: Icon(
+                                              Icons.indeterminate_check_box,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .info,
+                                              size: 30.0,
+                                            ),
+                                          ),
+                                          Text(
+                                            FFLocalizations.of(context).getText(
+                                              'tbl3nl34' /* Prescription Sale  */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodySmall
+                                                .override(
+                                                  fontFamily:
+                                                      'Plus Jakarta Sans',
+                                                  letterSpacing: 0.0,
+                                                ),
+                                          ),
+                                        ].divide(SizedBox(height: 8.0)),
                                       ),
                                       Column(
                                         mainAxisSize: MainAxisSize.max,

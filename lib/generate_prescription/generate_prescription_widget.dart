@@ -1,7 +1,6 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/backend/firebase_storage/storage.dart';
-import '/components/offer_code_widget.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_count_controller.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -10,6 +9,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -51,6 +51,10 @@ class _GeneratePrescriptionWidgetState
 
     _model.patientvillTextController ??= TextEditingController();
     _model.patientvillFocusNode ??= FocusNode();
+
+    _model.doctorID1TextController ??=
+        TextEditingController(text: currentUserDisplayName);
+    _model.doctorID1FocusNode ??= FocusNode();
 
     _model.medicinename1TextController ??= TextEditingController();
     _model.medicinename1FocusNode ??= FocusNode();
@@ -1386,6 +1390,79 @@ class _GeneratePrescriptionWidgetState
                                         .patientvillTextControllerValidator
                                         .asValidator(context),
                                   ),
+                                  AuthUserStreamWidget(
+                                    builder: (context) => TextFormField(
+                                      controller:
+                                          _model.doctorID1TextController,
+                                      focusNode: _model.doctorID1FocusNode,
+                                      autofocus: false,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelText:
+                                            FFLocalizations.of(context).getText(
+                                          'gkx8x5ta' /* Doctor ID */,
+                                        ),
+                                        labelStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              letterSpacing: 0.0,
+                                            ),
+                                        hintStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              letterSpacing: 0.0,
+                                            ),
+                                        enabledBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: FlutterFlowTheme.of(context)
+                                                .alternate,
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        focusedBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0x00000000),
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        errorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0x00000000),
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        focusedErrorBorder: OutlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0x00000000),
+                                            width: 1.0,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        filled: true,
+                                        fillColor: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyLarge
+                                          .override(
+                                            fontFamily: 'Plus Jakarta Sans',
+                                            letterSpacing: 0.0,
+                                          ),
+                                      minLines: 1,
+                                      validator: _model
+                                          .doctorID1TextControllerValidator
+                                          .asValidator(context),
+                                    ),
+                                  ),
                                 ].divide(SizedBox(height: 16.0)),
                               ),
                             ),
@@ -2612,615 +2689,6 @@ class _GeneratePrescriptionWidgetState
                                                         ),
                                                       ),
                                                     ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Wrap(
-                                                              spacing: 0.0,
-                                                              runSpacing: 0.0,
-                                                              alignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  WrapCrossAlignment
-                                                                      .start,
-                                                              direction:
-                                                                  Axis.vertical,
-                                                              runAlignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              verticalDirection:
-                                                                  VerticalDirection
-                                                                      .down,
-                                                              clipBehavior: Clip
-                                                                  .antiAlias,
-                                                              children: [
-                                                                Card(
-                                                                  clipBehavior:
-                                                                      Clip.antiAliasWithSaveLayer,
-                                                                  elevation:
-                                                                      0.0,
-                                                                  shape:
-                                                                      RoundedRectangleBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Align(
-                                                                        alignment: AlignmentDirectional(
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              5.0,
-                                                                              3.0,
-                                                                              5.0,
-                                                                              2.0),
-                                                                          child:
-                                                                              Text(
-                                                                            FFLocalizations.of(context).getText(
-                                                                              'mswmkn1i' /* Sale Rate */,
-                                                                            ),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
-                                                                                  fontSize: 20.0,
-                                                                                  letterSpacing: 0.0,
-                                                                                  fontWeight: FontWeight.w600,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Wrap(
-                                                              spacing: 0.0,
-                                                              runSpacing: 0.0,
-                                                              alignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  WrapCrossAlignment
-                                                                      .start,
-                                                              direction:
-                                                                  Axis.vertical,
-                                                              runAlignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              verticalDirection:
-                                                                  VerticalDirection
-                                                                      .down,
-                                                              clipBehavior: Clip
-                                                                  .antiAlias,
-                                                              children: [
-                                                                Card(
-                                                                  clipBehavior:
-                                                                      Clip.antiAliasWithSaveLayer,
-                                                                  elevation:
-                                                                      0.0,
-                                                                  shape:
-                                                                      RoundedRectangleBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Align(
-                                                                        alignment: AlignmentDirectional(
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              5.0,
-                                                                              3.0,
-                                                                              5.0,
-                                                                              2.0),
-                                                                          child:
-                                                                              Text(
-                                                                            FFLocalizations.of(context).getText(
-                                                                              'ds9fp8ka' /* ProOfferCode */,
-                                                                            ),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
-                                                                                  fontSize: 20.0,
-                                                                                  letterSpacing: 0.0,
-                                                                                  fontWeight: FontWeight.w600,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Wrap(
-                                                              spacing: 0.0,
-                                                              runSpacing: 0.0,
-                                                              alignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  WrapCrossAlignment
-                                                                      .start,
-                                                              direction:
-                                                                  Axis.vertical,
-                                                              runAlignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              verticalDirection:
-                                                                  VerticalDirection
-                                                                      .down,
-                                                              clipBehavior: Clip
-                                                                  .antiAlias,
-                                                              children: [
-                                                                Card(
-                                                                  clipBehavior:
-                                                                      Clip.antiAliasWithSaveLayer,
-                                                                  elevation:
-                                                                      0.0,
-                                                                  shape:
-                                                                      RoundedRectangleBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Align(
-                                                                        alignment: AlignmentDirectional(
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              5.0,
-                                                                              3.0,
-                                                                              5.0,
-                                                                              2.0),
-                                                                          child:
-                                                                              Text(
-                                                                            FFLocalizations.of(context).getText(
-                                                                              'tm5r593i' /* Offer Code Checking */,
-                                                                            ),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
-                                                                                  fontSize: 20.0,
-                                                                                  letterSpacing: 0.0,
-                                                                                  fontWeight: FontWeight.w600,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') !=
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Wrap(
-                                                              spacing: 0.0,
-                                                              runSpacing: 0.0,
-                                                              alignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  WrapCrossAlignment
-                                                                      .start,
-                                                              direction:
-                                                                  Axis.vertical,
-                                                              runAlignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              verticalDirection:
-                                                                  VerticalDirection
-                                                                      .down,
-                                                              clipBehavior: Clip
-                                                                  .antiAlias,
-                                                              children: [
-                                                                Card(
-                                                                  clipBehavior:
-                                                                      Clip.antiAliasWithSaveLayer,
-                                                                  elevation:
-                                                                      0.0,
-                                                                  shape:
-                                                                      RoundedRectangleBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Align(
-                                                                        alignment: AlignmentDirectional(
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              5.0,
-                                                                              3.0,
-                                                                              5.0,
-                                                                              2.0),
-                                                                          child:
-                                                                              Text(
-                                                                            FFLocalizations.of(context).getText(
-                                                                              'q0qsvnd9' /* D.Commission */,
-                                                                            ),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
-                                                                                  fontSize: 20.0,
-                                                                                  letterSpacing: 0.0,
-                                                                                  fontWeight: FontWeight.w600,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Wrap(
-                                                              spacing: 0.0,
-                                                              runSpacing: 0.0,
-                                                              alignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  WrapCrossAlignment
-                                                                      .start,
-                                                              direction:
-                                                                  Axis.vertical,
-                                                              runAlignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              verticalDirection:
-                                                                  VerticalDirection
-                                                                      .down,
-                                                              clipBehavior: Clip
-                                                                  .antiAlias,
-                                                              children: [
-                                                                Card(
-                                                                  clipBehavior:
-                                                                      Clip.antiAliasWithSaveLayer,
-                                                                  elevation:
-                                                                      0.0,
-                                                                  shape:
-                                                                      RoundedRectangleBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Align(
-                                                                        alignment: AlignmentDirectional(
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              5.0,
-                                                                              3.0,
-                                                                              5.0,
-                                                                              2.0),
-                                                                          child:
-                                                                              Text(
-                                                                            FFLocalizations.of(context).getText(
-                                                                              'eflt6052' /* R.Commission */,
-                                                                            ),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
-                                                                                  fontSize: 20.0,
-                                                                                  letterSpacing: 0.0,
-                                                                                  fontWeight: FontWeight.w600,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Wrap(
-                                                              spacing: 0.0,
-                                                              runSpacing: 0.0,
-                                                              alignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  WrapCrossAlignment
-                                                                      .start,
-                                                              direction:
-                                                                  Axis.vertical,
-                                                              runAlignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              verticalDirection:
-                                                                  VerticalDirection
-                                                                      .down,
-                                                              clipBehavior: Clip
-                                                                  .antiAlias,
-                                                              children: [
-                                                                Card(
-                                                                  clipBehavior:
-                                                                      Clip.antiAliasWithSaveLayer,
-                                                                  elevation:
-                                                                      0.0,
-                                                                  shape:
-                                                                      RoundedRectangleBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Align(
-                                                                        alignment: AlignmentDirectional(
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              5.0,
-                                                                              3.0,
-                                                                              5.0,
-                                                                              2.0),
-                                                                          child:
-                                                                              Text(
-                                                                            FFLocalizations.of(context).getText(
-                                                                              'jj2ye6su' /* Sale Status */,
-                                                                            ),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
-                                                                                  fontSize: 20.0,
-                                                                                  letterSpacing: 0.0,
-                                                                                  fontWeight: FontWeight.w600,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Wrap(
-                                                              spacing: 0.0,
-                                                              runSpacing: 0.0,
-                                                              alignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              crossAxisAlignment:
-                                                                  WrapCrossAlignment
-                                                                      .start,
-                                                              direction:
-                                                                  Axis.vertical,
-                                                              runAlignment:
-                                                                  WrapAlignment
-                                                                      .start,
-                                                              verticalDirection:
-                                                                  VerticalDirection
-                                                                      .down,
-                                                              clipBehavior: Clip
-                                                                  .antiAlias,
-                                                              children: [
-                                                                Card(
-                                                                  clipBehavior:
-                                                                      Clip.antiAliasWithSaveLayer,
-                                                                  elevation:
-                                                                      0.0,
-                                                                  shape:
-                                                                      RoundedRectangleBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            8.0),
-                                                                  ),
-                                                                  child: Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    children: [
-                                                                      Align(
-                                                                        alignment: AlignmentDirectional(
-                                                                            0.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              5.0,
-                                                                              3.0,
-                                                                              5.0,
-                                                                              2.0),
-                                                                          child:
-                                                                              Text(
-                                                                            FFLocalizations.of(context).getText(
-                                                                              'hiqmsm3x' /* Billing Amount */,
-                                                                            ),
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
-                                                                                  fontSize: 20.0,
-                                                                                  letterSpacing: 0.0,
-                                                                                  fontWeight: FontWeight.w600,
-                                                                                ),
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
                                                   ],
                                                 ),
                                               ),
@@ -3921,14 +3389,6 @@ class _GeneratePrescriptionWidgetState
                                                                           delete1Index);
                                                                       safeSetState(
                                                                           () {});
-                                                                      FFAppState()
-                                                                          .updateProoffferCodeAtIndex(
-                                                                        delete1Index,
-                                                                        (_) =>
-                                                                            delete1Item,
-                                                                      );
-                                                                      safeSetState(
-                                                                          () {});
                                                                     },
                                                                     child: Card(
                                                                       clipBehavior:
@@ -3972,699 +3432,6 @@ class _GeneratePrescriptionWidgetState
                                                         ),
                                                       ),
                                                     ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Builder(
-                                                              builder:
-                                                                  (context) {
-                                                                final saleRate1 =
-                                                                    _model
-                                                                        .saleRate
-                                                                        .toList();
-
-                                                                return Wrap(
-                                                                  spacing: 0.0,
-                                                                  runSpacing:
-                                                                      0.0,
-                                                                  alignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  crossAxisAlignment:
-                                                                      WrapCrossAlignment
-                                                                          .start,
-                                                                  direction: Axis
-                                                                      .vertical,
-                                                                  runAlignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  verticalDirection:
-                                                                      VerticalDirection
-                                                                          .down,
-                                                                  clipBehavior:
-                                                                      Clip.antiAlias,
-                                                                  children: List.generate(
-                                                                      saleRate1
-                                                                          .length,
-                                                                      (saleRate1Index) {
-                                                                    final saleRate1Item =
-                                                                        saleRate1[
-                                                                            saleRate1Index];
-                                                                    return Card(
-                                                                      clipBehavior:
-                                                                          Clip.antiAliasWithSaveLayer,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryBackground,
-                                                                      elevation:
-                                                                          1.0,
-                                                                      shape:
-                                                                          RoundedRectangleBorder(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                      ),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            5.0,
-                                                                            3.0,
-                                                                            5.0,
-                                                                            3.0),
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
-                                                                              child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5.0, 3.0, 5.0, 2.0),
-                                                                                child: Text(
-                                                                                  saleRate1Item.toString(),
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
-                                                                                        letterSpacing: 0.0,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                    );
-                                                                  }),
-                                                                );
-                                                              },
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Builder(
-                                                              builder:
-                                                                  (context) {
-                                                                final offercode1 =
-                                                                    FFAppState()
-                                                                        .prooffferCode
-                                                                        .toList();
-
-                                                                return Wrap(
-                                                                  spacing: 0.0,
-                                                                  runSpacing:
-                                                                      0.0,
-                                                                  alignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  crossAxisAlignment:
-                                                                      WrapCrossAlignment
-                                                                          .start,
-                                                                  direction: Axis
-                                                                      .vertical,
-                                                                  runAlignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  verticalDirection:
-                                                                      VerticalDirection
-                                                                          .down,
-                                                                  clipBehavior:
-                                                                      Clip.antiAlias,
-                                                                  children: List.generate(
-                                                                      offercode1
-                                                                          .length,
-                                                                      (offercode1Index) {
-                                                                    final offercode1Item =
-                                                                        offercode1[
-                                                                            offercode1Index];
-                                                                    return Card(
-                                                                      clipBehavior:
-                                                                          Clip.antiAliasWithSaveLayer,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryBackground,
-                                                                      elevation:
-                                                                          0.0,
-                                                                      shape:
-                                                                          RoundedRectangleBorder(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                      ),
-                                                                      child:
-                                                                          Row(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        children: [
-                                                                          Expanded(
-                                                                            child:
-                                                                                OfferCodeWidget(
-                                                                              key: Key('Keybvh_${offercode1Index}_of_${offercode1.length}'),
-                                                                            ),
-                                                                          ),
-                                                                        ],
-                                                                      ),
-                                                                    );
-                                                                  }),
-                                                                );
-                                                              },
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Builder(
-                                                              builder:
-                                                                  (context) {
-                                                                final offercodechecking1 =
-                                                                    _model
-                                                                        .offercodeChecking
-                                                                        .toList();
-
-                                                                return Wrap(
-                                                                  spacing: 0.0,
-                                                                  runSpacing:
-                                                                      0.0,
-                                                                  alignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  crossAxisAlignment:
-                                                                      WrapCrossAlignment
-                                                                          .start,
-                                                                  direction: Axis
-                                                                      .vertical,
-                                                                  runAlignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  verticalDirection:
-                                                                      VerticalDirection
-                                                                          .down,
-                                                                  clipBehavior:
-                                                                      Clip.antiAlias,
-                                                                  children: List.generate(
-                                                                      offercodechecking1
-                                                                          .length,
-                                                                      (offercodechecking1Index) {
-                                                                    final offercodechecking1Item =
-                                                                        offercodechecking1[
-                                                                            offercodechecking1Index];
-                                                                    return Card(
-                                                                      clipBehavior:
-                                                                          Clip.antiAliasWithSaveLayer,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryBackground,
-                                                                      elevation:
-                                                                          1.0,
-                                                                      shape:
-                                                                          RoundedRectangleBorder(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                      ),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            5.0,
-                                                                            3.0,
-                                                                            5.0,
-                                                                            3.0),
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            Text(
-                                                                              offercodechecking1Item.toString(),
-                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
-                                                                                    letterSpacing: 0.0,
-                                                                                  ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                    );
-                                                                  }),
-                                                                );
-                                                              },
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') !=
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Builder(
-                                                              builder:
-                                                                  (context) {
-                                                                final dCommission1 =
-                                                                    _model
-                                                                        .dCommission
-                                                                        .toList();
-
-                                                                return Wrap(
-                                                                  spacing: 0.0,
-                                                                  runSpacing:
-                                                                      0.0,
-                                                                  alignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  crossAxisAlignment:
-                                                                      WrapCrossAlignment
-                                                                          .start,
-                                                                  direction: Axis
-                                                                      .vertical,
-                                                                  runAlignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  verticalDirection:
-                                                                      VerticalDirection
-                                                                          .down,
-                                                                  clipBehavior:
-                                                                      Clip.antiAlias,
-                                                                  children: List.generate(
-                                                                      dCommission1
-                                                                          .length,
-                                                                      (dCommission1Index) {
-                                                                    final dCommission1Item =
-                                                                        dCommission1[
-                                                                            dCommission1Index];
-                                                                    return Card(
-                                                                      clipBehavior:
-                                                                          Clip.antiAliasWithSaveLayer,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryBackground,
-                                                                      elevation:
-                                                                          1.0,
-                                                                      shape:
-                                                                          RoundedRectangleBorder(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                      ),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            5.0,
-                                                                            3.0,
-                                                                            5.0,
-                                                                            3.0),
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
-                                                                              child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5.0, 3.0, 5.0, 2.0),
-                                                                                child: Text(
-                                                                                  dCommission1Item.toString(),
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
-                                                                                        letterSpacing: 0.0,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                    );
-                                                                  }),
-                                                                );
-                                                              },
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Builder(
-                                                              builder:
-                                                                  (context) {
-                                                                final rCommission1 =
-                                                                    _model
-                                                                        .rCommission
-                                                                        .toList();
-
-                                                                return Wrap(
-                                                                  spacing: 0.0,
-                                                                  runSpacing:
-                                                                      0.0,
-                                                                  alignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  crossAxisAlignment:
-                                                                      WrapCrossAlignment
-                                                                          .start,
-                                                                  direction: Axis
-                                                                      .vertical,
-                                                                  runAlignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  verticalDirection:
-                                                                      VerticalDirection
-                                                                          .down,
-                                                                  clipBehavior:
-                                                                      Clip.antiAlias,
-                                                                  children: List.generate(
-                                                                      rCommission1
-                                                                          .length,
-                                                                      (rCommission1Index) {
-                                                                    final rCommission1Item =
-                                                                        rCommission1[
-                                                                            rCommission1Index];
-                                                                    return Card(
-                                                                      clipBehavior:
-                                                                          Clip.antiAliasWithSaveLayer,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryBackground,
-                                                                      elevation:
-                                                                          1.0,
-                                                                      shape:
-                                                                          RoundedRectangleBorder(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                      ),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            5.0,
-                                                                            3.0,
-                                                                            5.0,
-                                                                            3.0),
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
-                                                                              child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5.0, 3.0, 5.0, 2.0),
-                                                                                child: Text(
-                                                                                  rCommission1Item.toString(),
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
-                                                                                        letterSpacing: 0.0,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                    );
-                                                                  }),
-                                                                );
-                                                              },
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Builder(
-                                                              builder:
-                                                                  (context) {
-                                                                final salestatus =
-                                                                    _model
-                                                                        .saleStatus
-                                                                        .toList();
-
-                                                                return Wrap(
-                                                                  spacing: 0.0,
-                                                                  runSpacing:
-                                                                      0.0,
-                                                                  alignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  crossAxisAlignment:
-                                                                      WrapCrossAlignment
-                                                                          .start,
-                                                                  direction: Axis
-                                                                      .vertical,
-                                                                  runAlignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  verticalDirection:
-                                                                      VerticalDirection
-                                                                          .down,
-                                                                  clipBehavior:
-                                                                      Clip.antiAlias,
-                                                                  children: List.generate(
-                                                                      salestatus
-                                                                          .length,
-                                                                      (salestatusIndex) {
-                                                                    final salestatusItem =
-                                                                        salestatus[
-                                                                            salestatusIndex];
-                                                                    return Card(
-                                                                      clipBehavior:
-                                                                          Clip.antiAliasWithSaveLayer,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryBackground,
-                                                                      elevation:
-                                                                          1.0,
-                                                                      shape:
-                                                                          RoundedRectangleBorder(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                      ),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            5.0,
-                                                                            3.0,
-                                                                            5.0,
-                                                                            3.0),
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
-                                                                              child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5.0, 3.0, 5.0, 2.0),
-                                                                                child: Text(
-                                                                                  salestatusItem,
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
-                                                                                        letterSpacing: 0.0,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                    );
-                                                                  }),
-                                                                );
-                                                              },
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    if (valueOrDefault(
-                                                            currentUserDocument
-                                                                ?.role,
-                                                            '') ==
-                                                        'Medical Store')
-                                                      Expanded(
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      2.0,
-                                                                      0.0,
-                                                                      3.0,
-                                                                      0.0),
-                                                          child:
-                                                              AuthUserStreamWidget(
-                                                            builder:
-                                                                (context) =>
-                                                                    Builder(
-                                                              builder:
-                                                                  (context) {
-                                                                final billAmount1 =
-                                                                    _model
-                                                                        .billingAmount
-                                                                        .toList();
-
-                                                                return Wrap(
-                                                                  spacing: 0.0,
-                                                                  runSpacing:
-                                                                      0.0,
-                                                                  alignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  crossAxisAlignment:
-                                                                      WrapCrossAlignment
-                                                                          .start,
-                                                                  direction: Axis
-                                                                      .vertical,
-                                                                  runAlignment:
-                                                                      WrapAlignment
-                                                                          .start,
-                                                                  verticalDirection:
-                                                                      VerticalDirection
-                                                                          .down,
-                                                                  clipBehavior:
-                                                                      Clip.antiAlias,
-                                                                  children: List.generate(
-                                                                      billAmount1
-                                                                          .length,
-                                                                      (billAmount1Index) {
-                                                                    final billAmount1Item =
-                                                                        billAmount1[
-                                                                            billAmount1Index];
-                                                                    return Card(
-                                                                      clipBehavior:
-                                                                          Clip.antiAliasWithSaveLayer,
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryBackground,
-                                                                      elevation:
-                                                                          1.0,
-                                                                      shape:
-                                                                          RoundedRectangleBorder(
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(8.0),
-                                                                      ),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            5.0,
-                                                                            3.0,
-                                                                            5.0,
-                                                                            3.0),
-                                                                        child:
-                                                                            Row(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.max,
-                                                                          children: [
-                                                                            Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
-                                                                              child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5.0, 3.0, 5.0, 2.0),
-                                                                                child: Text(
-                                                                                  billAmount1Item.toString(),
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
-                                                                                        letterSpacing: 0.0,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ],
-                                                                        ),
-                                                                      ),
-                                                                    );
-                                                                  }),
-                                                                );
-                                                              },
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
                                                   ],
                                                 ),
                                               ),
@@ -4793,7 +3560,7 @@ class _GeneratePrescriptionWidgetState
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                         child: Container(
-                          width: MediaQuery.sizeOf(context).width * 0.9,
+                          width: MediaQuery.sizeOf(context).width * 1.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(16.0),
@@ -4964,7 +3731,17 @@ class _GeneratePrescriptionWidgetState
                           if (_model.choiceChips1Value == 'No') {
                             FFAppState().PrescriptionInvoiceNo =
                                 FFAppState().PrescriptionInvoiceNo + 1;
+                            FFAppState().createPDF = functions.createpdfanddownload(
+                                '${_model.choiceChips1Value}${_model.patientNameTextController.text}')!;
                             safeSetState(() {});
+
+                            await currentUserReference!.update({
+                              ...mapToFirestore(
+                                {
+                                  'creditpoints': FieldValue.increment(20),
+                                },
+                              ),
+                            });
                             if ((_model.patientNameTextController.text != '') &&
                                 (_model.patientmobileTextController.text !=
                                         '') &&
@@ -4987,6 +3764,8 @@ class _GeneratePrescriptionWidgetState
                                   uploadprescription: _model.uploadedFileUrl,
                                   prescriptionInvoiceNo:
                                       FFAppState().PrescriptionInvoiceNo,
+                                  doctorID1:
+                                      _model.doctorID1TextController.text,
                                 ),
                                 ...mapToFirestore(
                                   {

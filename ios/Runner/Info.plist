@@ -60,6 +60,8 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>In order to search nearby, this app requires access to your current location.</string>
 	<key>NSCameraUsageDescription</key>
     <string>In order to take a picture or video, this app requires permission to access the camera.</string>
 	<key>NSMicrophoneUsageDescription</key>
@@ -70,15 +72,34 @@
     <string>Yes</string>
 	<key>NSContactsUsageDescription</key>
     <string>Con</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-    <string>kanpur</string>
 	<key>PermissionGroupNotification</key>
     <string>Good</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
     <string>OK</string>
 	<key>NSFaceIDUsageDescription</key>
     <string>OK</string>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+        <string>remote-notification</string>
+    </array>
 
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>comgooglemaps</string>
+      <string>baidumap</string>
+      <string>iosamap</string>
+      <string>waze</string>
+      <string>yandexmaps</string>
+      <string>yandexnavi</string>
+      <string>citymapper</string>
+      <string>mapswithme</string>
+      <string>osmandmaps</string>
+      <string>dgis</string>
+      <string>qqmap</string>
+      <string>here-location</string>
+
+    </array>
 
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

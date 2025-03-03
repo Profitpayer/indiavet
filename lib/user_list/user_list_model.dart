@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'home_widget.dart' show HomeWidget;
+import 'user_list_widget.dart' show UserListWidget;
 import 'package:flutter/material.dart';
 
-class HomeModel extends FlutterFlowModel<HomeWidget> {
+class UserListModel extends FlutterFlowModel<UserListWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for TextField widget.

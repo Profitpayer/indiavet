@@ -225,6 +225,16 @@ class JobsRecord extends FirestoreRecord {
   List<int> get srno => _srno ?? const [];
   bool hasSrno() => _srno != null;
 
+  // "saleoutpe" field.
+  List<String>? _saleoutpe;
+  List<String> get saleoutpe => _saleoutpe ?? const [];
+  bool hasSaleoutpe() => _saleoutpe != null;
+
+  // "DoctorID1" field.
+  String? _doctorID1;
+  String get doctorID1 => _doctorID1 ?? '';
+  bool hasDoctorID1() => _doctorID1 != null;
+
   void _initializeFields() {
     _title = snapshotData['title'] as String?;
     _experience = snapshotData['experience'] as String?;
@@ -270,6 +280,8 @@ class JobsRecord extends FirestoreRecord {
     _prescriptionInvoiceNo =
         castToType<int>(snapshotData['PrescriptionInvoiceNo']);
     _srno = getDataList(snapshotData['SRNO']);
+    _saleoutpe = getDataList(snapshotData['saleoutpe']);
+    _doctorID1 = snapshotData['DoctorID1'] as String?;
   }
 
   static CollectionReference get collection =>
@@ -342,6 +354,7 @@ Map<String, dynamic> createJobsRecordData({
   String? broadcastImg,
   String? broadcasttype,
   int? prescriptionInvoiceNo,
+  String? doctorID1,
 }) {
   final firestoreData = mapToFirestore(
     <String, dynamic>{
@@ -381,6 +394,7 @@ Map<String, dynamic> createJobsRecordData({
       'broadcastImg': broadcastImg,
       'broadcasttype': broadcasttype,
       'PrescriptionInvoiceNo': prescriptionInvoiceNo,
+      'DoctorID1': doctorID1,
     }.withoutNulls,
   );
 
@@ -434,7 +448,9 @@ class JobsRecordDocumentEquality implements Equality<JobsRecord> {
         listEquality.equals(e1?.typesofmedicine, e2?.typesofmedicine) &&
         listEquality.equals(e1?.medicineName, e2?.medicineName) &&
         e1?.prescriptionInvoiceNo == e2?.prescriptionInvoiceNo &&
-        listEquality.equals(e1?.srno, e2?.srno);
+        listEquality.equals(e1?.srno, e2?.srno) &&
+        listEquality.equals(e1?.saleoutpe, e2?.saleoutpe) &&
+        e1?.doctorID1 == e2?.doctorID1;
   }
 
   @override
@@ -480,7 +496,9 @@ class JobsRecordDocumentEquality implements Equality<JobsRecord> {
         e?.typesofmedicine,
         e?.medicineName,
         e?.prescriptionInvoiceNo,
-        e?.srno
+        e?.srno,
+        e?.saleoutpe,
+        e?.doctorID1
       ]);
 
   @override

@@ -7,6 +7,8 @@ import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
+import '/backend/push_notifications/push_notifications_handler.dart'
+    show PushNotificationsHandler;
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -348,11 +350,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => MRListWidget(),
         ),
         FFRoute(
-          name: HomeWidget.routeName,
-          path: HomeWidget.routePath,
-          builder: (context, params) => HomeWidget(),
-        ),
-        FFRoute(
           name: Doctor111111Widget.routeName,
           path: Doctor111111Widget.routePath,
           builder: (context, params) => Doctor111111Widget(),
@@ -455,7 +452,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: PrescriptionSaleOutWidget.routeName,
           path: PrescriptionSaleOutWidget.routePath,
-          builder: (context, params) => PrescriptionSaleOutWidget(),
+          builder: (context, params) => PrescriptionSaleOutWidget(
+            jobID: params.getParam(
+              'jobID',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['jobs'],
+            ),
+          ),
         ),
         FFRoute(
           name: OutstandingReportsWidget.routeName,
@@ -478,9 +482,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Authentication2Widget(),
         ),
         FFRoute(
-          name: PasscodeWidget.routeName,
-          path: PasscodeWidget.routePath,
-          builder: (context, params) => PasscodeWidget(),
+          name: DetailsPageWidget.routeName,
+          path: DetailsPageWidget.routePath,
+          builder: (context, params) => DetailsPageWidget(),
+        ),
+        FFRoute(
+          name: MyTeamMarketplaceWidget.routeName,
+          path: MyTeamMarketplaceWidget.routePath,
+          builder: (context, params) => MyTeamMarketplaceWidget(),
+        ),
+        FFRoute(
+          name: PdfWidget.routeName,
+          path: PdfWidget.routePath,
+          builder: (context, params) => PdfWidget(),
+        ),
+        FFRoute(
+          name: UserListWidget.routeName,
+          path: UserListWidget.routePath,
+          builder: (context, params) => UserListWidget(),
+        ),
+        FFRoute(
+          name: Test1Widget.routeName,
+          path: Test1Widget.routePath,
+          builder: (context, params) => Test1Widget(
+            title: params.getParam(
+              'title',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: NotificationWidget.routeName,
+          path: NotificationWidget.routePath,
+          builder: (context, params) => NotificationWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -675,7 +709,7 @@ class FFRoute {
                     fit: BoxFit.fill,
                   ),
                 )
-              : page;
+              : PushNotificationsHandler(child: page);
 
           final transitionInfo = state.transitionInfo;
           return transitionInfo.hasTransition

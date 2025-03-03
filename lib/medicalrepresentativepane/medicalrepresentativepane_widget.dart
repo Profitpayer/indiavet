@@ -3470,6 +3470,57 @@ class _MedicalrepresentativepaneWidgetState
                                           ].divide(SizedBox(height: 8.0)),
                                         ),
                                       ),
+                                      InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed(
+                                              VisitreportWidget.routeName);
+                                        },
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Container(
+                                              width: 60.0,
+                                              height: 60.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                                borderRadius:
+                                                    BorderRadius.circular(30.0),
+                                              ),
+                                              child: Icon(
+                                                Icons.insights,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .info,
+                                                size: 30.0,
+                                              ),
+                                            ),
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'bgx8ef7o' /* My Visit */,
+                                              ),
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodySmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Plus Jakarta Sans',
+                                                        letterSpacing: 0.0,
+                                                      ),
+                                            ),
+                                          ]
+                                              .divide(SizedBox(height: 3.0))
+                                              .around(SizedBox(height: 3.0)),
+                                        ),
+                                      ),
                                       Column(
                                         mainAxisSize: MainAxisSize.max,
                                         crossAxisAlignment:
@@ -3495,7 +3546,7 @@ class _MedicalrepresentativepaneWidgetState
                                           ),
                                           Text(
                                             FFLocalizations.of(context).getText(
-                                              'bgx8ef7o' /* Stock */,
+                                              'ebx3qh8l' /* Stock */,
                                             ),
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall

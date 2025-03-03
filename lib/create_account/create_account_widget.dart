@@ -1201,6 +1201,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                                                                 .text,
                                                             postname: _model
                                                                 .choiceChipsValue,
+                                                            creditpoints: 50,
                                                           ));
 
                                                       context.goNamedAuth(

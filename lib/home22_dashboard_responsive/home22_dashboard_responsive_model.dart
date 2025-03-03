@@ -1,5 +1,4 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/index.dart';
 import 'home22_dashboard_responsive_widget.dart'
     show Home22DashboardResponsiveWidget;
 import 'package:flutter/material.dart';

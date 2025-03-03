@@ -145,6 +145,11 @@ class UsersRecord extends FirestoreRecord {
   int get point => _point ?? 0;
   bool hasPoint() => _point != null;
 
+  // "FriendsList" field.
+  List<DocumentReference>? _friendsList;
+  List<DocumentReference> get friendsList => _friendsList ?? const [];
+  bool hasFriendsList() => _friendsList != null;
+
   void _initializeFields() {
     _email = snapshotData['email'] as String?;
     _displayName = snapshotData['display_name'] as String?;
@@ -172,6 +177,7 @@ class UsersRecord extends FirestoreRecord {
     _licenceno = snapshotData['licenceno'] as String?;
     _userID = snapshotData['UserID'] as String?;
     _point = castToType<int>(snapshotData['point']);
+    _friendsList = getDataList(snapshotData['FriendsList']);
   }
 
   static CollectionReference get collection =>
@@ -294,7 +300,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e1?.shopname == e2?.shopname &&
         e1?.licenceno == e2?.licenceno &&
         e1?.userID == e2?.userID &&
-        e1?.point == e2?.point;
+        e1?.point == e2?.point &&
+        listEquality.equals(e1?.friendsList, e2?.friendsList);
   }
 
   @override
@@ -324,7 +331,8 @@ class UsersRecordDocumentEquality implements Equality<UsersRecord> {
         e?.shopname,
         e?.licenceno,
         e?.userID,
-        e?.point
+        e?.point,
+        e?.friendsList
       ]);
 
   @override

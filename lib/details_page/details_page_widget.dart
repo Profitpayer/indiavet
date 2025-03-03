@@ -1,30 +1,28 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'home22_dashboard_responsive_model.dart';
-export 'home22_dashboard_responsive_model.dart';
+import 'details_page_model.dart';
+export 'details_page_model.dart';
 
-class Home22DashboardResponsiveWidget extends StatefulWidget {
-  const Home22DashboardResponsiveWidget({super.key});
+class DetailsPageWidget extends StatefulWidget {
+  const DetailsPageWidget({super.key});
 
-  static String routeName = 'Home22DashboardResponsive';
-  static String routePath = '/home22DashboardResponsive';
+  static String routeName = 'DetailsPage';
+  static String routePath = '/detailsPage';
 
   @override
-  State<Home22DashboardResponsiveWidget> createState() =>
-      _Home22DashboardResponsiveWidgetState();
+  State<DetailsPageWidget> createState() => _DetailsPageWidgetState();
 }
 
-class _Home22DashboardResponsiveWidgetState
-    extends State<Home22DashboardResponsiveWidget> {
-  late Home22DashboardResponsiveModel _model;
+class _DetailsPageWidgetState extends State<DetailsPageWidget> {
+  late DetailsPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Home22DashboardResponsiveModel());
+    _model = createModel(context, () => DetailsPageModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -39,7 +37,7 @@ class _Home22DashboardResponsiveWidgetState
   @override
   Widget build(BuildContext context) {
     return Title(
-        title: 'Home22DashboardResponsive',
+        title: 'DetailsPage',
         color: FlutterFlowTheme.of(context).primary.withAlpha(0XFF),
         child: GestureDetector(
           onTap: () {
@@ -48,7 +46,7 @@ class _Home22DashboardResponsiveWidgetState
           },
           child: Scaffold(
             key: scaffoldKey,
-            backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+            backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
           ),
         ));
   }
